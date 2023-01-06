@@ -28,7 +28,7 @@ export default function Home () {
                     <a href={"#/linkdin"} label-aria="linkedin"><LinkdinIcon /></a>
                     <a href={"#/github"} label-aria="github"><GithubIcon /></a>
                 </div>
-                <h3>ADIL AKOTHIAT</h3>
+                <h3>ADIL AKHTIYAT</h3>
                 <TypeIt
                 options={{
                     loop:true

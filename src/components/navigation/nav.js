@@ -12,7 +12,7 @@ export default function Nav () {
         <nav>
             <div className="hero">
                 <img src={"https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"} alt={"hero"}/>
-                <h5>adil akothiat</h5>
+                <h5>adil akhtiyat</h5>
             </div>
             <ul>
                 <Link to={"/"} label-aria="home">
@@ -37,7 +37,7 @@ export default function Nav () {
                 </Link>
             </ul>
             <p>
-                © {new Date().getFullYear()} ADIL AKOTHIAT. All Rights Reserved.
+                © {new Date().getFullYear()} ADIL AKHTIYAT. All Rights Reserved.
             </p>
         </nav>
     );
