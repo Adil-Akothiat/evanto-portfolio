@@ -1,0 +1,91 @@
+.contact {
+    padding: 1em 2em;
+}
+.contact-info >div {
+    background-color: #2E4CCB;
+    display: flex;
+    align-items: center;
+    margin: 1em 0;
+    width: fit-content;
+    padding: .75em 1em;
+    color: white;
+    border-radius: .5em;
+}
+.contact-info svg {
+    margin-right: .5em;
+}
+.contact-info span {
+    font-size: .9em;
+}
+.contact form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 3em;
+    column-gap: 1em;
+    margin: 3em 0;
+}
+.contact form input,
+.contact form textarea {
+    display: block;
+    width: 100%;
+    padding: .5em 0em;
+    border: none;
+    border-bottom: 1mm solid #bbb;
+    outline: none;
+    max-height: 10em;
+}
+.contact form label {
+    display: block;
+    position: relative; 
+}
+.contact form label[for="message"] {
+    grid-column-start:span 2;
+}
+.contact form input:focus,
+.contact form textarea:focus {
+    border-color: #2E4CCB;
+}
+.contact form input[type="submit"] {
+    border: 1px solid #2E4CCB;
+    cursor: pointer;
+    width: fit-content;
+    padding: .75em 2em;
+    text-transform: capitalize;
+    background-color: white;
+    transition: all 300ms ease;
+}
+.contact form input[type="submit"]:hover {
+    color: white;
+    background-color: #2E4CCB;
+}
+.contact h3 {
+    color: #2E4CCB;
+    margin: 2em 0;  
+}
+.contact iframe {
+    margin-bottom: 4em;
+}
+@media screen and (min-width: 1000px) {
+    .contact {
+        position: fixed;
+        right: 0;
+        width: 75%;
+        height: 100%;
+        overflow-y: scroll;
+    }
+    .contact::-webkit-scrollbar {
+        width: 5px;
+    }
+    .contact::-webkit-scrollbar-thumb {
+        background-color: #2E4CCB;
+    }
+    .contact >div {
+        margin-bottom: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2em;
+    }
+    .contact iframe {
+        margin-bottom:4em;
+    }
+}

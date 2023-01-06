@@ -1,0 +1,68 @@
+.home {
+    position: fixed;
+    left: 50%;top: 50%;
+    transform: translate(-50%,-50%); 
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    transition: all 500ms ease;
+    background-image: url("https://img.freepik.com/free-vector/network-mesh-wire-digital-technology-background_1017-27428.jpg?w=900&t=st=1673020868~exp=1673021468~hmac=3af1cc9e443fcc6d6e32901d4c75ac72c864d4dd4bf46d92ac4433f98302c7d8");
+    background-size: cover;
+    background-position: center center;
+}
+.home img {
+    width: 176px;
+    height: 176px;
+    object-fit: cover;
+    border-radius: 48px; 
+}
+.home .container {
+    position: absolute;
+    left: 50%;top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    border-radius: 1em;
+}
+.social {
+    margin: .75em 0;
+}
+.social a:nth-child(2) {
+    margin: 0 .5em;
+}
+.home h3 {
+    color: #2B3458;
+    font-weight: 700;
+    margin: .2em 0;
+}
+.home button {
+    display: block;
+    width: fit-content;
+    margin: 1.25em auto;
+    background-color: #2E4CCB;
+    padding: 1em;
+    color: white;
+    border: none;
+    border-radius: .18em;
+}
+.home span {
+    text-transform: capitalize;
+    color: #6272B1;
+    font-size: 1.18em;
+}
+canvas {
+    display: none;
+}
+@media screen and (min-width: 1000px) {
+    .home {
+        width: 75%;
+        left: auto;
+        right: 0;
+        top: 0;
+        transform: translate(0);
+        border-right: 2px solid #6272B1;
+        transition: all 500ms ease;
+    }
+    .hide {
+        transform: translate(0) scale(0);
+    }
+}

@@ -1,0 +1,163 @@
+.about {
+    position: fixed;
+    left: 50%;top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 1em 2em;
+    overflow-y: scroll;
+    transition: all 500ms ease;
+}
+.about::-webkit-scrollbar {
+    width: 5px;
+}
+.about::-webkit-scrollbar-thumb {
+    background-color: #2E4CCB;
+}
+.about h3 {
+    color: #2E4CCB;
+    margin-top: 3em;
+}
+.skills .rt {
+    position: relative;
+    height: 1mm;
+    width: 100%;
+    background-color: #bac6ff;
+}
+.skills .rate {
+    background-color: #2E4CCB;
+    position: absolute;
+    height: 100%;
+    transition: all 1s ease;
+    width: 0%;
+}
+.skills >div >div {
+    margin: 3em 0;
+}
+.skills .rt p {
+    position: absolute;
+    right: 0;
+    top: -1.5em;
+    color: #6272B1;
+}
+.skills .rt span {
+    position: absolute;
+    left: 0;
+    top: -1.5em;
+    color: #2E4CCB;
+}
+.what-i-do  {
+    margin-bottom: 10em;
+}
+.about h3 {
+    margin-bottom: 1.5em;
+}
+.experience .exp {
+    border-left: 1px dashed #2E4CCB;
+    padding: 0 1em 4em 1em;
+}
+.experience span {
+    position: relative;
+    color: #6272B1;
+}
+.experience span::after {
+    content: "";
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    border: 1px dashed #2E4CCB;
+    background-color: white;
+    border-radius: 50%;
+    left: -1.6em;
+}
+.experience h4 {
+    font-size: 1.18em;
+    line-height: 1.5;
+    color: #2E4CCB;
+}
+.experience h5 {
+    font-size: 1em;
+    color: #6272B1;
+}
+.experience p {
+    font-size: .85em;
+    line-height: 1.6;
+    margin-top: 1.5em;
+}
+.experience .exp {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 750ms ease;
+}
+.experience .show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2em;
+    row-gap: 2em;
+}
+.cards >div {
+    border: .25px solid #2E4CCB;
+    padding: 1em;
+    transform: translateY(20px);
+    opacity: 0; 
+    transition: all 500ms ease;
+}
+.cards >div:hover {
+    transform: scale(1.05);
+}
+.cards svg {
+    color: #2E4CCB;
+}
+.cards h4 {
+    color: #2E4CCB;
+    text-transform: capitalize;
+    line-height: 1.75;
+}
+.cards p {
+    font-size: .9em;
+    margin: 1em 0;
+}
+.cards .show {
+    opacity: 1;
+    transform: translateY(0);
+}
+@media screen and (min-width: 1000px) {
+    .what-i-do {
+        margin-bottom: 2em;
+    }
+    .skills >div {
+        display: grid;
+        grid-template-columns: 48% 48%;
+        column-gap: 4%;
+    }
+    .about {
+        left: auto;
+        width: 75%;
+        transform: translate(0);
+        right: 0;
+        top: 0;
+    }
+    .experience {
+        margin: 0;
+    }
+    .fl {
+        display: grid;
+        grid-template-columns: 48% 48%;
+        column-gap: 4%;
+    }
+}
+@media screen and (max-width: 700px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 500px) {
+    .cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
