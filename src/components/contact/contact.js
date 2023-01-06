@@ -20,11 +20,11 @@ export default function Contact () {
             <div className="contact-info">
                 <div>
                     <Unicons.UilLocationPinAlt />
-                    <span>Avon str. 22, NYC, USA</span>
+                    <span>Avon str. 22, NYC, LOREM</span>
                 </div>
                 <div>
                     <Unicons.UilPhoneAlt />
-                    <span>+77 022 155 02 02</span>
+                    <span>+212 062 155 02 02</span>
                 </div>
                 <div>
                     <Unicons.UilEnvelopeAlt />
