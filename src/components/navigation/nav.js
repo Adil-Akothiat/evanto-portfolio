@@ -15,22 +15,22 @@ export default function Nav () {
                 <h5>adil akothiat</h5>
             </div>
             <ul>
-                <Link to={"/"}>
+                <Link to={"/"} label-aria="home">
                     <li className="focus" onClick={focus} data-page="home">
                         <Unicons.UilEstate /><span>Home</span>
                     </li>
                 </Link>
-                <Link to={"/about"}>
-                <li onClick={focus} data-page="about">
+                <Link to={"/about"} label-aria="about">
+                <li onClick={focus} data-page="about" >
                     <Unicons.UilUserCircle /><span>About</span>
                 </li>
                 </Link>
-                <Link to={"/portfolio"}>
+                <Link to={"/portfolio"} label-aria="portfolio">
                 <li onClick={focus} data-page="portfolio">
                     <Unicons.UilSuitcaseAlt /><span>Portfolio</span>
                 </li>
                 </Link>
-                <Link to={"/contact"}>
+                <Link to={"/contact"} label-aria="contact">
                 <li onClick={focus} data-page="contact">
                     <Unicons.UilEnvelopeEdit /><span>Contact</span>
                 </li>

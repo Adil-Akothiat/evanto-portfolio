@@ -13,11 +13,11 @@ export default function Projects () {
                             <div className="project-info">
                                 <h3>{p.name}</h3>
                                 <div className="btns">
-                                    <a href={p.source}>
+                                    <a href={p.source} label-aria="source">
                                         view source
                                         <Unicons.UilExternalLinkAlt />
                                     </a>
-                                    <a href={p.live}>
+                                    <a href={p.live} label-aria="demo">
                                         try it live
                                         <Unicons.UilExternalLinkAlt />
                                     </a>

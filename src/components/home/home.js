@@ -24,9 +24,9 @@ export default function Home () {
                 alt="portrait"
                 />
                 <div className="social">
-                    <a href={"#/twitter"}><TwitterIcon /></a>
-                    <a href={"#/linkdin"}><LinkdinIcon /></a>
-                    <a href={"#/github"}><GithubIcon /></a>
+                    <a href={"#/twitter"} label-aria="twitter"><TwitterIcon /></a>
+                    <a href={"#/linkdin"} label-aria="linkedin"><LinkdinIcon /></a>
+                    <a href={"#/github"} label-aria="github"><GithubIcon /></a>
                 </div>
                 <h3>ADIL AKOTHIAT</h3>
                 <TypeIt
