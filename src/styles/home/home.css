@@ -6,9 +6,6 @@
     width: 100%;
     text-align: center;
     transition: all 500ms ease;
-    background-image: url("https://img.freepik.com/free-vector/network-mesh-wire-digital-technology-background_1017-27428.jpg?w=900&t=st=1673020868~exp=1673021468~hmac=3af1cc9e443fcc6d6e32901d4c75ac72c864d4dd4bf46d92ac4433f98302c7d8");
-    background-size: cover;
-    background-position: center center;
 }
 .home img {
     width: 176px;
