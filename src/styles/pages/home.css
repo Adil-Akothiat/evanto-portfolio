@@ -1,0 +1,45 @@
+:root {
+    --main-color: #2a68db;
+    --dark-color: #3a3a3a;
+}
+.home .center {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.home .center >div:last-child {
+    display: grid;
+    row-gap: 1em;
+    width: 100%;
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%);
+}
+.home span {
+    text-transform: capitalize;
+}
+.presentation span {
+    font-size: 2em;
+    color: var(--dark-color);
+}
+.jobs span {
+    color: var(--main-color);
+    font-size: 1.25em;
+}
+.social-links a{
+    color: var(--dark-color);
+    margin: 0 .3em;
+    transition: all 200ms ease-in-out;
+    line-height: 0;
+}
+.social-links a:hover {
+    color: var(--main-color);
+}
+.center p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}

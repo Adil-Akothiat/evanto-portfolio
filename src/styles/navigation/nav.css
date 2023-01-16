@@ -1,0 +1,316 @@
+/*
+.navigation {
+    background-color: var(--main-color);
+    position: fixed;
+    height: 100%;
+    width: 80%;
+    left: 0;
+    top: 0;
+    z-index: 8;
+    transform: translateX(-100%);
+    transition: all 300ms ease-in-out;
+}
+.navigation .container {
+    overflow-y: scroll;
+    height: 100%;
+}
+.navigation .container::-webkit-scrollbar {
+    width: 5px;
+}
+.navigation .container::-webkit-scrollbar-thumb {
+    background-color: var(--light-color);
+    border-radius: 4em;
+}
+.navigation .container >div:not(div:last-child) {
+    border-bottom: 1px solid var(--border-color);
+}
+.navigation .container >div {
+    padding: 1.5em 1em;
+} */
+/* start small size */
+/* .expand-nav {
+    transform: translateX(0%);
+}
+.navigation .collapse {
+    position: absolute;
+    right: -3.8em;
+    padding: 1em;
+    line-height: 0;
+    border: none;
+    background-color: var(--collapse-color);
+    cursor: pointer;
+    pointer-events: auto;
+    z-index: 100;
+}
+.navigation .collapse svg{
+    color: white;
+}
+.navigation .collapse:hover {
+    background-color: var(--collapse-color);
+}
+/* end small size */
+/* gr than 450px */
+/* .navigation .hero {
+    width: 100%;
+    height: 200px;
+    position: relative;
+} */
+/*.navigation .hero img {
+    display: block;
+    position: absolute;
+    left: 50%;top: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.navigation ul {
+    list-style-type: none;
+    align-self: center;
+}
+.navigation ul a {
+    color: white;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: .5em;
+    font-size: .9em;
+}
+.navigation ul a span,
+.navigation ul a svg {
+    pointer-events: none;
+}
+.navigation ul a svg {
+    margin-right: .75em;
+}
+.navigation ul a:hover {
+    background-color: var(--border-color);
+    color: var(--main-color);
+} */
+/* js onclick to nav */
+/* .navigation ul .focus {
+    background-color: var(--border-color);
+    color: var(--main-color);
+}
+.rights {
+    height: 100px;
+    position: relative;
+}
+.rights p {
+    width:100%;
+    color: white;
+    font-size: .75em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+.recent-posts h3 {
+    color: white;
+    width: fit-content;
+    line-height: 1.5;
+    border-bottom: 1mm solid white;
+}
+.recent-posts ul {
+    margin-top: 1em;
+}
+.recent-posts ul li {
+    line-height: 1;
+}
+.recent-posts ul li a {
+    width: fit-content;
+    padding: .5em;
+    text-transform: capitalize;
+    transition: all 300ms ease;
+}
+.recent-posts ul li a:hover {
+    color: var(--main-color);
+    text-decoration: underline;
+}
+@media screen and (min-width: 450px) {
+    .navigation {
+        width: 300px;
+    }
+} */
+/* min size */
+/* @media screen and (max-width: 350px) {
+    .navigation ul a {
+        font-size: .7em;
+    }
+    .navigation ul svg {
+        width: 1.25em;
+    }
+    .navigation .hero img {
+        width: 100px;
+        height: 100px;
+    }
+    .rights p {
+        font-size: .6em;
+    }
+} */
+/* medium size */
+/* @media screen and (min-width: 600px) {
+    .navigation {
+        width: 360px;
+    }
+} */
+/* small size */
+/* @media screen and (min-width: 850px) {
+    .navigation {
+        width: 25%;
+        overflow-x: hidden;
+    }
+    .expand-nav,
+    .navigation {
+        transform: translateX(0%);
+    }
+    .navigation .collapse {
+        display: none;
+    }
+    .navigation .hero img {
+        transition: all 300ms ease-in-out;
+    }
+    .navigation .hero img:hover {
+        transform: translate(-50%, -50%) scale(1.1); 
+    }
+} */
+.navigation {
+    position: fixed;
+    width: 70%;
+    height: 100%;
+    background-color: var(--nav-fix-bg);
+    transform: translateX(-100%);
+    z-index: 10;
+    transition: all 750ms ease;
+}
+.expand-nav {
+    transform: translateX(0%);
+}
+@media screen and (min-width: 500px) {
+    .navigation {
+        width: 300px;
+    }
+}
+.navigation .content {
+    overflow-y: scroll;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 1px;
+}
+.navigation .content >div {
+    padding: 1em;
+    background-color: var(--light-white);
+}
+.navigation .content::-webkit-scrollbar {
+    width: .5em;
+}
+.navigation .content::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-color);
+    border-radius: 5em;
+}
+.navigation .hero {
+    padding: 1em;
+    position: relative;
+    text-align: center;
+}
+.navigation .hero img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: auto;
+}
+@media screen and (min-width: 350px) {
+    .navigation .hero img {
+        width: 150px;
+        height: 150px;
+    }
+}
+.navigation ul {
+    list-style-type: none; 
+}
+.navigation a {
+    text-transform: capitalize;
+}
+.navigation .link-pages a {
+    display: block;
+    border-radius: 1em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: var(--main-color);
+    padding: .5em 1em;
+    position: relative;
+    z-index: 1;
+    transition: all 350ms ease;
+}
+.navigation .link-pages a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;height: 100%;
+    background-color: var(--main-color);
+    border-radius: 2mm;
+    opacity: 0;
+    transition: all 350ms ease;
+    z-index: -1;
+}
+.navigation .link-pages a:hover {
+    color: var(--text-white);
+}
+.navigation .link-pages a:hover::after {
+    opacity: .7;
+}
+.navigation ul svg,
+.navigation ul span {
+    pointer-events: none;
+}
+.navigation ul a svg {
+    margin-right: .5em;
+}
+.navigation .link-pages .focus {
+    color: var(--text-white);
+}
+.navigation .link-pages .focus::after {
+    opacity: 1;
+}
+.navigation .collapse {
+    width: 4em;
+    height: 4em;
+    line-height: 0;
+    position: absolute;
+    top: 0;
+    right: -4em;
+    background-color: var(--light-white);
+    cursor: pointer;
+    border: 1px solid var(--main-color);
+    border-left: none;
+    border-top: none;
+}
+.navigation .collapse svg {
+    pointer-events: none;
+    color: var(--main-color);
+}
+@media screen and (min-width: 850px) {
+    .navigation {
+        width: 25%;
+        transform: translateX(0%);
+    }
+    .expand-nav {
+        transform: translateX(0%);
+    }
+    .navigation .collapse {
+        display: none;
+    }
+}
+.recent a {
+    text-decoration: none;
+    color: var(--dark-color);
+    transition: color 300ms ease;
+}
+.recent a:hover {
+    color: var(--main-color);
+}

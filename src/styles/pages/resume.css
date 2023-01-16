@@ -1,0 +1,104 @@
+:root {
+    --main-bg: white;
+    --main-color: #2a68db;
+    --dark-color: #3a3a3a;
+    --light-color: #dbdbdb;
+    --light-gr: #ececec;
+    --text-light: #5e5e5e;
+}
+.resume .rs-head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2em;
+    position: relative;
+    width: fit-content;
+}
+.resume .rs-head::after {
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    width: 24px;
+    height: 1mm;
+    left: 0;
+    bottom: -1mm;
+}
+.resume .rs-head svg {
+    margin-right: .5em;
+    color: var(--main-color);
+}
+.resume-card p {
+    margin: 0;
+}
+.resume-card {
+    display: grid;
+    grid-template-columns: 22% 75%;
+    column-gap: 3%;
+    align-items: flex-start;
+    line-height: 1.2;
+    margin-bottom: 3.5em;
+    text-align: start;
+}
+.resume-card h6 {
+    color: var(--main-color);
+    font-size: .85em;
+    font-weight: 500;
+}
+.resume-card h5,
+.resume-card h4 {
+    text-transform: capitalize;
+}
+.resume-card h5{
+    font-weight: 500;
+    font-size: .85em;
+}
+.resume-card h4 {
+    font-size: 1em;
+    margin-bottom: 2px;
+}
+.resume-card p {
+    font-size: .9em;
+    line-height: 1.4;
+    color: var(--text-light);
+}
+.resume-card >div {
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: .5em;
+}
+.resume-card >div a {
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+    border: 1px solid transparent;
+    background-color: var(--main-color);
+    margin-top: .75em;
+    padding: .25em .75em;
+    color: white;
+    transition: all 300ms ease;
+}
+.resume-card >div a:hover {
+    border-color: var(--main-color);
+    background-color: white;
+    color: var(--main-color);
+}
+.skills .js {
+    width: 8em;
+    height: 8em;
+    border: 2mm solid var(--light-color);
+    border-radius: 50%;
+    position: relative;
+}
+.skills .js span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color);
+    border-radius: 50%;
+}
+@media screen and (max-width: 300px) {
+    .resume-card {
+        display: block;
+    }
+}

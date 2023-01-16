@@ -1,29 +1,40 @@
-import React, {useEffect} from "react";
-import { Routes, Route } from "react-router-dom";
+import React, {useState} from "react";
 import About from "./components/about/about";
-import Contact from "./components/contact/contact";
 import Home from "./components/home/home";
-import Nav from "./components/navigation/nav";
-import Portfolio from "./components/portfolio/portfolio";
-import "./styles/styles.css";
+import Loader from "./components/loader/loader";
+import Navigation from "./components/navigation/navigation";
+import Resume from "./components/resume/resume";
 
 export default function App () {
-  useEffect(()=> {
-    window.onmousemove = e=> {
-      const {clientX, clientY} = e;
-      document.querySelector(".pointer").style.transform=`translate(${clientX-15}px, ${clientY-15}px)`;
+  const [page, setPage] = useState("home");
+  function setBorders () {
+    document.querySelectorAll(".body-page").forEach(e=> {
+        [...e.children].forEach((child, i)=> {
+            if(!((i+1)%2===0)) child.classList.add("border-right");
+        });
+    });
+  }
+  function focusHandler (target) {
+    document.querySelector(".focus").classList.remove("focus");
+    if(target.hasAttribute("src")) {
+      document.getElementById("home").classList.add("focus");
+      setPage("home");
+    }else {
+      target.classList.add("focus");
+      setPage(target.lastElementChild.textContent);
     }
-  }, [])
+  }
+  function expandHandler () {
+    document.querySelector(".navigation").classList.toggle("expand-nav");
+  }
   return (
     <>
-      <div className="pointer"></div>
-      <Nav/>
-      <Routes>
-        <Route path={"/"} element={<Home/>}/>
-        <Route path={"/about"} element={<About />}/>
-        <Route path={"/portfolio"} element={<Portfolio />}/>
-        <Route path={"/contact"} element={<Contact />}/>
-      </Routes>
+      <Loader />
+      <Navigation focus={focusHandler} expand={expandHandler}/>
+      {
+        page==="home"?<Home/>:
+        page==="about"?<About setBorders={setBorders}/>:<Resume  setBorders={setBorders}/>
+      }
     </>
   );
 }

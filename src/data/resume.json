@@ -1,0 +1,40 @@
+{
+    "resume": {
+        "experiences": [
+            {
+                "from":2018,
+                "to":"present",
+                "job":"frontend web developer",
+                "company":"abc company",
+                "description":"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus.",
+                "link":"#company-profile"
+            },
+            {
+                "from":2018,
+                "to":"present",
+                "job":"frontend web developer",
+                "company":"abc company",
+                "description":"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia.",
+                "link":"#company-profile"
+            }
+        ],
+        "educations": [
+            {
+                "from":2018,
+                "to":"present",
+                "degree":"master of science",
+                "university":"abc university",
+                "description":"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit.",
+                "link":"#education-profile"
+            },
+            {
+                "from":2018,
+                "to":"present",
+                "degree":"master of science",
+                "university":"abc university",
+                "description":"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere.",
+                "link":"#education-profile"
+            }
+        ]
+    }
+}

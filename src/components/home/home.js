@@ -1,57 +1,69 @@
-import React, {useEffect} from "react";
-import "../../styles/home/home.css";
-import {ReactComponent as TwitterIcon} from "../../assets/icons/twitter.svg";
-import {ReactComponent as LinkdinIcon} from "../../assets/icons/linkdin.svg";
-import {ReactComponent as GithubIcon} from "../../assets/icons/github.svg";
+import React from "react";
+import "../../styles/pages/home.css";
 import TypeIt from "typeit-react";
+import * as Unicons from "@iconscout/react-unicons";
+import BackgroundAnimated from "./animatedBackground";
+import Loader from "../loader/loader";
+import homeData from "../../data/home.json";
 
 export default function Home () {
-    useEffect(()=> {
-        const lists = document.querySelectorAll("li");
-        lists.forEach(li=> {
-            if(li.dataset.page==="home") {
-                li.classList.add("focus")
-            }else {
-                li.classList.remove("focus")
-            }
-        });
-    }, []);
     return (
-        <main className="home">
-            <div className="container">
-                <img 
-                src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
-                alt="portrait"
-                />
-                <div className="social">
-                    <a href={"#/twitter"} label-aria="twitter"><TwitterIcon /></a>
-                    <a href={"#/linkdin"} label-aria="linkedin"><LinkdinIcon /></a>
-                    <a href={"#/github"} label-aria="github"><GithubIcon /></a>
+        <div className="home fixed-right">
+            <div className="center">
+                <Loader />
+                <BackgroundAnimated />
+                <div className="container pd-4">
+                    <div>
+                        <div className="presentation">
+                            <TypeIt
+                                getBeforeInit={(instance) => {
+                                    instance
+                                        .type("hi, i am adil khayt")
+                                    return instance;
+                                }}
+                            />
+                        </div>
+                        <div className="jobs">
+                            <TypeIt
+                                options={{loop: true}}
+                                getBeforeInit={(instance) => {
+                                    instance
+                                        .type("freelancre")
+                                        .pause(750)
+                                        .delete(2)
+                                        .pause(500)
+                                        .type("er")
+                                        .pause(750)
+                                        .delete()
+                                        .type("web designer")
+                                        .pause(750)
+                                        .delete()
+                                        .type("developer")
+                                        .pause(500)
+                                        .delete()
+                                    return instance;
+                                }}
+                            />
+                        </div>
+                    </div>
+                    <div>
+                        <p>
+                            {homeData.selfIntroduction}
+                        </p>
+                    </div>
+                    <div className="social-links">
+                        <a href={"#twitter"} target={"_blank"} rel={"noreferrer"}>
+                            <Unicons.UilTwitter />
+                        </a>
+                        <a href={"#github"} target={"_blank"} rel={"noreferrer"}>
+                            <Unicons.UilGithub />
+                        </a>
+                        <a href={"#linkedin"} target={"_blank"} rel={"noreferrer"}>
+                            <Unicons.UilLinkedin />
+                        </a>
+                    </div>
                 </div>
-                <h3>ADIL AKHTIYAT</h3>
-                <TypeIt
-                options={{
-                    loop:true
-                }}
-                getBeforeInit={(instance) => {
-                    instance
-                        .type("uX designer")
-                        .pause(750)
-                        .delete()
-                        .type("uI designer")
-                        .pause(700)
-                        .delete()
-                        .type("frontend developer")
-                        .pause(400)
-                        .delete()
-                        .type("Streamer")
-                    return instance;
-                }}
-                />
-                <button>
-                    DOWNLOAD CV
-                </button>
             </div>
-        </main>
+        </div>
     );
 }
