@@ -31,7 +31,7 @@ export default function About (props) {
     };
     return (
         <div className="about fixed-right container">
-            <Loader />
+            <Loader time={500}/>
             <Personal personal={aboutData.about.personalInfo}/>
             <Services />
             <Pricing />

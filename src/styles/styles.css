@@ -18,7 +18,6 @@
     --light-white: #F5F5F5;
 }
 body {
-    background-color: transparent;
     color: var(--dark-color);
 }
 .head-page h2 {

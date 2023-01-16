@@ -29,7 +29,7 @@ export default function App () {
   }
   return (
     <>
-      <Loader />
+      <Loader time={500}/>
       <Navigation focus={focusHandler} expand={expandHandler}/>
       {
         page==="home"?<Home/>:

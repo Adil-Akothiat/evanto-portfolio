@@ -10,7 +10,7 @@ export default function Home () {
     return (
         <div className="home fixed-right">
             <div className="center">
-                <Loader />
+                <Loader time={500}/>
                 <BackgroundAnimated />
                 <div className="container pd-4">
                     <div>
