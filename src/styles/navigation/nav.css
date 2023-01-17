@@ -1,8 +1,10 @@
 .navigation {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 70%;
     height: 100%;
-    background-color: var(--nav-fix-bg);
+    background-color: var(--main-color);
     transform: translateX(-100%);
     z-index: 10;
     transition: all 750ms ease;
@@ -43,6 +45,19 @@
     height: 100px;
     border-radius: 50%;
     margin: auto;
+}
+.navigation .open,
+.navigation .not-open {
+    background-color: var(--success-color);
+    width: fit-content;
+    margin: auto;
+    padding: 0 1em;
+    text-transform: capitalize;
+    color: var(--text-white);
+    border-radius: 1em;
+}
+.navigation .not-open {
+    background-color: var(--danger-color);
 }
 @media screen and (min-width: 350px) {
     .navigation .hero img {
@@ -127,6 +142,10 @@
     .navigation .collapse {
         display: none;
     }
+}
+.recent h3 {
+    color: var(--main-color);
+    text-transform: capitalize;
 }
 .recent a {
     text-decoration: none;

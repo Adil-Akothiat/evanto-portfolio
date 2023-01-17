@@ -16,6 +16,8 @@
     --nav-fix-bg: #1f496b;
     --scroll-color: #cecece;
     --light-white: #F5F5F5;
+    --success-color: #3ea347;
+    --danger-color: #f37272;
 }
 body {
     color: var(--dark-color);

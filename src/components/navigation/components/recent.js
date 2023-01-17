@@ -1,20 +1,14 @@
 import React from "react";
 
-export default function Recent () {
+export default function Recent (props) {
     return (
         <div className="recent">
             <div>
-                <h3>Recent Posts</h3>
+                <h3>{props.mainTitle}</h3>
                 <ul>
-                    <li>
-                        <a href={"#post"}>creativity is more than</a>
-                    </li>
-                    <li>
-                        <a href={"#post"}>designing the perfect</a>
-                    </li>
-                    <li>
-                        <a href={"#post"}>by spite about do of allow</a>
-                    </li>
+                    {
+                        props.posts.map((p, i)=> <li key={"link-"+i}><a href={p.link}>{p.title}</a></li>)
+                    }
                 </ul>
             </div>
         </div>
