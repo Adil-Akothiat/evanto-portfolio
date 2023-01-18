@@ -30,6 +30,7 @@
 }
 .navigation .content::-webkit-scrollbar {
     width: .5em;
+    background-color: var(--light-color);
 }
 .navigation .content::-webkit-scrollbar-thumb {
     background-color: var(--scroll-color);
@@ -99,7 +100,7 @@
     color: var(--text-white);
 }
 .navigation .link-pages a:hover::after {
-    opacity: .7;
+    opacity: .6;
 }
 .navigation ul svg,
 .navigation ul span {
@@ -112,7 +113,7 @@
     color: var(--text-white);
 }
 .navigation .link-pages .focus::after {
-    opacity: 1;
+    opacity: .7;
 }
 .navigation .collapse {
     width: 4em;
@@ -154,4 +155,15 @@
 }
 .recent a:hover {
     color: var(--main-color);
+}
+.login {
+    display: flex;
+    justify-content: space-between;
+}
+.login a {
+    text-decoration: none;
+    background-color: var(--main-color);
+    padding: 0 1em;
+    color: var(--text-white);
+    border-radius: 1em;
 }

@@ -66,16 +66,52 @@ export default function Navigation (props) {
                     posts={[
                         {
                             title:"Creativity Is More Than",
-                            link:"#posts"
+                            link:"#post"
                         },
                         {
                             title:"Designing The Perfect",
-                            link:"#posts"
+                            link:"#post"
                         },
                         {
                             title:"By Spite About Do Of Allow",
-                            link:"#posts"
+                            link:"#post"
                         }
+                    ]}
+                />
+                <Recent 
+                    mainTitle="categories"
+                    posts={
+                        [
+                            {
+                                title:"design",
+                                link:"#post"
+                            },
+                            {
+                                title:"frontend",
+                                link:"#post"
+                            }, 
+                            {
+                                title:"backend",
+                                link:"#post"
+                            },
+                            {
+                                title:"problem solving",
+                                link:"#post"
+                            }
+                        ]
+                    }
+                />
+                <Recent 
+                    mainTitle="join us"
+                    posts={[
+                        {
+                            title:"log in",
+                            link:"#login"
+                        },
+                        {
+                            title:"sign in",
+                            link:"#signin"
+                        }, 
                     ]}
                 />
             </div>
