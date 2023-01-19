@@ -3,18 +3,18 @@ import * as Unicons from "@iconscout/react-unicons";
 
 export default function Pricing () {
     return (
-        <div className="pd-4">
-            <div className="head-page">
+        <div>
+            <div className="m-title">
                 <h2>Pricing</h2>
             </div>
-            <div className="body-page cards pricing">
-                <div>
+            <div className="my-grid pricing">
+                <div className="card">
                     <div>
                         <Unicons.UilTelegramAlt />
-                        <h3>basic</h3>
-                        <h4><strong>15 </strong>$/mo</h4>
+                        <h3 className="big-text text-cap fw-b">basic</h3>
+                        <h4><strong className="big-xl-text">15 </strong>$/mo</h4>
                     </div>
-                    <div>
+                    <div className="text-cap">
                         <ul>
                             <li>Page <strong>4</strong></li>
                             <li>theme <strong>20</strong></li>
@@ -23,18 +23,18 @@ export default function Pricing () {
                         </ul>
                     </div>
                     <div>
-                        <a href={"#buy-basic"} role="button">
+                        <a href={"#buy-basic"} role="button" className="btn-primary rounded-sm">
                             buy basic
                         </a>
                     </div>
                 </div>
-                <div>
+                <div className="card">
                     <div>
                         <Unicons.UilRocket />
-                        <h3>pro</h3>
-                        <h4><strong>25 </strong>$/mo</h4>
+                        <h3 className="big-text text-cap fw-b">pro</h3>
+                        <h4><strong className="big-xl-text">25 </strong>$/mo</h4>
                     </div>
-                    <div>
+                    <div className="text-cap">
                         <ul>
                             <li>Page <strong>unlimited</strong></li>
                             <li>theme <strong>20</strong></li>
@@ -43,7 +43,7 @@ export default function Pricing () {
                         </ul>
                     </div>
                     <div>
-                        <a href={"#buy-pro"} role="button">
+                        <a href={"#buy-pro"} role="button" className="btn-primary rounded-sm">
                             buy pro
                         </a>
                     </div>

@@ -13,44 +13,58 @@
     --main-color: #2a68db;
     --dark-color: #3a3a3a;
     --light-color: #dbdbdb;
-    --nav-fix-bg: #1f496b;
     --scroll-color: #a0a0a0;
     --light-white: #F5F5F5;
     --success-color: #3ea347;
     --danger-color: #f37272;
+    --shadow-color: #0000001a;
 }
 body {
     color: var(--dark-color);
 }
-.head-page h2 {
-    font-size: 2em;
-    text-transform: capitalize;
-    color: var(--main-color);
-    position: relative;
-    width: fit-content;
-    margin: .5em 0;
+.main-size  {
+    width: 90%;
+    margin: 3em auto 0 auto;
 }
-.head-page h2::after {
+.my-grid {
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 1.5em;
+    margin: 2em 0;
+}
+@media screen and (max-width: 300px) {
+    .main-size {
+        width: 95%;
+    }
+}
+@media screen and (min-width: 620px) {
+    .main-size {
+        width: 95%;
+    }
+    .my-grid {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.5em;
+    }
+}
+@media screen and (min-width: 850px) {
+    .main-size {
+        width: 90%;
+        margin: 1em auto 0 auto;
+    }
+}
+.m-title {
+    text-transform: uppercase;
+    position: relative; 
+    width: fit-content;
+}
+.m-title::after {
     content: "";
     position: absolute;
-    left: 0;
     bottom: 0;
-    width: 70%;
-    height: 1mm;
-    border-radius: 2em;
-    background-color: var(--main-color); 
-}
-.container {
-    margin-top: 3em;
-    overflow: hidden;
-}
-.pd-4 {
-    padding: 1em;
-}
-@media screen and (min-width: 600px) {
-    .pd-4 {
-        padding: 1em 3em;
-    }
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--main-color);
 }
 @media screen and (min-width: 850px) {
     .fixed-right {
@@ -68,15 +82,123 @@ body {
     .fixed-right::-webkit-scrollbar {
         width: 1mm;
     }
-    .pd-4 {
-        padding: 0 3em;
-    }
-    .container {
-        margin: 0;
-    }
 }
-@media screen and (min-width: 1000px) {
-    .pd-4 {
-        padding: 0em 4em;
-    }
+.rounded-sm {
+    border-radius: 4px;
+}
+.btn-secondary {
+    display: block;
+    width: fit-content;
+    margin: 1em auto;
+    color: var(--main-color);
+    text-decoration: none;
+    border: 1px solid var(--main-color);
+    padding: 0 1em;
+    transition: all .3s linear;
+}
+.btn-secondary:hover {
+    background-color: var(--main-color);
+    color: var(--text-white); 
+}
+.curs-p {
+    cursor: pointer;
+}
+.mr-b-mini {
+    margin-bottom: .5em;
+}
+.mr-b-sm {
+    margin-bottom: 2em;
+}
+.fw-b {
+    font-weight: 800;
+}
+.fw-sm {
+    font-weight: 300;
+}
+.fw-med {
+    font-weight: 400;
+}
+.sm-size {
+    width: 5em;
+    height: 5em;
+}
+.rounded-cir {
+    border-radius: 50%;
+}
+.big-xl-text {
+    font-size: 3em;
+    color: var(--main-color);
+}
+.card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--main-color);
+    transition: opacity .5s linear;
+    z-index: -1;
+    opacity: 0;
+}
+.card:hover::after {
+    opacity: 0.1;
+}
+.btn-primary {
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+    color: var(--text-white);
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    padding: .2em 1em;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    transition: all .3s linear;
+}
+.btn-primary:hover {
+    background-color: var(--text-white);
+    color: var(--main-color);
+}
+.mr-top {
+    margin-top: 1em;
+}
+.big-text {
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: .5em;
+}
+.med-text {
+    font-size: 1.25em;
+    font-weight: 600;
+}
+.sm-text {
+    font-size: .95em;
+    line-height: 1.5;
+}
+.card {
+    padding: 1em;
+    box-shadow: 0 0 10px 0 var(--shadow-color);
+    position: relative;
+    z-index: 1;
+}
+.text-cap {
+    text-transform: capitalize;
+}
+img {
+    object-fit: cover;
+}
+.center {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+li {
+    list-style-type: none;
+}
+.my-sm-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
 }

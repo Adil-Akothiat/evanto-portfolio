@@ -30,12 +30,14 @@ export default function About (props) {
         }
     };
     return (
-        <div className="about fixed-right container">
+        <div className="about fixed-right">
             <Loader time={500}/>
-            <Personal personal={aboutData.about.personalInfo}/>
-            <Services />
-            <Pricing />
-            <Clients view={view} viewMore={viewMoreHandler} clients={aboutData.about.clients}/>
+            <div className="main-size">
+                <Personal personal={aboutData.about.personalInfo}/>
+                <Services />
+                <Pricing />
+                <Clients view={view} viewMore={viewMoreHandler} clients={aboutData.about.clients}/>
+            </div>
         </div>
     );
 } 

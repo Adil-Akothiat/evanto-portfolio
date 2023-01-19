@@ -1,32 +1,38 @@
 import React from "react";
 
 export default function Personal (props) {
+    function getPersonalInfo () {
+        let personal = [];
+        for(let key in props.personal) personal.push({key:key, value:props.personal[key]});
+        return personal;
+    }
     return (
-        <div className="pd-4">
-            <div className="head-page">
+        <div>
+            <div className="m-title">
                 <h2>about me</h2>
             </div>
-            <div className="body-page">
+            <div className="my-grid info">
                 <div>
-                    <p>
-                        {props.personal.description}
-                    </p>
-                    <a href={"#CV"} role="button" id="download-cv">
-                        download cv
-                    </a>
+                    <img src={"https://deterylightmode.netlify.app/static/media/Aboutus.90dda4cec7b8b59ed230.png"} alt="hero"/>
                 </div>
-                <div className="personal-info">
+                <div>
                     <div>
-                        <span>Age</span><span>{props.personal.age} Years</span>
+                        <p>
+                            {props.personal.description}
+                        </p>
                     </div>
                     <div>
-                        <span>Nationality</span><span>{props.personal.nationality}</span>
-                    </div>
-                    <div>
-                        <span>Languages</span><span>{props.personal.languages}</span>
-                    </div>
-                    <div>
-                        <span>Address</span><span>{props.personal.address}</span>
+                        <h3 className="text-cap big-text">personal info</h3>
+                        {
+                            getPersonalInfo().filter(e=> e.key!=="description").map((e, i)=> (
+                                <div key={"key-"+i} className="ds-fl text-cap">
+                                    <strong>{e.key} : </strong><span>{e.value}</span>
+                                </div>
+                            ))
+                        }
+                        <a href={"#CV"} role="button" className="btn-primary mr-top">
+                                download cv
+                        </a>
                     </div>
                 </div>
             </div>

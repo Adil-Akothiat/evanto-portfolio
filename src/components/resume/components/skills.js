@@ -1,21 +1,16 @@
 import React from "react";
-import * as Unicons from "@iconscout/react-unicons";
 import CircleProgressBar from "./CircleProgressBar";
 import LanguageProgress from "./languageProgress";
 
 export default function Skills () {
     return (
-        <div className="pd-4">
-            <div className="head-page">
+        <div>
+            <div className="m-title">
                 <h2>skills</h2>
             </div>
-            <div className="body-page skills">
+            <div className="my-grid skills">
                 <div>
-                    <div className="sk-head">
-                        <Unicons.UilBrowser />
-                        <h4>{"frontend".toUpperCase()}</h4>
-                    </div>
-                    <div className="gr">
+                    <div className="skill">
                         <CircleProgressBar 
                             value={80}
                             skill="javascript"
@@ -35,10 +30,6 @@ export default function Skills () {
                     </div>
                 </div>
                 <div>
-                    <div className="sk-head">
-                        <Unicons.UilLetterEnglishA />
-                        <h4>{"languages".toUpperCase()}</h4>
-                    </div>
                     <div className="languages">
                         < LanguageProgress 
                             language="arabic"

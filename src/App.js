@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import About from "./components/about/about";
 import Home from "./components/home/home";
 import Loader from "./components/loader/loader";
@@ -27,6 +27,17 @@ export default function App () {
   function expandHandler () {
     document.querySelector(".navigation").classList.toggle("expand-nav");
   }
+  // collapse button
+  useEffect(()=> {
+    window.onscroll = ()=> {
+      const collapse = document.querySelector(".collapse");
+      if(window.scrollY>1) {
+        collapse.style.opacity="0.5"
+      }else {
+        collapse.style.opacity="1";
+      }
+    }
+  }, [])
   return (
     <>
       <Loader time={500}/>

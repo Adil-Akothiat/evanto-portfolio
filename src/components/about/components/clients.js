@@ -3,11 +3,11 @@ import ReviewCard from "./reviewCard";
 
 export default function Clients (props) {
     return (
-        <div className="pd-4">
-            <div className="head-page">
+        <div>
+            <div className="m-title">
                 <h2>clients</h2>
             </div>
-            <div className="body-page clients cards">
+            <div className="my-grid clients">
                 {
                     props.clients.map((client, i)=> (
                         <ReviewCard 
@@ -22,7 +22,7 @@ export default function Clients (props) {
                 }
             </div>
             <div className="view-more">
-                <button onClick={props.viewMore}>
+                <button onClick={props.viewMore} className="btn-secondary curs-p text-cap mr-b-sm rounded-sm">
                     {props.view}
                 </button>
             </div>
