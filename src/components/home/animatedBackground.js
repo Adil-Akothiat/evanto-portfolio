@@ -11,7 +11,7 @@ export default function BackgroundAnimated () {
                 id="tsparticles"
                 init={particlesInit}
                 options={{
-                    background: {
+                    background: {   
                         color: {
                             value: "white",
                         },
@@ -47,7 +47,7 @@ export default function BackgroundAnimated () {
                             color: "#b8b8b8",
                             distance: 150,
                             enable: true,
-                            opacity: .5,
+                            opacity: 1,
                             width: 1,
                         },
                         collisions: {
@@ -68,10 +68,10 @@ export default function BackgroundAnimated () {
                                 enable: true,
                                 area: 900,
                             },
-                            value: 100,
+                            value: 30,
                         },
                         opacity: {
-                            value: 0.4,
+                            value: 0.5,
                         },
                         shape: {
                             type: "circle",

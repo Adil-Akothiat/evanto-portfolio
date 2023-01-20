@@ -41,8 +41,8 @@ export default function App () {
     const scrollElements = [...document.querySelectorAll(".scroll")];
     scrollElements.forEach(element=> {
       const {top} = element.getBoundingClientRect();
-      if((positionY+100)>= top) element.classList.remove("hi-sc-ef")
-      else element.classList.add("hi-sc-ef")
+      if((positionY)>= top) element.classList.remove("hi-sc-ef")
+      // else element.classList.add("hi-sc-ef")
     })
   }
   useEffect(()=> {

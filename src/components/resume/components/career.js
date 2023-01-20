@@ -42,17 +42,18 @@ export default function Career (props) {
             <div className="m-title">
                 <h2>education</h2>
             </div>
-            <div className="my-grid education hi-sc-ef scroll">
+            <div className="my-grid education">
                 {
                     props.resume.educations.map((edu, i)=> (
                         <ResumeCard 
-                            key={"experience-"+i}
+                            key={"key-"+i}
                             from={edu.from}
                             to={edu.to}
                             jobTitle={edu.degree}
                             jobPlace={edu.university}
                             description={edu.description}
                             link={edu.link}
+                            class="hi-sc-ef scroll"
                         />
                     ))
                 }
