@@ -10,7 +10,6 @@ import Personal from "./components/personal";
 export default function About (props) {
     const [view, setView] = useState("view more");
     useEffect(()=> {
-        props.setBorders();
         const clients = [...document.querySelector(".clients").children];
         clients.forEach((c, i)=> {
             if(i>1) c.classList.add("hide-client");
@@ -30,7 +29,7 @@ export default function About (props) {
         }
     };
     return (
-        <div className="about fixed-right">
+        <div className="about fixed-right main-scroll" onScroll={props.handleScroll}>
             <Loader time={500}/>
             <div className="main-size">
                 <Personal personal={aboutData.about.personalInfo}/>

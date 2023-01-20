@@ -7,13 +7,6 @@ import Resume from "./components/resume/resume";
 
 export default function App () {
   const [page, setPage] = useState("home");
-  function setBorders () {
-    document.querySelectorAll(".body-page").forEach(e=> {
-        [...e.children].forEach((child, i)=> {
-            if(!((i+1)%2===0)) child.classList.add("border-right");
-        });
-    });
-  }
   function focusHandler (target) {
     document.querySelector(".focus").classList.remove("focus");
     if(target.hasAttribute("src")) {
@@ -38,13 +31,34 @@ export default function App () {
       }
     }
   }, [])
+  function scrollEffect (e, win) {
+    let positionY;
+    if(win) {
+      positionY = window.scrollY;
+    }else {
+      positionY = e.currentTarget.scrollTop;
+    }
+    const scrollElements = [...document.querySelectorAll(".scroll")];
+    scrollElements.forEach(element=> {
+      const {top} = element.getBoundingClientRect();
+      if((positionY+100)>= top) element.classList.remove("hi-sc-ef")
+      else element.classList.add("hi-sc-ef")
+    })
+  }
+  useEffect(()=> {
+    window.onscroll = e=> scrollEffect(e, true);
+  })
   return (
     <>
       <Loader time={500}/>
       <Navigation focus={focusHandler} expand={expandHandler}/>
       {
         page==="home"?<Home/>:
-        page==="about"?<About setBorders={setBorders}/>:<Resume  setBorders={setBorders}/>
+        page==="about"?<About 
+        handleScroll={scrollEffect}
+        />:<Resume  
+        handleScroll={scrollEffect}
+        />
       }
     </>
   );

@@ -10,7 +10,7 @@ export default function Skills () {
             </div>
             <div className="my-grid skills">
                 <div>
-                    <div className="skill">
+                    <div className="skill hi-sc-ef scroll">
                         <CircleProgressBar 
                             value={80}
                             skill="javascript"
@@ -29,7 +29,7 @@ export default function Skills () {
                         />
                     </div>
                 </div>
-                <div>
+                <div className="hi-sc-ef scroll">
                     <div className="languages">
                         < LanguageProgress 
                             language="arabic"

@@ -8,7 +8,7 @@ export default function Pricing () {
                 <h2>Pricing</h2>
             </div>
             <div className="my-grid pricing">
-                <div className="card">
+                <div className="card hi-sc-ef scroll">
                     <div>
                         <Unicons.UilTelegramAlt />
                         <h3 className="big-text text-cap fw-b">basic</h3>
@@ -28,7 +28,7 @@ export default function Pricing () {
                         </a>
                     </div>
                 </div>
-                <div className="card">
+                <div className="card hi-sc-ef scroll">
                     <div>
                         <Unicons.UilRocket />
                         <h3 className="big-text text-cap fw-b">pro</h3>

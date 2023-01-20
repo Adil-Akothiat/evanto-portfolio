@@ -202,3 +202,11 @@ li {
     display: grid;
     grid-template-columns: 50% 50%;
 }
+.hi-sc-ef {
+    opacity: 0;
+    transform: translateY(1em);
+    transition: all .3s linear;   
+}
+.scroll {
+    transition: all .3s linear;
+}

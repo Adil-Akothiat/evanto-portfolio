@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ResumeCard (props) {
     return (
-        <div className="card">
+        <div className={`card ${props.class}`}>
             <span className="line-top"></span>
             <div>
                 <div className="date mr-b-mini">

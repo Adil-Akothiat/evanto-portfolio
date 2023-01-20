@@ -8,7 +8,7 @@ export default function Services () {
                 <h2>my services</h2>
             </div>
             <div className="my-grid services">
-                <div className="card">
+                <div className="card hi-sc-ef scroll">
                     <div>
                         <Unicons.UilPalette />
                         <h3 className="med-text text-cap">web design</h3>
@@ -19,7 +19,7 @@ export default function Services () {
                         </p>
                     </div>
                 </div>
-                <div className="card">
+                <div className="card hi-sc-ef scroll">
                     <div>
                         <Unicons.UilBracketsCurly />
                         <h3 className="med-text text-cap">web development</h3>
@@ -30,7 +30,7 @@ export default function Services () {
                         </p>
                     </div>
                 </div>
-                <div className="card">
+                <div className="card hi-sc-ef scroll">
                     <div>
                         <Unicons.UilApps />
                         <h3 className="med-text text-cap">apps development</h3>
@@ -41,7 +41,7 @@ export default function Services () {
                         </p>
                     </div>
                 </div>
-                <div className="card">
+                <div className="card hi-sc-ef scroll">
                     <div>
                         <Unicons.UilDesktopAlt />
                         <h3 className="med-text text-cap">uX design</h3>
