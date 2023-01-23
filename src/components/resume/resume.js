@@ -11,7 +11,7 @@ export default function Resume (props) {
             <Loader time={500}/>
             <div className="main-size">
                 <Career resume={resumeData.resume}/>
-                <Skills />
+                <Skills resume={resumeData.resume}/>
             </div>
         </div>
     );

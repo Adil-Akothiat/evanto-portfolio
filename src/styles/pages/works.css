@@ -1,0 +1,83 @@
+.works img {
+    width: 100%;
+}
+.filter button {
+    margin-right: 1em;
+}
+.filter .btn-focus {
+    background-color: var(--main-color);
+    color: var(--text-white);
+}
+.work-card {
+    position: relative;
+    line-height: 0;
+    overflow: hidden;
+}
+.work-card >div {
+    position: absolute;
+    top: 0;
+    background-color: var(--sm-darken);
+    backdrop-filter: blur(4px);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity .3s linear; 
+}
+.work-card >div div {
+    position: absolute;
+    color: var(--text-white);
+}
+.work-card img {
+    width: 100%;
+    height: 14em;
+    transition: transform .3s linear;
+}
+.work-card:hover >div {
+    opacity: 1;
+}
+.work-card:hover img {
+    transform: scale(1.05);
+}
+#open-work {
+    line-height: 0;
+    background-color: var(--main-color);
+    color: var(--text-white);
+    padding: .75em;
+    border: none;
+    transition: all .3s linear;
+    position: absolute;
+    left: 50%;transform: translateX(-50%);
+    bottom: 1em;
+}
+#open-work svg {
+    pointer-events: none;
+}
+.work-details {
+    position: absolute;
+    background-color: var(--text-white);
+    width: 100%;
+    height: 100%;
+    z-index: 100; 
+}
+.work-details h5 {
+    font-size: 1.2em;
+}
+.work-details >div {
+    box-shadow: 0 0 10px 0 var(--shadow-color);
+    padding: 2em 1em;
+    border-radius: .5em;
+    position: relative;
+}
+.work-details #close-details {
+    line-height: 0;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    padding: 1em
+}
+.work-details #close-details svg {
+    pointer-events: none;
+}
+.work-details h3 {
+    margin-bottom: 2em;
+}

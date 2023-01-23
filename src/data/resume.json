@@ -67,6 +67,32 @@
                 "description":"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere.",
                 "link":"#education-profile"
             }
+        ],
+        "skills": [
+            {
+                "skill":"web design",
+                "rate":65
+            },
+            {
+                "skill":"javascript",
+                "rate":75
+            },
+            {
+                "skill":"angular js",
+                "rate":60
+            },
+            {
+                "skill":"html/css",
+                "rate":80
+            },
+            {
+                "skill":"react js",
+                "rate":50
+            },
+            {
+                "skill":"bootstrap",
+                "rate":40
+            }
         ]
     }
 }

@@ -4,6 +4,7 @@ import Home from "./components/home/home";
 import Loader from "./components/loader/loader";
 import Navigation from "./components/navigation/navigation";
 import Resume from "./components/resume/resume";
+import Works from "./components/works/works";
 
 export default function App () {
   const [page, setPage] = useState("home");
@@ -20,17 +21,15 @@ export default function App () {
   function expandHandler () {
     document.querySelector(".navigation").classList.toggle("expand-nav");
   }
-  // collapse button
-  useEffect(()=> {
-    window.onscroll = ()=> {
-      const collapse = document.querySelector(".collapse");
-      if(window.scrollY>1) {
-        collapse.style.opacity="0.5"
-      }else {
-        collapse.style.opacity="1";
-      }
+  // decrease collapse button opacity
+  function decrOpacity () {
+    const collapse = document.querySelector(".collapse");
+    if(window.scrollY>1) {
+      collapse.style.opacity="0.5"
+    }else {
+      collapse.style.opacity="1";
     }
-  }, [])
+  }
   function scrollEffect (e, win) {
     let positionY;
     if(win) {
@@ -41,12 +40,14 @@ export default function App () {
     const scrollElements = [...document.querySelectorAll(".scroll")];
     scrollElements.forEach(element=> {
       const {top} = element.getBoundingClientRect();
-      if((positionY)>= top) element.classList.remove("hi-sc-ef")
-      // else element.classList.add("hi-sc-ef")
+      if((positionY)>= top+80) element.classList.remove("hi-sc-ef")
     })
   }
   useEffect(()=> {
-    window.onscroll = e=> scrollEffect(e, true);
+    window.onscroll = e=> {
+      scrollEffect(e, true)
+      decrOpacity();
+    };
   })
   return (
     <>
@@ -56,9 +57,10 @@ export default function App () {
         page==="home"?<Home/>:
         page==="about"?<About 
         handleScroll={scrollEffect}
-        />:<Resume  
+        />:
+        page==="resume"?<Resume 
         handleScroll={scrollEffect}
-        />
+        />:<Works />
       }
     </>
   );

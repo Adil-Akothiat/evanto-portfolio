@@ -10,7 +10,7 @@
 }
 :root {
     --text-white: white;
-    --main-color: #2a68db;
+    --main-color: #037FFF;
     --dark-color: #3a3a3a;
     --light-color: #dbdbdb;
     --scroll-color: #a0a0a0;
@@ -18,6 +18,7 @@
     --success-color: #3ea347;
     --danger-color: #f37272;
     --shadow-color: #0000001a;
+    --sm-darken: rgba(0, 0, 0, .4);
 }
 body {
     color: var(--dark-color);
@@ -89,10 +90,12 @@ body {
 .btn-secondary {
     display: block;
     width: fit-content;
-    margin: 1em auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
     color: var(--main-color);
     text-decoration: none;
     border: 1px solid var(--main-color);
+    background-color: var(--text-white);
     padding: 0 1em;
     transition: all .3s linear;
 }
@@ -164,6 +167,9 @@ body {
 .mr-top {
     margin-top: 1em;
 }
+.mr-top-med {
+    margin-top: 1.5em;
+}
 .big-text {
     font-size: 1.5em;
     font-weight: 600;
@@ -187,6 +193,9 @@ body {
 .text-cap {
     text-transform: capitalize;
 }
+.text-upper {
+    text-transform: uppercase;
+}
 img {
     object-fit: cover;
 }
@@ -209,4 +218,21 @@ li {
 }
 .scroll {
     transition: all .3s linear;
+}
+.ds-fl {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.mr-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+.my-grid-second {
+    display: grid;
+    grid-template-columns: 40% 55%;
+    column-gap: 1em;
+}
+.text-center {
+    text-align: center;
 }

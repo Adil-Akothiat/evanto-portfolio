@@ -24,11 +24,21 @@ export default function Personal (props) {
                     <div>
                         <h3 className="text-cap big-text">personal info</h3>
                         {
-                            getPersonalInfo().filter(e=> e.key!=="description").map((e, i)=> (
-                                <div key={"key-"+i} className="ds-fl text-cap">
-                                    <strong>{e.key} : </strong><span>{e.value}</span>
-                                </div>
-                            ))
+                            getPersonalInfo().filter(e=> e.key!=="description").map((e, i)=> {
+                                if(e.key!=="email") {
+                                    return (
+                                        <div key={"key-"+i} className="ds-fl text-cap">
+                                            <strong>{e.key} : </strong><span>{e.value}</span>
+                                        </div>
+                                    );
+                                }else {
+                                    return (
+                                        <div key={"key-"+i} className="ds-fl">
+                                            <strong className="text-cap">{e.key} : </strong><span>{e.value}</span>
+                                        </div>
+                                    );
+                                }
+                            })
                         }
                         <a href={"#CV"} role="button" className="btn-primary mr-top">
                                 download cv

@@ -2,34 +2,21 @@ import React from "react";
 import CircleProgressBar from "./CircleProgressBar";
 import LanguageProgress from "./languageProgress";
 
-export default function Skills () {
+export default function Skills (props) {
     return (
         <div>
             <div className="m-title">
                 <h2>skills</h2>
             </div>
             <div className="my-grid skills">
-                <div>
+                <div className="card">
                     <div className="skill hi-sc-ef scroll">
-                        <CircleProgressBar 
-                            value={80}
-                            skill="javascript"
-                        />
-                        <CircleProgressBar 
-                            value={90}
-                            skill="javascript"
-                        />
-                        <CircleProgressBar 
-                            value={45}
-                            skill="javascript"
-                        />
-                        <CircleProgressBar 
-                            value={25}
-                            skill="javascript"
-                        />
+                        {
+                            props.resume.skills.map((s, i)=> <CircleProgressBar key={"key-"+i} value={s.rate} skill={s.skill}/>)
+                        }
                     </div>
                 </div>
-                <div className="hi-sc-ef scroll">
+                <div className="hi-sc-ef scroll card">
                     <div className="languages">
                         < LanguageProgress 
                             language="arabic"

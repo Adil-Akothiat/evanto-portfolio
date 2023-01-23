@@ -52,6 +52,28 @@ export default function Services () {
                         </p>
                     </div>
                 </div>
+                <div className="card hi-sc-ef scroll">
+                    <div>
+                        <Unicons.UilAnalytics />
+                        <h3 className="med-text text-cap">business analysis</h3>
+                    </div>
+                    <div>
+                        <p className="sm-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.
+                        </p>
+                    </div>
+                </div>
+                <div className="card hi-sc-ef scroll">
+                    <div>
+                        <Unicons.UilMegaphone />
+                        <h3 className="med-text text-cap">sEO marketing</h3>
+                    </div>
+                    <div>
+                        <p className="sm-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     );

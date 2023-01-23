@@ -22,7 +22,7 @@ export default function Clients (props) {
                 }
             </div>
             <div className="view-more">
-                <button onClick={props.viewMore} className="btn-secondary curs-p text-cap mr-b-sm rounded-sm">
+                <button onClick={props.viewMore} className="btn-secondary curs-p text-cap mr-b-sm rounded-sm mr-auto">
                     {props.view}
                 </button>
             </div>

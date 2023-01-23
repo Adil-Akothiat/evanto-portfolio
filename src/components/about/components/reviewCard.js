@@ -15,7 +15,7 @@ export default function ReviewCard (props) {
                 <p className="sm-text">{props.review}</p>
             </div>
             <div>
-                <a href={props.link} role={"button"} className="btn-secondary text-cap rounded-sm">
+                <a href={props.link} role={"button"} className="btn-secondary text-cap rounded-sm mr-auto">
                     watch review
                 </a>
             </div>
