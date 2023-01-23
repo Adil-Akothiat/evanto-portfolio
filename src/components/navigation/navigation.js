@@ -5,7 +5,7 @@ import Recent from "./components/recent";
 import openToWork from "../../data/openToWork.json";
 
 export default function Navigation (props) {
-    const [open, isOpen] = useState(false);
+    const [open, setOpen] = useState(false);
     function focus ({target}) {
         props.focus(target);
         props.expand();
@@ -119,8 +119,8 @@ export default function Navigation (props) {
                 className="collapse" 
                 role="menubar"
                 onClick={()=> {
-                    open?isOpen(false):isOpen(true);
-                    props.expand();
+                    open?setOpen(false):setOpen(true);
+                    props.expand()
                 }}
                 >
                 {

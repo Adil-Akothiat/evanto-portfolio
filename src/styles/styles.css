@@ -155,7 +155,6 @@ body {
     background-color: var(--main-color);
     border: 1px solid var(--main-color);
     padding: .2em 1em;
-    text-transform: uppercase;
     position: relative;
     z-index: 1;
     transition: all .3s linear;
@@ -169,6 +168,9 @@ body {
 }
 .mr-top-med {
     margin-top: 1.5em;
+}
+.mr-top-l {
+    margin-top: 2em;
 }
 .big-text {
     font-size: 1.5em;
@@ -224,15 +226,32 @@ li {
     align-items: center;
     flex-wrap: wrap;
 }
+.mr-lf-sm {
+    margin-left: .75em;
+}
 .mr-auto {
     margin-left: auto;
     margin-right: auto;
 }
-.my-grid-second {
-    display: grid;
-    grid-template-columns: 40% 55%;
-    column-gap: 1em;
-}
 .text-center {
     text-align: center;
+}
+.btn-danger,
+.btn-success {
+    border: none;
+    padding: .1em .75em;
+    text-decoration: none;
+    color: var(--text-white);
+    opacity: .75;
+    transition: opacity .3s linear;
+}
+.btn-danger {
+    background-color: var(--danger-color);
+}
+.btn-success {
+    background-color: var(--success-color);
+}
+.btn-danger:hover,
+.btn-success:hover {
+    opacity: 1;
 }

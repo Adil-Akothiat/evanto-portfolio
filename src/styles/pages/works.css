@@ -54,7 +54,9 @@
 }
 .work-details {
     position: absolute;
-    background-color: var(--text-white);
+    top: 0;
+    left: 0;
+    background-color: var(--dark-color);
     width: 100%;
     height: 100%;
     z-index: 100; 
@@ -63,6 +65,7 @@
     font-size: 1.2em;
 }
 .work-details >div {
+    background-color: var(--light-white);
     box-shadow: 0 0 10px 0 var(--shadow-color);
     padding: 2em 1em;
     border-radius: .5em;
@@ -73,11 +76,29 @@
     position: absolute;
     top: 1em;
     right: 1em;
-    padding: 1em
+    padding: .5em;
 }
 .work-details #close-details svg {
     pointer-events: none;
 }
 .work-details h3 {
     margin-bottom: 2em;
+}
+.my-grid-second {
+    display: grid;
+    grid-template-columns: 40% 55%;
+    column-gap: 2em;
+}
+.work-d >div {
+    border-bottom: 1px solid var(--light-color);
+    padding: .5em 0;
+}
+.work-d >div:last-child {
+    border-bottom: none;
+}
+@media screen and (max-width: 600px) {
+    .my-grid-second {
+        grid-template-columns: 100%;
+        row-gap: 1em;
+    }
 }
