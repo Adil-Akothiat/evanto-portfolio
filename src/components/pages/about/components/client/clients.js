@@ -5,7 +5,7 @@ export default function Clients (props) {
     return (
         <div>
             <div className="m-title">
-                <h2>clients</h2>
+                <h2 className="fw-normal">clients</h2>
             </div>
             <div className="my-grid clients">
                 {
@@ -22,7 +22,7 @@ export default function Clients (props) {
                 }
             </div>
             <div className="view-more">
-                <button onClick={props.viewMore} className="btn-secondary curs-p text-cap mr-b-sm rounded-sm mr-auto">
+                <button onClick={props.viewMore} className="my-own-btn text-capitalize rounded mx-auto mb-5">
                     {props.view}
                 </button>
             </div>

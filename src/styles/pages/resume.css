@@ -1,3 +1,7 @@
+.resume * {
+    margin: 0;
+    padding: 0; 
+}
 .experience >div,
 .education >div {
     position: relative; 
@@ -32,6 +36,7 @@
 }
 .skills .progressbar-content {
     width: fit-content;
+    margin: auto;
 }
 .skills .progressbar {
     position: relative;
@@ -57,15 +62,12 @@
     transform: translate(-50%, -50%);
     text-align: center;
 }
-.skills .progressbar-content h4 {
+.skills .progressbar-content h5 {
     text-align: center;
     color: var(--main-color);
-    font-weight: 600;
-    text-transform: capitalize;
 }
-.skills .progress-text h5 {
+.skills .progress-text h6 {
     font-size: 1.5em;
-    font-weight: 500;
 }
 .resume .gr {
     display: grid;
@@ -122,14 +124,9 @@
     row-gap: 1.5em;
     column-gap: 1.5em;
 }
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 500px) {
     .resume .skill {
         grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media screen and (max-width: 500px) {
-    .skills .progressbar-content {
-        margin: auto;
     }
 }
 @media screen and (max-width: 300px)  {

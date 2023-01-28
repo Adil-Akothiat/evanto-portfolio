@@ -35,10 +35,10 @@ export default function CircleProgressBar (props) {
                     <circle r="50" cx="60" cy="60" className="progress" style={{strokeDasharray:strokeArray, strokeDashoffset: strokeOffset}}/>
                 </svg>
                 <div className="progress-text">
-                    <h5>{rate}%</h5>
+                    <h6 className="fw-normal">{rate}%</h6>
                 </div>
             </div>
-            <h4>{props.skill}</h4>
+            <h5 className="text-capitalize fw-light mt-2">{props.skill}</h5>
         </div>
     );
 }

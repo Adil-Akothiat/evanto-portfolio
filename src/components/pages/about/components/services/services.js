@@ -4,72 +4,72 @@ import * as Unicons from "@iconscout/react-unicons";
 export default function Services () {
     return (
         <div>
-            <div className="m-title">
-                <h2>my services</h2>
+            <div className="m-title mb-5">
+                <h2 className="fw-normal">my services</h2>
             </div>
             <div className="my-grid services">
-                <div className="card hi-sc-ef scroll">
-                    <div>
+                <div className="my-card hi-sc-ef scroll">
+                    <div className="mb-3">
                         <Unicons.UilPalette />
-                        <h3 className="med-text text-cap">web design</h3>
+                        <h5 className="fw-normal text-capitalize">web design</h5>
                     </div>
                     <div>
-                        <p className="sm-text">
+                        <p className="fw-light">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.
                         </p>
                     </div>
                 </div>
-                <div className="card hi-sc-ef scroll">
-                    <div>
+                <div className="my-card hi-sc-ef scroll">
+                    <div className="mb-3">
                         <Unicons.UilBracketsCurly />
-                        <h3 className="med-text text-cap">web development</h3>
+                        <h5 className="fw-normal text-capitalize">web development</h5>
                     </div>
                     <div>
-                        <p className="sm-text">
+                        <p className="fw-light">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.
                         </p>
                     </div>
                 </div>
-                <div className="card hi-sc-ef scroll">
-                    <div>
+                <div className="my-card hi-sc-ef scroll">
+                    <div className="mb-3">
                         <Unicons.UilApps />
-                        <h3 className="med-text text-cap">apps development</h3>
+                        <h5 className="fw-normal text-capitalize">apps development</h5>
                     </div>
                     <div>
-                        <p className="sm-text">
+                        <p className="fw-light">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.
                         </p>
                     </div>
                 </div>
-                <div className="card hi-sc-ef scroll">
-                    <div>
+                <div className="my-card hi-sc-ef scroll">
+                    <div className="mb-3">
                         <Unicons.UilDesktopAlt />
-                        <h3 className="med-text text-cap">uX design</h3>
+                        <h5 className="fw-normal text-capitalize">uX design</h5>
                     </div>
                     <div>
-                        <p className="sm-text">
+                        <p className="fw-light">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.
                         </p>
                     </div>
                 </div>
-                <div className="card hi-sc-ef scroll">
-                    <div>
+                <div className="my-card hi-sc-ef scroll">
+                    <div className="mb-3">
                         <Unicons.UilAnalytics />
-                        <h3 className="med-text text-cap">business analysis</h3>
+                        <h5 className="fw-normal text-capitalize">business analysis</h5>
                     </div>
                     <div>
-                        <p className="sm-text">
+                        <p className="fw-light">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.
                         </p>
                     </div>
                 </div>
-                <div className="card hi-sc-ef scroll">
-                    <div>
+                <div className="my-card hi-sc-ef scroll">
+                    <div className="mb-3">
                         <Unicons.UilMegaphone />
-                        <h3 className="med-text text-cap">sEO marketing</h3>
+                        <h5 className="fw-normal text-capitalize">sEO marketing</h5>
                     </div>
                     <div>
-                        <p className="sm-text">
+                        <p className="fw-light">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.
                         </p>
                     </div>

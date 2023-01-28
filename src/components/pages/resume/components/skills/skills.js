@@ -5,18 +5,18 @@ import LanguageProgress from "./languageProgress";
 export default function Skills (props) {
     return (
         <div>
-            <div className="m-title">
-                <h2>skills</h2>
+            <div className="m-title mb-5">
+                <h2 className="fw-normal">skills</h2>
             </div>
             <div className="my-grid skills">
-                <div className="card">
+                <div className="my-card">
                     <div className="skill hi-sc-ef scroll">
                         {
                             props.resume.skills.map((s, i)=> <CircleProgressBar key={"key-"+i} value={s.rate} skill={s.skill}/>)
                         }
                     </div>
                 </div>
-                <div className="hi-sc-ef scroll card">
+                <div className="hi-sc-ef scroll my-card" style={{height:"fit-content"}}>
                     <div className="languages">
                         < LanguageProgress 
                             language="arabic"

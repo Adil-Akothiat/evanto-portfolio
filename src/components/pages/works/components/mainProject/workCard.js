@@ -1,0 +1,24 @@
+import React from "react";
+import * as Unicons from "@iconscout/react-unicons";
+
+export default function WorkCard (props) {
+    return (
+        <div className="work-card rounded">
+            <img className="rounded" src={props.src} alt={props.title}/>
+            <div>
+                <button 
+                    className="open-work rounded" 
+                    onClick={props.handleClick} 
+                    data-id={props.id}
+                >
+                    <Unicons.UilPlus />
+                </button>
+                <div className="translate-middle top-50 start-50">
+                    <h4 className="text-capitalize fw-normal">
+                        {props.title}
+                    </h4>
+                </div>
+            </div>
+        </div>
+    );
+}

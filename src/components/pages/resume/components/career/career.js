@@ -4,8 +4,8 @@ import ResumeCard from "./resumeCard";
 export default function Career (props) {
     return (
         <>  
-            <div className="m-title">
-                <h2>experience</h2>
+            <div className="m-title mb-5">
+                <h2 className="fw-normal">experience</h2>
             </div>
             <div className="my-grid experience">
                 {
@@ -39,8 +39,8 @@ export default function Career (props) {
                     })
                 }
             </div>
-            <div className="m-title">
-                <h2>education</h2>
+            <div className="m-title mb-5">
+                <h2 className="fw-normal">education</h2>
             </div>
             <div className="my-grid education">
                 {

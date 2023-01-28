@@ -2,7 +2,17 @@
     width: 100%;
 }
 .filter button {
-    margin-right: 1em;
+    background-color: var(--text-white);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    padding: .25em 1em;
+    margin-right: .5em;
+    border-radius: .18em;
+    transition: all .3s linear; 
+}
+.filter button:hover {
+    background-color: var(--main-color);
+    color: var(--text-white);
 }
 .filter .btn-focus {
     background-color: var(--main-color);
@@ -29,7 +39,7 @@
 }
 .work-card img {
     width: 100%;
-    height: 14em;
+    height: 15em;
     transition: transform .3s linear;
 }
 .work-card:hover >div {
@@ -38,7 +48,7 @@
 .work-card:hover img {
     transform: scale(1.05);
 }
-#open-work {
+.open-work {
     line-height: 0;
     background-color: var(--main-color);
     color: var(--text-white);
@@ -49,8 +59,12 @@
     left: 50%;transform: translateX(-50%);
     bottom: 1em;
 }
-#open-work svg {
+.open-work svg {
     pointer-events: none;
+}
+/* work details */
+.work-details .main-bg {
+    background-color: var(--main-color) !important;
 }
 .work-details {
     position: absolute;
@@ -81,24 +95,61 @@
 .work-details #close-details svg {
     pointer-events: none;
 }
-.work-details h3 {
-    margin-bottom: 2em;
-}
 .my-grid-second {
     display: grid;
-    grid-template-columns: 40% 55%;
+    grid-template-columns: 55% 40%;
     column-gap: 2em;
-}
-.work-d >div {
-    border-bottom: 1px solid var(--light-color);
-    padding: .5em 0;
-}
-.work-d >div:last-child {
-    border-bottom: none;
 }
 @media screen and (max-width: 600px) {
     .my-grid-second {
         grid-template-columns: 100%;
         row-gap: 1em;
     }
+}
+#content-gallery {
+    position: relative;
+    height: 20em;
+    overflow: hidden;
+    line-height: 0;
+}
+#content-gallery img {
+    position: absolute;
+    height: 100%;
+    transition: opacity .3s linear;
+}
+.gallery button {
+    background-color: var(--main-color);
+    color: var(--text-white); 
+    padding: .3em .5em;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1; 
+    opacity: 0.5;
+    transition: opacity .3s linear;
+}
+.gallery button:hover {
+    opacity: 1; 
+}
+.work-d svg {
+    color: var(--main-color);
+}
+.work-d span {
+    margin-left: .5em;
+}
+.work-d a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+.stack span{
+    margin-right: .4em;
+    padding: .2em .75em;
+    background-color: var(--light-color);
+}
+.hide {
+    opacity: 0;
+}
+.show {
+    opacity: 1  ;
 }

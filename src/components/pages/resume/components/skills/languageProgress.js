@@ -16,8 +16,8 @@ export default function LanguageProgress (props) {
     return (
         <div>
             <div>
-                <h4>{props.language}</h4>
-                <h6>{props.description}</h6>
+                <h4 className="fw-normal mb-1">{props.language}</h4>
+                <h6 className="fw-light">{props.description}</h6>
             </div>
             <div className="rate-language">
                 {

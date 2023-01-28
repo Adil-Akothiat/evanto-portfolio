@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from "react";
-import About from "./components/about/about";
-import Home from "./components/home/home";
+import About from "./components/pages/about/about";
+import Home from "./components/pages/home/home";
 import Loader from "./components/loader/loader";
 import Navigation from "./components/navigation/navigation";
-import Resume from "./components/resume/resume";
-import Works from "./components/works/works";
+import Resume from "./components/pages/resume/resume";
+import Works from "./components/pages/works/works";
 
 export default function App () {
   const [page, setPage] = useState("home");
@@ -23,7 +23,7 @@ export default function App () {
   }
   // decrease collapse button opacity
   function decrOpacity () {
-    const collapse = document.querySelector(".collapse");
+    const collapse = document.querySelector(".my-collapse");
     if(window.scrollY>1) {
       collapse.style.opacity="0.5"
     }else {

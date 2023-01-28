@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from "react";
-import "../../styles/pages/about.css";
-import Loader from "../loader/loader";
-import Clients from "./components/clients";
-import Pricing from "./components/pricing";
-import Services from "./components/services";
-import aboutData from "../../data/about.json";
-import Personal from "./components/personal";
+import "../../../styles/pages/about.css";
+import Loader from "../../loader/loader";
+import Clients from "./components/client/clients";
+import Pricing from "./components/pricing/pricing";
+import Services from "./components/services/services";
+import aboutData from "../../../data/about.json";
+import SelfPresentation from "./components/selfPresent/selfPresent";
 
 export default function About (props) {
     const [view, setView] = useState("view more");
@@ -32,7 +32,7 @@ export default function About (props) {
         <div className="about fixed-right main-scroll" onScroll={props.handleScroll}>
             <Loader time={500}/>
             <div className="main-size">
-                <Personal personal={aboutData.about.personalInfo}/>
+                <SelfPresentation about={aboutData.about}/>
                 <Services />
                 <Pricing />
                 <Clients view={view} viewMore={viewMoreHandler} clients={aboutData.about.clients}/>

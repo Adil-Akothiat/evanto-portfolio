@@ -2,7 +2,6 @@ import React, {useState} from "react";
 import * as Unicons from "@iconscout/react-unicons";
 import "../../styles/navigation/nav.css";
 import Recent from "./components/recent";
-import openToWork from "../../data/openToWork.json";
 
 export default function Navigation (props) {
     const [open, setOpen] = useState(false);
@@ -13,16 +12,13 @@ export default function Navigation (props) {
     return (
         <div className="navigation">
             <div className="content">
-                <div className="hero">
+                <div className="p-3 hero mx-auto">
                     <a href={"#/"} onClick={focus}>
                         <img src={"https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"} alt="adil khayt"/>
                     </a>
-                    {
-                        openToWork.open?<h5 className="open">available for work</h5>:<h5 className="not-open">unavailable for work</h5>
-                    }
                 </div>
-                <div>
-                    <ul className="link-pages">
+                <div className="p-3">
+                    <ul className="link-pages px-0 m-0">
                         <li>
                             <a className="focus" href={"#/"} onClick={focus} id="home">
                                 <Unicons.UilEstate />
@@ -116,7 +112,7 @@ export default function Navigation (props) {
                 />
             </div>
             <button 
-                className="collapse" 
+                className="my-collapse" 
                 role="menubar"
                 onClick={()=> {
                     open?setOpen(false):setOpen(true);

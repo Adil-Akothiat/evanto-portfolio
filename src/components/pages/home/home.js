@@ -1,10 +1,10 @@
 import React from "react";
-import "../../styles/pages/home.css";
+import "../../../styles/pages/home.css";
 import TypeIt from "typeit-react";
 import * as Unicons from "@iconscout/react-unicons";
 import BackgroundAnimated from "./animatedBackground";
-import Loader from "../loader/loader";
-import homeData from "../../data/home.json";
+import Loader from "../../loader/loader";
+import homeData from "../../../data/home.json";
 
 export default function Home () {
     return (
@@ -12,7 +12,7 @@ export default function Home () {
             <div className="center">
                 <Loader time={500}/>
                 <BackgroundAnimated />
-                <div className="container pd-4">
+                <div className="home-size">
                     <div>
                         <div className="presentation">
                             <TypeIt
