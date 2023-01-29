@@ -10,6 +10,7 @@ export default function Works () {
     const [details, setDetails] = useState({status: false});
     function openProject ({target}) {
         // display none of the navigation 
+        window.scrollTo(0, 0)
         if(window.innerWidth<850) {
             document.querySelector(".navigation").style.display="none";
         }

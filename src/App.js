@@ -9,6 +9,7 @@ import Works from "./components/pages/works/works";
 export default function App () {
   const [page, setPage] = useState("home");
   function focusHandler (target) {
+    window.scrollTo(0, 0);
     document.querySelector(".focus").classList.remove("focus");
     if(target.hasAttribute("src")) {
       document.getElementById("home").classList.add("focus");
