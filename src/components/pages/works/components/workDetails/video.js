@@ -12,17 +12,26 @@ export default function Video (props) {
         }
         return newUrl;
     }
+    function getPlayer () {
+        let player;
+        if(props.src.split(".").includes("https://vimeo")) {
+            player = "https://player.vimeo.com/video";
+        }else {
+            player = "https://www.youtube.com/embed"
+        }
+        return player;
+    }
     return (
-        <div>
-        <iframe
-            style={{width:"100%"}}
-            className="rounded"
-            height="400"
-            src={`https://www.youtube.com/embed/${getUrl()}`}
-            title="Youtube Player"
-            frameBorder="0"
-            allowFullScreen
-        />
+        <div className="video-player">
+            <iframe
+                style={{width:"100%"}}
+                className="rounded"
+                height="400"
+                src={`${getPlayer()}/${getUrl()}`}
+                title="Youtube Player"
+                frameBorder="0"
+                allowFullScreen
+            />
         </div>
     );
 }

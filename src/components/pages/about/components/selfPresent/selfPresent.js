@@ -11,10 +11,10 @@ export default function SelfPresentation (props) {
             <div className="m-title mb-5">
                 <h2 className="fw-normal">about me</h2>
             </div>
-            <div className="my-grid info">
-                <div>
+            <div className="my-grid info align-items-center">
+                <div className="order-2">
                     <img 
-                        className="w-100 rounded"
+                        className="img-fluid rounded w-100"
                         src={"https://deterylightmode.netlify.app/static/media/Aboutus.90dda4cec7b8b59ed230.png"} 
                         alt="hero"
                     />

@@ -32,7 +32,7 @@ export default function ImageGallery (props) {
                 props.details.images.map((img, i)=> (
                     <img 
                         key={"key-"+i}
-                        className={i===0?"rounded position-absolute hide show":"rounded hide"}
+                        className={i===0?"rounded position-absolute hide show img-fluid":"rounded hide"}
                         src={img}
                         alt={props.title}
                     />

@@ -11,13 +11,13 @@ export default function Filter () {
             <div className="m-title mb-5">
                 <h2 className="fw-normal">my portfolio</h2>
             </div>
-            <div className="d-flex align-items-center categories">
+            <div className="d-flex flex-wrap align-items-center categories">
                 {
                     categories.map((c, i)=> (
                         <button 
                             onClick={focus}
                             key={"key-"+i}
-                            className={i===0?"text-capitalize btn-focus":"text-capitalize"}
+                            className={i===0?"text-capitalize btn-focus mb-2":"text-capitalize mb-2"}
                         >{c}</button>
                     ))
                 }
