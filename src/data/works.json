@@ -8,6 +8,7 @@
                 "client":"Client Name",
                 "link":"www.project-site.com",
                 "technologies": ["java", "javascript", "css"],
+                "category": "web development",
                 "date":"2023-01-24",
                 "images":["https://images.unsplash.com/photo-1580894894513-541e068a3e2b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80", "https://images.unsplash.com/photo-1580894908361-967195033215?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"],
                 "source":"https://youtu.be/6AYVlq4RU_A"
@@ -22,7 +23,8 @@
             "details": {
                 "client":"jackson sophat",
                 "link":"www.project-site.com",
-                "technologies":["sass", "html", "javascript", "express.js"], 
+                "technologies":["sass", "html", "javascript", "express.js"],
+                "category":"web design",
                 "date":"2023-01-27",
                 "images":["https://images.unsplash.com/photo-1667946702545-9ac106a21261?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80","https://images.unsplash.com/photo-1667946702484-3632234dfcb8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80","https://images.unsplash.com/photo-1667946702464-307113568dcf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"],
                 "source":"https://vimeo.com/97102654"

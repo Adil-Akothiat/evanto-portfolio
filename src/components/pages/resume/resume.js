@@ -7,7 +7,7 @@ import Skills from "./components/skills/skills";
 
 export default function Resume (props) {
     return (
-        <div className="resume fixed-right" onScroll={props.handleScroll}>
+        <div className="resume fixed-right test" onScroll={props.handleScroll} id="resume">
             <Loader time={500}/>
             <div className="main-size">
                 <Career resume={resumeData.resume}/>

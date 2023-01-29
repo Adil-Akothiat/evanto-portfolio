@@ -9,6 +9,10 @@ export default function Works () {
     const [works, setWorks]=  useState([]);
     const [details, setDetails] = useState({status: false});
     function openProject ({target}) {
+        // display none of the navigation 
+        if(window.innerWidth<850) {
+            document.querySelector(".navigation").style.display="none";
+        }
         const detailsStatus = {
             id: target.dataset.id,
             status: true,
@@ -16,6 +20,10 @@ export default function Works () {
         setDetails(detailsStatus);
     }
     function closeProject () {
+        // display none of the navigation 
+        if(window.innerWidth<850) {
+            document.querySelector(".navigation").style.display="block";
+        }
         setDetails({status: false});
     }
     function generateDataWithId (dataParams, array=[]) {

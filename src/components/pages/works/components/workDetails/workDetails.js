@@ -34,6 +34,9 @@ export default function WorkDetails (props) {
                                 <Unicons.UilGlobe /><span className="fw-light ml-2"><a href={props.details.link}>{props.details.link}</a></span>
                             </div>
                             <div className="d-flex mb-2">
+                                <Unicons.UilApps /><span className="fw-light ml-2 text-capitalize">{props.details.category}</span>
+                            </div>
+                            <div className="d-flex mb-2">
                                 <Unicons.UilCalendarAlt /><span className="fw-light ml-2">{props.details.date}</span>
                             </div>
                         </div>

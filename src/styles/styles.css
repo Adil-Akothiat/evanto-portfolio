@@ -98,6 +98,11 @@ body {
         background-color: var(--light-color);
     }
 }
+@media screen and (min-width: 1550px) {
+    .main-size {
+        width: 1000px;
+    }
+}
 .my-card::after {
     content: "";
     position: absolute;

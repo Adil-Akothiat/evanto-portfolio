@@ -9,34 +9,17 @@ export default function Career (props) {
             </div>
             <div className="my-grid experience">
                 {
-                    props.resume.experiences.map((exp, i)=> {
-                        if(i===0 || i===1) {
-                            return (
-                                <ResumeCard 
-                                    key={"experience-"+i}
-                                    from={exp.from}
-                                    to={exp.to}
-                                    jobTitle={exp.job}
-                                    jobPlace={exp.company}
-                                    description={exp.description}
-                                    link={exp.link}
-                                />
-                            );
-                        }else {
-                            return (
-                                <ResumeCard 
-                                    key={"experience-"+i}
-                                    from={exp.from}
-                                    to={exp.to}
-                                    jobTitle={exp.job}
-                                    jobPlace={exp.company}
-                                    description={exp.description}
-                                    link={exp.link}
-                                    class="hi-sc-ef scroll"
-                                />
-                            );
-                        }
-                    })
+                    props.resume.experiences.map((exp, i)=> (
+                        <ResumeCard 
+                            key={"experience-"+i}
+                            from={exp.from}
+                            to={exp.to}
+                            jobTitle={exp.job}
+                            jobPlace={exp.company}
+                            description={exp.description}
+                            link={exp.link}
+                        />
+                    ))
                 }
             </div>
             <div className="m-title mb-5">
@@ -53,7 +36,6 @@ export default function Career (props) {
                             jobPlace={edu.university}
                             description={edu.description}
                             link={edu.link}
-                            class="hi-sc-ef scroll"
                         />
                     ))
                 }

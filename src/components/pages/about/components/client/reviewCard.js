@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ReviewCard (props) {
     return (
-        <div className="my-card hi-sc-ef scroll">
+        <div className="my-card">
             <div>
                 <img 
                     src={props.image} 

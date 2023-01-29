@@ -59,3 +59,18 @@
     color: var(--main-color);
     font-size: 24px;
 }
+@media screen and (max-width: 1250px) {
+    .hero-img img {
+        height: 28em;
+    }
+}
+@media screen and (max-width: 1150px) {
+    .hero-img img {
+        height: 27em;
+    }
+}
+@media screen and (max-width: 620px) {
+    .hero-img img {
+        height: auto;
+    }
+}
