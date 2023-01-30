@@ -1,4 +1,4 @@
-.works img {
+.portfolio img {
     width: 100%;
 }
 .filter button {
@@ -18,12 +18,18 @@
     background-color: var(--main-color);
     color: var(--text-white);
 }
-.work-card {
+.filter input { 
+    padding: .25em 1em;
+    border: 1px solid var(--main-color);
+    caret-color: var(--main-color);
+    margin-right: .5em;
+}
+.project-card {
     position: relative;
     line-height: 0;
     overflow: hidden;
 }
-.work-card >div {
+.project-card >div {
     position: absolute;
     top: 0;
     background-color: var(--sm-darken);
@@ -33,22 +39,22 @@
     opacity: 0;
     transition: opacity .3s linear;
 }
-.work-card >div div {
+.project-card >div div {
     position: absolute;
     color: var(--text-white);
 }
-.work-card img {
+.project-card img {
     width: 100%;
     height: 15em;
     transition: transform .3s linear;
 }
-.work-card:hover >div {
+.project-card:hover >div {
     opacity: 1;
 }
-.work-card:hover img {
+.project-card:hover img {
     transform: scale(1.05);
 }
-.open-work {
+.open-project {
     line-height: 0;
     background-color: var(--main-color);
     color: var(--text-white);
@@ -59,14 +65,14 @@
     left: 50%;transform: translateX(-50%);
     bottom: 1em;
 }
-.open-work svg {
+.open-project svg {
     pointer-events: none;
 }
-/* work details */
-.work-details .main-bg {
+/* project details */
+.project-details .main-bg {
     background-color: var(--main-color) !important;
 }
-.work-details {
+.project-details {
     position: absolute;
     top: 0;
     left: 0;
@@ -75,24 +81,24 @@
     height: 100%;
     z-index: 100; 
 }
-.work-details h5 {
+.project-details h5 {
     font-size: 1.2em;
 }
-.work-details >div {
+.project-details >div {
     background-color: var(--light-white);
     box-shadow: 0 0 10px 0 var(--shadow-color);
     padding: 2em 1em;
     border-radius: .5em;
     position: relative;
 }
-.work-details #close-details {
+.project-details #close-details {
     line-height: 0;
     position: absolute;
     top: 1em;
     right: 1em;
     padding: .5em;
 }
-.work-details #close-details svg {
+.project-details #close-details svg {
     pointer-events: none;
 }
 .my-grid-second {
@@ -157,13 +163,13 @@
 .gallery button:hover {
     opacity: 1; 
 }
-.work-d svg {
+.detail svg {
     color: var(--main-color);
 }
-.work-d span {
+.detail span {
     margin-left: .5em;
 }
-.work-d a {
+.detail a {
     color: var(--main-color);
     text-decoration: none;
 }

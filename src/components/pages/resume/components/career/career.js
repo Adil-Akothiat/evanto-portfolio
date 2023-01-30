@@ -4,6 +4,9 @@ import ResumeCard from "./resumeCard";
 export default function Career (props) {
     return (
         <>  
+            <div className="m-title m-title-top mb-5">
+                <h2 className="fw-normal text-main">my resume</h2>
+            </div>
             <div className="m-title mb-5">
                 <h2 className="fw-normal">experience</h2>
             </div>

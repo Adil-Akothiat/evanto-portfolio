@@ -8,8 +8,8 @@ export default function SelfPresentation (props) {
     }
     return (
         <div className="cv">
-            <div className="m-title mb-5">
-                <h2 className="fw-normal">about me</h2>
+            <div className="m-title m-title-top mb-5">
+                <h2 className="fw-normal text-main">about me</h2>
             </div>
             <div className="my-grid info align-items-center hero-img">
                 <div>
@@ -26,7 +26,7 @@ export default function SelfPresentation (props) {
                         </p>
                     </div>
                     <div>
-                        <h4 className="fw-normal text-capitalize">personal info</h4>
+                        <h4 className="fw-normal text-capitalize">personal information</h4>
                         {
                             getPersonalInfo().map((e, i)=> (
                                 <div 

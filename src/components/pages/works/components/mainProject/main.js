@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import Filter from "./filter";
-import WorkCard from "./workCard";
+import ProjectCard from "./projectCard";
 
-export default function MainWork (props) {
+export default function Main (props) {
     const [categ, setCateg] = useState("all");
     function handleCategories (categ) {
         setCateg(categ);
@@ -14,7 +14,7 @@ export default function MainWork (props) {
                 {
                     props.works.map((w, i)=> {
                         return (
-                            <WorkCard 
+                            <ProjectCard 
                                 key={"key-"+i}
                                 class=
                                 {

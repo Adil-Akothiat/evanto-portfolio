@@ -59,7 +59,9 @@ body::-webkit-scrollbar {
     text-transform: capitalize;
     position: relative; 
     width: fit-content;
-    font-size: .4em; 
+}
+.m-title h2 {
+    font-size: 1.5em;
 }
 .m-title::after {
     content: "";
@@ -69,6 +71,18 @@ body::-webkit-scrollbar {
     width: 50px;
     height: 2px;
     background-color: var(--main-color);
+}
+.m-title-top {
+    width: 100%;
+}
+.m-title-top h2 {
+    font-size: 1.9em;
+}
+.m-title-top::after {
+    background-color: transparent;
+    border: 1px dashed var(--light-color);
+    width: 100%;
+    bottom: -12px;
 }
 @media screen and (max-width: 300px) {
     .main-size {
@@ -144,4 +158,7 @@ li {
 }
 .show {
     opacity: 1  ;
+}
+.text-main {
+    color: var(--main-color);
 }

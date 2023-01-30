@@ -1,13 +1,13 @@
 import React from "react";
 import * as Unicons from "@iconscout/react-unicons";
 
-export default function WorkCard (props) {
+export default function PorjectCard (props) {
     return (
-        <div className={`work-card rounded ${props.class}`}>
+        <div className={`project-card rounded ${props.class}`}>
             <img className="rounded img-fluid" src={props.src} alt={props.title}/>
             <div>
                 <button 
-                    className="open-work rounded" 
+                    className="open-project rounded" 
                     onClick={props.handleClick} 
                     data-id={props.id}
                 >

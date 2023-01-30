@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from "react";
 import Loader from "../../loader/loader";
-import "../../../styles/pages/works.css";
-import WorkDetails from "./components/workDetails/workDetails";
-import MainWork from "./components/mainProject/mainWork";
-import workData from "../../../data/works.json";
+import "../../../styles/pages/portfolio.css";
+import ProjectDetails from "./components/projectDetails/projectDetails";
+import Main from "./components/mainProject/main";
+import portfolioData from "../../../data/portfolio.json";
 
-export default function Works () {
-    const [works, setWorks]=  useState([]);
+export default function Portfolio () {
+    const [projects, setProjects]=  useState([]);
     const [categories, setCategories] = useState([]);
     const [details, setDetails] = useState({status: false});
     function openProject ({target}) {
@@ -41,22 +41,22 @@ export default function Works () {
         return array;
     }
     useEffect(()=> {
-        setWorks(generateDataWithId(workData));
+        setProjects(generateDataWithId(portfolioData));
     }, [])
     // get categories
     useEffect(()=> {
         const categoriesSet = new Set([]);
         let array = ["all"];
-        workData.forEach(e=> categoriesSet.add(e.info.details.category));
+        portfolioData.forEach(e=> categoriesSet.add(e.info.details.category));
         categoriesSet.forEach(e=> array.push(e));
         setCategories(array);
     }, [])
     return (
-        <div className="works fixed-right">
+        <div className="portfolio fixed-right">
             <Loader time={500} />
             {
-                details.status?works.filter(w=> w.id===details.id).map((e, i)=> (
-                    <WorkDetails 
+                details.status?projects.filter(project=> project.id===details.id).map((e, i)=> (
+                    <ProjectDetails 
                         key={"key-"+i}
                         handleClick={closeProject}
                         images={e.info}
@@ -66,7 +66,7 @@ export default function Works () {
                     />
                )):null
             }
-            {details.status?null:<MainWork works={works} openProject={openProject} categories={categories}/>}
+            {details.status?null:<Main works={projects} openProject={openProject} categories={categories}/>}
         </div>
     );
 }

@@ -2,10 +2,12 @@ import React from "react";
 import * as Unicons from "@iconscout/react-unicons";
 import ImageGallery from "./imageGallery";
 import Video from "./video";
+import Loader from "../../../../loader/loader";
 
-export default function WorkDetails (props) {
+export default function projectDetails (props) {
     return (
-        <div className="work-details">
+        <div className="project-details">
+            <Loader time={300}/>
             <div className="main-size">
                 <button 
                     id="close-details" 
@@ -26,7 +28,7 @@ export default function WorkDetails (props) {
                         <h5 className="text-capitalize mb-3">
                             description
                         </h5>
-                        <div className="work-d mb-4">
+                        <div className="detail mb-4">
                             <div className="d-flex mb-2">
                                 <Unicons.UilUserSquare /><span className="fw-light text-capitalize ml-2">{props.details.client}</span>
                             </div>
