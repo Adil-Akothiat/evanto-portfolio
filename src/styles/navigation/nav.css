@@ -4,7 +4,6 @@
     left: 0;
     width: 70%;
     height: 100%;
-    /* background-color: var(--main-color); */
     background-color: var(--light-white);
     transform: translateX(-100%);
     z-index: 10;
@@ -24,6 +23,7 @@
     }
 }
 .navigation .content {
+    overflow-x: hidden;
     overflow-y: scroll;
     height: 100%;
     display: grid;

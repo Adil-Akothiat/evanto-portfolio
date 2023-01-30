@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function Filter () {
-    const categories = ["all", "branding", "photography", "fashion"];
+export default function Filter (props) {
     function focus ({target}) {
         for(let btn of [...document.querySelector(".categories").children]) btn.classList.remove("btn-focus");
         target.classList.add("btn-focus");
+        props.setCategories(target.textContent);
     }
     return (
         <div className="filter">
@@ -13,7 +13,7 @@ export default function Filter () {
             </div>
             <div className="d-flex flex-wrap align-items-center categories">
                 {
-                    categories.map((c, i)=> (
+                    props.categories.map((c, i)=> (
                         <button 
                             onClick={focus}
                             key={"key-"+i}

@@ -50,7 +50,7 @@ export default function App () {
       scrollEffect(e, true)
       decrOpacity();
     };
-  })
+  });
   return (
     <>
       <Loader time={500}/>

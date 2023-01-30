@@ -31,8 +31,18 @@ ul {
     --shadow-color: #0000001a;
     --sm-darken: rgba(0, 0, 0, .4);
 }
+/* body properties */
 body {
     color: var(--dark-color);
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 4em;
+    border: .2em solid var(--light-color); 
+}
+body::-webkit-scrollbar {
+    width: .7em;
+    background-color: var(--light-color);
 }
 /* general styles */
 .main-size  {
@@ -82,20 +92,10 @@ body {
 }
 @media screen and (min-width: 850px) {
     .fixed-right {
-        position: fixed;
+        position: absolute;
         width: 75%;
         height: 100%;
         right: 0;
-        overflow-y: scroll;
-        scroll-behavior: smooth;
-    }
-    .fixed-right::-webkit-scrollbar-thumb {
-        background-color: var(--scroll-color);
-        border-radius: 4em; 
-    }
-    .fixed-right::-webkit-scrollbar {
-        width: .5em;
-        background-color: var(--light-color);
     }
 }
 @media screen and (min-width: 1550px) {

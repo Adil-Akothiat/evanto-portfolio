@@ -3,7 +3,7 @@ import * as Unicons from "@iconscout/react-unicons";
 
 export default function WorkCard (props) {
     return (
-        <div className="work-card rounded">
+        <div className={`work-card rounded ${props.class}`}>
             <img className="rounded img-fluid" src={props.src} alt={props.title}/>
             <div>
                 <button 

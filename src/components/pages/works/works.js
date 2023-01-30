@@ -7,6 +7,7 @@ import workData from "../../../data/works.json";
 
 export default function Works () {
     const [works, setWorks]=  useState([]);
+    const [categories, setCategories] = useState([]);
     const [details, setDetails] = useState({status: false});
     function openProject ({target}) {
         // display none of the navigation 
@@ -42,6 +43,14 @@ export default function Works () {
     useEffect(()=> {
         setWorks(generateDataWithId(workData));
     }, [])
+    // get categories
+    useEffect(()=> {
+        const categoriesSet = new Set([]);
+        let array = ["all"];
+        workData.forEach(e=> categoriesSet.add(e.info.details.category));
+        categoriesSet.forEach(e=> array.push(e));
+        setCategories(array);
+    }, [])
     return (
         <div className="works fixed-right">
             <Loader time={500} />
@@ -57,7 +66,7 @@ export default function Works () {
                     />
                )):null
             }
-            {details.status?null:<MainWork works={works} openProject={openProject}/>}
+            {details.status?null:<MainWork works={works} openProject={openProject} categories={categories}/>}
         </div>
     );
 }

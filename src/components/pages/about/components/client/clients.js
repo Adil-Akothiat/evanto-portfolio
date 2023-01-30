@@ -3,7 +3,7 @@ import ReviewCard from "./reviewCard";
 
 export default function Clients (props) {
     return (
-        <div>
+        <div className="pb-4">
             <div className="m-title">
                 <h2 className="fw-normal">clients</h2>
             </div>
@@ -22,7 +22,7 @@ export default function Clients (props) {
                 }
             </div>
             <div className="view-more">
-                <button onClick={props.viewMore} className="my-own-btn text-capitalize rounded mx-auto mb-5">
+                <button onClick={props.viewMore} className="my-own-btn text-capitalize rounded mx-auto">
                     {props.view}
                 </button>
             </div>
