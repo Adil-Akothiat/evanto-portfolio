@@ -38,9 +38,9 @@ export default function Navigation (props) {
                             </a> 
                         </li>
                         <li>
-                            <a href={"#/works"} onClick={focus}>
-                                <Unicons.UilCheckSquare />
-                                <span>works</span>
+                            <a href={"#/portfolio"} onClick={focus}>
+                                <Unicons.UilBag />
+                                <span>portfolio</span>
                             </a>
                         </li>
                         <li>

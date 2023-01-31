@@ -2,12 +2,10 @@ import React from "react";
 import * as Unicons from "@iconscout/react-unicons";
 import ImageGallery from "./imageGallery";
 import Video from "./video";
-import Loader from "../../../../loader/loader";
 
 export default function projectDetails (props) {
     return (
         <div className="project-details">
-            <Loader time={300}/>
             <div className="main-size">
                 <button 
                     id="close-details" 

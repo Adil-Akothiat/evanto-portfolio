@@ -1,10 +1,11 @@
 import React from "react";
 import CircleProgressBar from "./CircleProgressBar";
 import LanguageProgress from "./languageProgress";
+import * as Unicons from '@iconscout/react-unicons';
 
 export default function Skills (props) {
     return (
-        <div>
+        <div className="my-4">
             <div className="m-title mb-5">
                 <h2 className="fw-normal">skills</h2>
             </div>
@@ -38,6 +39,22 @@ export default function Skills (props) {
                             languageRate={1}
                             description="beginner"
                         />
+                    </div>
+                    <div>
+                        <h3 className="fw-light my-2">licenses & certifications</h3>
+                        <div className="card p-3 certification">
+                           <div>
+                                <div className="svg-certif">
+                                    <Unicons.UilAward />
+                                </div>
+                                <div className="certif-data text-capitalize">
+                                    <h4 className="fw-normal mb-2">build responsive website using html, css, js And Bootstrap</h4>
+                                    <h5 className="fw-light text-uppercase">educba</h5>
+                                    <h6 className="fw-light my-2">October 2022</h6>
+                                    <h6 className="fw-light my-2">credential ID U49M32ANQ</h6>
+                                </div>
+                           </div>
+                        </div>
                     </div>
                 </div>
             </div>
