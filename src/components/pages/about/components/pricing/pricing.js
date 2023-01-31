@@ -8,7 +8,7 @@ export default function Pricing () {
                 <h2 className="fw-normal">Pricing</h2>
             </div>
             <div className="my-grid pricing">
-                <div className="my-card hi-sc-ef scroll">
+                <div className="my-card" data-aos="fade-top">
                     <div>
                         <Unicons.UilTelegramAlt />
                         <h3 className="fw-normal text-capitalize">basic</h3>
@@ -28,7 +28,7 @@ export default function Pricing () {
                         </a>
                     </div>
                 </div>
-                <div className="my-card hi-sc-ef scroll">
+                <div className="my-card" data-aos="fade-right" data-aos-duration="1000">
                     <div>
                         <Unicons.UilRocket />
                         <h3 className="fw-normal text-capitalize">pro</h3>

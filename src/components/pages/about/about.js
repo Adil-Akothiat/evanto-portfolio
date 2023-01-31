@@ -6,6 +6,8 @@ import Pricing from "./components/pricing/pricing";
 import Services from "./components/services/services";
 import aboutData from "../../../data/about.json";
 import SelfPresentation from "./components/selfPresent/selfPresent";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function About (props) {
     const [view, setView] = useState("view more");
@@ -28,8 +30,11 @@ export default function About (props) {
             })
         }
     };
+    useEffect(()=> {
+        AOS.init();
+    }, []);
     return (
-        <div className="about fixed-right main-scroll" onScroll={props.handleScroll}>
+        <div className="about fixed-right main-scroll">
             <Loader time={500}/>
             <div className="main-size">
                 <SelfPresentation about={aboutData.about}/>

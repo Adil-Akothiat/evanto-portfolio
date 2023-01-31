@@ -1,13 +1,18 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Loader from "../../loader/loader";
 import Career from "./components/career/career";
 import "../../../styles/pages/resume.css";
 import resumeData from "../../../data/resume.json";
 import Skills from "./components/skills/skills";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-export default function Resume (props) {
+export default function Resume () {
+    useEffect(()=> {
+        AOS.init();
+    }, [])
     return (
-        <div className="resume fixed-right test" onScroll={props.handleScroll}>
+        <div className="resume fixed-right test">
             <Loader time={500}/>
             <div className="main-size">
                 <Career resume={resumeData.resume}/>

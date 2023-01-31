@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ReviewCard (props) {
     return (
-        <div className="my-card">
+        <div className="my-card" data-aos="fade-right" data-aos-duration="1000">
             <div>
                 <img 
                     src={props.image} 
