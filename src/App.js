@@ -4,7 +4,7 @@ import Home from "./components/pages/home/home";
 import Loader from "./components/loader/loader";
 import Navigation from "./components/navigation/navigation";
 import Resume from "./components/pages/resume/resume";
-import Portfolio from "./components/pages/works/portfolio";
+import Portfolio from "./components/pages/portfolio/portfolio";
 
 export default function App () {
   const [page, setPage] = useState("home");

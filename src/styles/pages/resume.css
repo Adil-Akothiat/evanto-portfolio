@@ -126,21 +126,14 @@
 }
 .certification svg {
     color: var(--main-color);
-    margin-bottom: 1em; 
-}
-.certification >div {
-    display: flex;
-    align-items: flex-start;
-}
-.certification .svg-certif {
-    width: 10%; 
-}
-.certification .certif-data {
-    width: 85%;
+    transform: scale(1.4);
 }
 .certification h4 {
-    font-size: 18px;
+    font-size: 1.25em;
     color: var(--main-color);
+}
+.certification h6 {
+    font-size: .9em;
 }
 @media screen and (max-width: 500px) {
     .resume .skill {

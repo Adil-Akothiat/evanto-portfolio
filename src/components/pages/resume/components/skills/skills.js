@@ -18,6 +18,7 @@ export default function Skills (props) {
                     </div>
                 </div>
                 <div className="hi-sc-ef scroll my-card" style={{height:"fit-content"}}>
+                    <h3 className="fw-light my-2 text-capitalize">languages</h3>
                     <div className="languages">
                         < LanguageProgress 
                             language="arabic"
@@ -41,17 +42,18 @@ export default function Skills (props) {
                         />
                     </div>
                     <div>
-                        <h3 className="fw-light my-2">licenses & certifications</h3>
+                        <h3 className="fw-light my-2 text-capitalize">licenses & certifications</h3>
                         <div className="card p-3 certification">
                            <div>
-                                <div className="svg-certif">
+                                <div className="svg-certif mb-2">
                                     <Unicons.UilAward />
                                 </div>
                                 <div className="certif-data text-capitalize">
                                     <h4 className="fw-normal mb-2">build responsive website using html, css, js And Bootstrap</h4>
-                                    <h5 className="fw-light text-uppercase">educba</h5>
+                                    <h5 className="fw-normal text-uppercase">educba</h5>
                                     <h6 className="fw-light my-2">October 2022</h6>
                                     <h6 className="fw-light my-2">credential ID U49M32ANQ</h6>
+                                    <a role="button" className="btn btn-secondary" href={"#credential"}>show credential</a>
                                 </div>
                            </div>
                         </div>
