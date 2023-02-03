@@ -1,7 +1,7 @@
 import React from "react";
+import Certificat from "./certification/certification";
 import CircleProgressBar from "./CircleProgressBar";
 import LanguageProgress from "./languageProgress";
-import * as Unicons from '@iconscout/react-unicons';
 
 export default function Skills (props) {
     return (
@@ -11,13 +11,13 @@ export default function Skills (props) {
             </div>
             <div className="my-grid skills">
                 <div className="my-card">
-                    <div className="skill hi-sc-ef scroll">
+                    <div className="skill">
                         {
                             props.resume.skills.map((s, i)=> <CircleProgressBar key={"key-"+i} value={s.rate} skill={s.skill}/>)
                         }
                     </div>
                 </div>
-                <div className="hi-sc-ef scroll my-card" style={{height:"fit-content"}}>
+                <div className="my-card overflow-hidden">
                     <h3 className="fw-light my-2 text-capitalize">languages</h3>
                     <div className="languages">
                         < LanguageProgress 
@@ -43,20 +43,7 @@ export default function Skills (props) {
                     </div>
                     <div>
                         <h3 className="fw-light my-2 text-capitalize">licenses & certifications</h3>
-                        <div className="card p-3 certification">
-                           <div>
-                                <div className="svg-certif mb-2">
-                                    <Unicons.UilAward />
-                                </div>
-                                <div className="certif-data text-capitalize">
-                                    <h4 className="fw-normal mb-2">build responsive website using html, css, js And Bootstrap</h4>
-                                    <h5 className="fw-normal text-uppercase">educba</h5>
-                                    <h6 className="fw-light my-2">October 2022</h6>
-                                    <h6 className="fw-light my-2">credential ID U49M32ANQ</h6>
-                                    <a role="button" className="btn btn-secondary" href={"#credential"}>show credential</a>
-                                </div>
-                           </div>
-                        </div>
+                        <Certificat certificat={props.resume.certifications}/>
                     </div>
                 </div>
             </div>

@@ -39,7 +39,10 @@
     border: 1px solid var(--light-white);
 }
 .navigation p {
+    width: 90%;
+    margin: auto;
     color: var(--scroll-color);
+    font-size: 16px;
 }
 .hero {
     width: 100%;
@@ -130,7 +133,6 @@
     cursor: pointer;
     border: 1px solid var(--main-color);
     border-left: none;
-    /*border-top: none; */
 }
 .navigation .my-collapse svg {
     pointer-events: none;

@@ -14,10 +14,11 @@ export default function Resume () {
     return (
         <div className="resume fixed-right test">
             <Loader time={500}/>
-            <div className="main-size">
+            <div className="main-size pb-3">
                 <Career resume={resumeData.resume}/>
                 <Skills resume={resumeData.resume}/>
             </div>
+            {/* <div className="py-3"></div> */}
         </div>
     );
 }

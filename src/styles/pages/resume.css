@@ -123,10 +123,11 @@
     grid-template-columns: repeat(3, 1fr);
     row-gap: 1.5em;
     column-gap: 1.5em;
+    overflow: hidden;
 }
 .certification svg {
     color: var(--main-color);
-    transform: scale(1.4);
+    transform: scale(1.2);
 }
 .certification h4 {
     font-size: 1.25em;
@@ -134,6 +135,17 @@
 }
 .certification h6 {
     font-size: .9em;
+}
+.certification {
+    width: 340px;
+}
+.num-cert {
+    position: absolute;
+    right: 0; top: 0;
+    background-color: var(--light-color);
+    color: var(--main-color);
+    padding: .2em 1em;
+    border-radius: 0 .2em 0 .2em;
 }
 @media screen and (max-width: 500px) {
     .resume .skill {
