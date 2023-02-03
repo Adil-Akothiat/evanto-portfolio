@@ -142,8 +142,8 @@
 .num-cert {
     position: absolute;
     right: 0; top: 0;
-    background-color: var(--light-color);
-    color: var(--main-color);
+    background-color: var(--main-color);
+    color: var(--text-white);
     padding: .2em 1em;
     border-radius: 0 .2em 0 .2em;
 }

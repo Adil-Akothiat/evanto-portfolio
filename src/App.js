@@ -5,6 +5,7 @@ import Loader from "./components/loader/loader";
 import Navigation from "./components/navigation/navigation";
 import Resume from "./components/pages/resume/resume";
 import Portfolio from "./components/pages/portfolio/portfolio";
+import Blogs from "./components/pages/blogs/blogs";
 
 export default function App () {
   const [page, setPage] = useState("home");
@@ -62,7 +63,8 @@ export default function App () {
         />:
         page==="resume"?<Resume 
         handleScroll={scrollEffect}
-        />:<Portfolio />
+        />:
+        page==="portfolio"?<Portfolio />:<Blogs />
       }
     </>
   );

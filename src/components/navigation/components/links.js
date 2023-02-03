@@ -32,7 +32,7 @@ export default function Links (props) {
                 <li>
                     <a href={"#blog"} onClick={props.focus}>
                         <Unicons.UilDocumentLayoutLeft />
-                        <span>blog</span>
+                        <span>blogs</span>
                     </a>
                 </li>
                 <li>
