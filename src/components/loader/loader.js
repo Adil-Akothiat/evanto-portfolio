@@ -4,9 +4,12 @@ import {Blocks} from "react-loader-spinner";
 export default function Loader (props) {
     const [width, setWidth] = useState(100);
     useEffect(()=> {
-        setTimeout(()=> {
+        let timer = setTimeout(()=> {
             setWidth(0);
         }, props.time);
+        return ()=> {
+            clearTimeout(timer);
+        }
     }, [props.time])
     return (
         <div style={{position:"absolute",left:"0",top:"0",height:width+"%",width:width+"%",backgroundColor:"white", zIndex:"100"}}>

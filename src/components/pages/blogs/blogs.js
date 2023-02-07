@@ -48,7 +48,7 @@ export default function Blogs () {
             setAllBlogs(myPortfolioBlogs);
             setBlogs(myPortfolioBlogs.slice(startPoint, endPoint));
         };
-        getBlogs();
+        if(startPoint || endPoint) getBlogs();
     }, [startPoint, endPoint])
     //pagination
     useEffect(()=> {
