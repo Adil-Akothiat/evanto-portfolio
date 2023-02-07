@@ -1,4 +1,7 @@
-.blogs p {
+.blogs-view {
+    padding-bottom: 100px;
+}
+.blogs-view p {
     margin: 0;
     padding: 0;
 }
@@ -20,12 +23,18 @@
     margin-left: .2em;
 }
 .blogs .blog-title h3 {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     font-size: 18px;
     line-height: 1.32;
     cursor: pointer;
     transition: color .3s linear;
+    position: relative;
 }
 .blogs .blog-title h3:hover {
+    text-decoration: underline;
     color: var(--main-color);
 }
 .blogs .blog-description p {
@@ -33,6 +42,8 @@
     color: var(--scroll-color);
 }
 .blogs-view img {
+    width: 100%;
+    height: 200px; 
     transition: transform .3s linear;
 }
 .blogs-view .card:hover img {
@@ -44,4 +55,29 @@
 .blogs-view img {
     width: 100%;
     max-height: 250px;
+}
+.blog img {
+    height: fit-content;
+    width: 100%;
+    border: 1px solid var(--light-color)
+}
+.blog p {
+    line-height: 1.6;
+    margin-bottom: 1.18em;
+}
+.pagination button {
+    background-color: var(--main-color);
+    border: none;
+    outline: none;
+    color: var(--text-white);
+    padding: 5px 10px;
+    /* cursor: pointer; */
+    opacity: .8;
+    transition: opacity .3s linear;
+}
+.pagination button:hover {
+    opacity: 1;
+}
+.pagination button:last-child{
+    border-left: 1px solid var(--text-white);
 }
