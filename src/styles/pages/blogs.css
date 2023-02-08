@@ -56,6 +56,21 @@
     width: 100%;
     max-height: 250px;
 }
+.pagination button {
+    background-color: var(--main-color);
+    border: none;
+    outline: none;
+    color: var(--text-white);
+    padding: 5px 10px;
+    opacity: .8;
+    transition: opacity .3s linear;
+}
+.pagination button:hover {
+    opacity: 1;
+}
+.pagination button:last-child{
+    border-left: 1px solid var(--text-white);
+}
 .blog img {
     height: fit-content;
     width: 100%;
@@ -65,19 +80,80 @@
     line-height: 1.6;
     margin-bottom: 1.18em;
 }
-.pagination button {
+.blog .r-c h6 {
+    color: var(--scroll-color);
+}
+.blog .r-c span {
+    margin: 0 .5em;
+}
+.blog .r-c h5:hover {
+    color: var(--main-color);
+    cursor: pointer;
+}
+.blog #close {
+    position: absolute;
+    right: 0;
+    top: 0;
     background-color: var(--main-color);
-    border: none;
-    outline: none;
     color: var(--text-white);
-    padding: 5px 10px;
-    /* cursor: pointer; */
-    opacity: .8;
+    border: none;
+    line-height: 0;
+    border: none;
+    border-radius: 5px;
+    padding: 6px;
+    opacity: .3;
     transition: opacity .3s linear;
 }
-.pagination button:hover {
+.blog #close:hover {
     opacity: 1;
 }
-.pagination button:last-child{
-    border-left: 1px solid var(--text-white);
+.blog #close svg {
+    pointer-events: none;
+}
+.blog .description {
+    color: var(--scroll-color);
+    text-align: center;
+    font-style: italic;
+}
+.blog .author {
+    text-align: center;
+}
+.blog .author img {
+    width: 80px;
+    height: 80px;
+}
+.blog .author h4 {
+    color: var(--main-color);
+    line-height: 1;
+}
+.blog .author h6 {
+    color: var(--scroll-color);
+    line-height: 1;
+}
+.blog .rich-text img {
+    width: 80%;
+    max-height: 500px;
+    display: block;
+    margin: 1em auto 2.5em auto;
+}
+.blog .rich-text * {
+    list-style: square;
+}
+.blog .rich-text {
+    padding: 1em 4em;
+}
+.blog .rich-text a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+.blog .rich-text p {
+    font-weight: 300;
+    margin: 10px 0;
+    line-height: 1.75;
+}
+.blog .rich-text code {
+    background-color: var(--light-color);
+    padding: 10px;
+    border-radius: 10px;
+    display: block;
 }

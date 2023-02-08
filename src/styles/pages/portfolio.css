@@ -2,21 +2,62 @@
     width: 100%;
 }
 .filter button {
-    background-color: var(--text-white);
-    color: var(--main-color);
-    border: 1px solid var(--main-color);
-    padding: .25em 1em;
-    margin-right: .5em;
-    border-radius: .18em;
-    transition: all .3s linear; 
+    border: none;
+    padding: 5px 12px;
+    background-color: transparent;
+    position: relative;
+    transition: color .5s linear;
+}
+.filter button::after {
+    content:"";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background-color: var(--main-color);
+    left: 50%;transform: translateX(-50%);
+    bottom: -1px;
+    transition: width .5s linear;
+    z-index: 10;
+}
+.filter .categories {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    position: relative;
+}
+.filter .categories::after {
+    content:"";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background-color: var(--light-color);
+}
+.filter .categories::-webkit-scrollbar {
+    height: 0;
+    width: 0;
 }
 .filter button:hover {
-    background-color: var(--main-color);
-    color: var(--text-white);
+    color: var(--main-color);
+}
+.filter button:hover::after {
+    width: 100%;
+}
+.filter .btn-focus::after {
+    width: 100%;
 }
 .filter .btn-focus {
-    background-color: var(--main-color);
-    color: var(--text-white);
+    color: var(--main-color);
+}
+@media screen and (max-width: 350px) {
+    .filter button {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 300px) {
+    .filter button {
+        font-size: 9px;
+    }
 }
 .filter input { 
     padding: .25em 1em;

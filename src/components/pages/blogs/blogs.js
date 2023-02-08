@@ -57,6 +57,10 @@ export default function Blogs () {
         if (endPoint >= allBlogs.length) disabled("next", true);
         else disabled("next", false);
     }, [startPoint, endPoint, allBlogs]);
+    // close blog
+    function closeBlog () {
+        setOpenBlog(false);
+    }
     return (
         <div className="blogs fixed-right test">
             <Loader time={500}/>
@@ -74,7 +78,7 @@ export default function Blogs () {
                         />
                     }
                     {
-                        openBlog?<Blog blog={blogs.filter(({id})=> id === blogId)[0]}/>:null
+                        openBlog?<Blog handleClick={closeBlog} blog={blogs.filter(({id})=> id === blogId)[0]}/>:null
                     }
                 </div>
             </div>
