@@ -157,3 +157,27 @@
     border-radius: 10px;
     display: block;
 }
+@media screen and (max-width: 624px) {
+    .blog .rich-text {
+        padding: 1em;
+    }   
+    .blog .rich-text img {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 424px) {
+    .blog .rich-text {
+        padding: 1em 0.5em;
+    }   
+    .blog .rich-text img {
+        width: 95%;
+    }
+}
+@media screen and (max-width: 324px) {
+    .blog .rich-text {
+        padding: 1em 0;
+    }   
+    .blog .rich-text img {
+        width: 100%;
+    }
+}
