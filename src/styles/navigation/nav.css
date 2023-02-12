@@ -38,12 +38,6 @@
     border-radius: 5em;
     border: 1px solid var(--light-white);
 }
-.navigation p {
-    width: 90%;
-    margin: auto;
-    color: var(--scroll-color);
-    font-size: 16px;
-}
 .hero {
     width: 100%;
     height: 100%;
@@ -166,4 +160,13 @@
     background-color: var(--main-color);
     color: var(--text-white);
     border-radius: 1em;
+}
+.navigation .copyright p {
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+
 }

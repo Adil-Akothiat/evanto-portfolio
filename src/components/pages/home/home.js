@@ -2,6 +2,7 @@ import React from "react";
 import "../../../styles/pages/home.css";
 import TypeIt from "typeit-react";
 import * as Unicons from "@iconscout/react-unicons";
+
 import BackgroundAnimated from "./animatedBackground";
 import Loader from "../../loader/loader";
 import homeData from "../../../data/home.json";
@@ -9,7 +10,7 @@ import homeData from "../../../data/home.json";
 export default function Home () {
     return (
         <div className="home fixed-right">
-            <div className="center">
+            <div className="center main-size m-0">
                 <Loader time={500}/>
                 <BackgroundAnimated />
                 <div className="home-size">

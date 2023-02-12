@@ -12,14 +12,17 @@ import Blog from "./components/pages/blogs/components/blog/blog";
 
 
 export default function App () {
-  function focusHandler (target) {
+  
+  
+  //navigation.js
+  const expandHandler = ()=> document.querySelector(".navigation").classList.toggle("expand-nav");
+  
+  // onClick to navLink close the navbar
+  const closeNavHandler = ()=> {
+    document.querySelector(".navigation").classList.remove("expand-nav");
     window.scrollTo(0, 0);
-    document.querySelector(".focus").classList.remove("focus");
-    target.classList.add("focus");
   }
-  function expandHandler () {
-    document.querySelector(".navigation").classList.toggle("expand-nav");
-  }
+  
   // decrease collapse button opacity
   function decrOpacity () {
     const collapse = document.querySelector(".my-collapse");
@@ -35,6 +38,8 @@ export default function App () {
       decrOpacity();
     })
   }, []);
+
+
   // single Blog article
   const [isOpenShare, setIsOpenShare] = useState(false);
   function openShare () {
@@ -50,7 +55,7 @@ export default function App () {
   return (
     <>
       <Loader time={500}/>
-      <Navigation focus={focusHandler} expand={expandHandler}/>
+      <Navigation expand={expandHandler} close={closeNavHandler}/>
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/about" element={<About />}/>

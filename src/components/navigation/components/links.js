@@ -2,12 +2,13 @@ import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import * as Unicons from "@iconscout/react-unicons";
 
-export default function Links () {
+export default function Links (props) {
     return (
         <div className="p-3">
             <ul className="link-pages px-0 m-0 text-capitalize">
                 <li>
                     <NavLink
+                        onClick={()=> props.closeNav()}
                         tag={Link}
                         to="/"
                     >
@@ -17,6 +18,7 @@ export default function Links () {
                 </li>
                 <li>
                     <NavLink
+                        onClick={()=> props.closeNav()}
                         tag={Link}
                         to="/about"
                     >
@@ -26,6 +28,7 @@ export default function Links () {
                 </li>
                 <li> 
                     <NavLink
+                        onClick={()=> props.closeNav()}
                         tag={Link}
                         to="/resume"
                     >
@@ -35,6 +38,7 @@ export default function Links () {
                 </li>
                 <li>
                     <NavLink 
+                        onClick={()=> props.closeNav()}
                         tag={Link}
                         to="/portfolio"
                     >
@@ -44,6 +48,7 @@ export default function Links () {
                 </li>
                 <li>
                     <NavLink
+                        onClick={()=> props.closeNav()}
                         tag={Link}
                         to="/blogs"
                     >
@@ -53,6 +58,7 @@ export default function Links () {
                 </li>
                 <li>
                     <NavLink
+                        onClick={()=> props.closeNav()}
                         tag={Link}
                         to="/contact"
                     >
