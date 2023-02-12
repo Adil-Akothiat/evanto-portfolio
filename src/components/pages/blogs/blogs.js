@@ -4,82 +4,56 @@ import "../../../styles/pages/blogs.css";
 import Loader from "../../loader/loader";
 import client from "./controller/client";
 import QUERY from "./controller/query";
-import Blog from "./components/blog/blog";
 
-export default function Blogs () {
-    const [allBlogs, setAllBlogs] = useState([]);
+export default function Blogs (props) {
     const [blogs, setBlogs] = useState([]);
-    const [blogId, setBlogId] = useState("");
-    const [openBlog, setOpenBlog] = useState(false);
+  // blogs length
+  const [blogsLength, setBlogsLength] = useState(0);
 
-    // Pagination
-    const [startPoint, setStartPoint] = useState(0);
-    const itemPerPage = 6;
-    const [endPoint, setEndPoint] = useState(itemPerPage);
+  // Pagination
+  const [startPoint, setStartPoint] = useState(0);
+  const itemPerPage = 6;
+  const [endPoint, setEndPoint] = useState(itemPerPage);
 
-    function getIdBlog ({target}) {
-        const {id} = target.dataset;
-        setBlogId(id);
-        setOpenBlog(true);
+  // Get the blogs
+  useEffect(()=> {
+    const getBlogs = async ()=> {
+      try {
+        const {myPortfolioBlogs} = await client.request(QUERY);
+        setBlogsLength(myPortfolioBlogs.length);
+        setBlogs(myPortfolioBlogs.slice(startPoint, endPoint));
+      } catch (err) {
+        console.log("err");
+      }
     }
-    function disabled(id, boolean) {
-        if (boolean) document.getElementById(id).setAttribute("disabled", true);
-        else document.getElementById(id).removeAttribute("disabled");
-        return;
-    }
+    getBlogs();
+  }, [startPoint, endPoint])
+
+  // next page and prev page
     function nextPage () {
-        window.scrollTo(0, 0);
-        if(endPoint <= allBlogs.length) {
+        if(endPoint < blogsLength) {
             setStartPoint(prevState=> prevState + itemPerPage);
             setEndPoint(prevState=> prevState + itemPerPage);
         }
     }
+
     function prevPage () {
-        window.scrollTo(0, 0);
         if(startPoint > 0) {
             setStartPoint(prevState=> prevState - itemPerPage);
             setEndPoint(prevState=> prevState - itemPerPage);
         }
     }
-    //blogs
-    useEffect(()=> {
-        const getBlogs = async ()=> {
-            const {myPortfolioBlogs} = await client.request(QUERY);
-            setAllBlogs(myPortfolioBlogs);
-            setBlogs(myPortfolioBlogs.slice(startPoint, endPoint));
-        };
-        if(startPoint || endPoint) getBlogs();
-    }, [startPoint, endPoint])
-    //pagination
-    useEffect(()=> {
-        if (startPoint <= 0) disabled("prev", true);
-        else disabled("prev", false);
-        if (endPoint >= allBlogs.length) disabled("next", true);
-        else disabled("next", false);
-    }, [startPoint, endPoint, allBlogs]);
-    // close blog
-    function closeBlog () {
-        setOpenBlog(false);
-    }
+
     return (
         <div className="blogs fixed-right test">
             <Loader time={500}/>
             <div className="main-size">
-                <div className="m-title m-title-top mb-5 text-capitalize">
-                    <h2 className="fw-normal text-main">recent blogs</h2>
-                </div>
                 <div className="position-relative">
-                    {
-                        openBlog?null:<BlogsView 
-                            nextHandler={nextPage} 
-                            prevHandler={prevPage} 
-                            blogs={blogs} 
-                            handleClick={getIdBlog}
-                        />
-                    }
-                    {
-                        openBlog?<Blog handleClick={closeBlog} blog={blogs.filter(({id})=> id === blogId)[0]}/>:null
-                    }
+                <BlogsView
+                    nextHandler={nextPage} 
+                    prevHandler={prevPage} 
+                    blogs={blogs}
+                />
                 </div>
             </div>
         </div>

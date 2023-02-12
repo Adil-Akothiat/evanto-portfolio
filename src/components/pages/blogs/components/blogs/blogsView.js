@@ -1,27 +1,17 @@
 import React from "react";
 import * as Unicons from "@iconscout/react-unicons";
 import Pagination from "../pagination/pagination";
+import { Link } from "react-router-dom";
 
 export default function BlogsView (props) {
-    // const [startPoint, setStartPoint] = useState(0);
-    // const [endPoint, setEndPoint] = useState(6);
-    // const [blogs, setBlogs] = useState(props.blogs.slice(startPoint, endPoint));
-    // const itemPerPage = 6;
-
-    // function nextHandler () {
-    //     console.log("test")
-    // }
-    // function prevHandler () {
-    //     console.log("test")
-    // }
-    // useState(()=> {
-    //     setBlogs(props.blogs.slice(startPoint, endPoint));
-    // }, [startPoint, endPoint])
     return (
         <div className="blogs-view positioh-relative">
+            <div className="m-title m-title-top mb-5 text-capitalize">
+                <h2 className="fw-normal text-main">recent blogs</h2>
+            </div>
             <div className="row">
                 {
-                    props.blogs.map((b, i)=> (
+                    props.blogs?props.blogs.map((b, i)=> (
                     <div key={"key-"+i} className="col-xl-4 col-md-6 col-sm-6 mb-4">
                         <div className="card">
                             <div className="overflow-hidden rounded-top border-bottom">
@@ -38,10 +28,8 @@ export default function BlogsView (props) {
                                 <div className="blog-title">
                                     <h3 
                                         className="fw-bolder text-capitalize"
-                                        data-id={b.id}
-                                        onClick={props.handleClick}
                                     >
-                                        {b.title}
+                                        <Link to={"/blogs/blog"}>{b.title}</Link>
                                     </h3>
                                 </div>
                                 <div className="blog-description">
@@ -52,7 +40,7 @@ export default function BlogsView (props) {
                             </div>
                         </div>
                     </div>
-                    ))
+                    )):<h2>data was not found! please try again and fix error!</h2>
                 }
             </div>
             <div>

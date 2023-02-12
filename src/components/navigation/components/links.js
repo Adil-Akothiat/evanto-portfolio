@@ -1,51 +1,64 @@
 import React from "react";
+import { NavLink, Link } from "react-router-dom";
 import * as Unicons from "@iconscout/react-unicons";
 
-export default function Links (props) {
+export default function Links () {
     return (
         <div className="p-3">
             <ul className="link-pages px-0 m-0 text-capitalize">
                 <li>
-                    <a className="focus" href={"#/"} onClick={props.focus} id="home">
+                    <NavLink
+                        tag={Link}
+                        to="/"
+                    >
                         <Unicons.UilEstate />
                         <span>home</span>
-                    </a>
+                    </NavLink>
                 </li>
                 <li>
-                    <a href={"#/about"} onClick={props.focus}>
+                    <NavLink
+                        tag={Link}
+                        to="/about"
+                    >
                         <Unicons.UilUserCircle />
                         <span>about</span>
-                    </a>
+                    </NavLink>
                 </li>
-                <li>
-                    <a href={"#/resume"} onClick={props.focus}>
+                <li> 
+                    <NavLink
+                        tag={Link}
+                        to="/resume"
+                    >
                         <Unicons.UilClipboardAlt />
                         <span>resume</span>
-                    </a> 
+                    </NavLink>   
                 </li>
                 <li>
-                    <a href={"#/portfolio"} onClick={props.focus}>
+                    <NavLink 
+                        tag={Link}
+                        to="/portfolio"
+                    >
                         <Unicons.UilBag />
                         <span>portfolio</span>
-                    </a>
+                    </NavLink>
                 </li>
                 <li>
-                    <a href={"#blog"} onClick={props.focus}>
+                    <NavLink
+                        tag={Link}
+                        to="/blogs"
+                    >
                         <Unicons.UilDocumentLayoutLeft />
                         <span>blogs</span>
-                    </a>
+                    </NavLink>
                 </li>
                 <li>
-                    <a href={"#contact"} onClick={props.focus}>
+                    <NavLink
+                        tag={Link}
+                        to="/contact"
+                    >
                         <Unicons.UilAt />
                         <span>contact</span>
-                    </a>
-                </li>
-                <li>
-                    <a href={"#notifications"} onClick={props.focus}>
-                        <Unicons.UilBell />
-                        <span>notification</span>
-                    </a>
+                    </NavLink>
                 </li>
             </ul>
         </div>

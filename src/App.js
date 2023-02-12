@@ -1,24 +1,21 @@
-import React, {useState, useEffect} from "react";
-import About from "./components/pages/about/about";
-import Home from "./components/pages/home/home";
-import Loader from "./components/loader/loader";
+import React, {useEffect, useState} from "react";
+import { Route, Routes} from "react-router-dom";
+
 import Navigation from "./components/navigation/navigation";
+import Home from "./components/pages/home/home";
+import About from "./components/pages/about/about";
 import Resume from "./components/pages/resume/resume";
 import Portfolio from "./components/pages/portfolio/portfolio";
 import Blogs from "./components/pages/blogs/blogs";
+import Loader from "./components/loader/loader";
+import Blog from "./components/pages/blogs/components/blog/blog";
+
 
 export default function App () {
-  const [page, setPage] = useState("home");
   function focusHandler (target) {
     window.scrollTo(0, 0);
     document.querySelector(".focus").classList.remove("focus");
-    if(target.hasAttribute("src")) {
-      document.getElementById("home").classList.add("focus");
-      setPage("home");
-    }else {
-      target.classList.add("focus");
-      setPage(target.lastElementChild.textContent);
-    }
+    target.classList.add("focus");
   }
   function expandHandler () {
     document.querySelector(".navigation").classList.toggle("expand-nav");
@@ -32,40 +29,38 @@ export default function App () {
       collapse.style.opacity="1";
     }
   }
-  function scrollEffect (e, win) {
-    let positionY;
-    if(win) {
-      positionY = window.scrollY;
-    }else {
-      positionY = e.currentTarget.scrollTop;
-    }
-    const scrollElements = [...document.querySelectorAll(".scroll")];
-    scrollElements.forEach(element=> {
-      const {top} = element.getBoundingClientRect();
-      if((positionY)>= top) element.classList.remove("hi-sc-ef")
-    })
-  }
   useEffect(()=> {
-    window.scrollTo(0, 0)
-    window.onscroll = e=> {
-      scrollEffect(e, true)
+    window.scrollTo(0, 0);
+    window.addEventListener("scroll", ()=> {
       decrOpacity();
-    };
-  });
+    })
+  }, []);
+  // single Blog article
+  const [isOpenShare, setIsOpenShare] = useState(false);
+  function openShare () {
+    setIsOpenShare(true);
+    // disable scroll
+    window.document.body.style.overflow="hidden";
+  }
+  function closeShare () {
+    setIsOpenShare(false);
+    // enable scroll
+    window.document.body.style.overflow="auto";
+  }
   return (
     <>
       <Loader time={500}/>
       <Navigation focus={focusHandler} expand={expandHandler}/>
-      {
-        page==="home"?<Home/>:
-        page==="about"?<About 
-        handleScroll={scrollEffect}
-        />:
-        page==="resume"?<Resume 
-        handleScroll={scrollEffect}
-        />:
-        page==="portfolio"?<Portfolio />:<Blogs />
-      }
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/about" element={<About />}/>
+        <Route path="/resume" element={<Resume />}/>
+        <Route path="/portfolio" element={<Portfolio />}/>
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/contact" element={<h1>Contact Me!</h1>} />
+        <Route path="/blogs/blog" element={<Blog openShareHandler={openShare} closeShareHandler={closeShare} open= {isOpenShare}/>}/>
+        <Route path="*" element={<h1>Page Not Found 505!</h1>} />
+      </Routes>
     </>
   );
 }
