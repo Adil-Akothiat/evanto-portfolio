@@ -112,6 +112,7 @@ body::-webkit-scrollbar {
         width: 75%;
         height: 100%;
         right: 0;
+        transition: width .8s linear;
     }
 }
 @media screen and (min-width: 1550px) {

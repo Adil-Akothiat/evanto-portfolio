@@ -5,7 +5,7 @@ import Loader from "../../loader/loader";
 import client from "./controller/client";
 import QUERY from "./controller/query";
 
-export default function Blogs (props) {
+export default function Blogs () {
     const [blogs, setBlogs] = useState([]);
   // blogs length
   const [blogsLength, setBlogsLength] = useState(0);
@@ -53,6 +53,7 @@ export default function Blogs (props) {
                     nextHandler={nextPage} 
                     prevHandler={prevPage} 
                     blogs={blogs}
+                    // getBlogIdHandler={blogs}
                 />
                 </div>
             </div>

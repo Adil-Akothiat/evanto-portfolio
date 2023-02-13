@@ -29,7 +29,11 @@ export default function BlogsView (props) {
                                     <h3 
                                         className="fw-bolder text-capitalize"
                                     >
-                                        <Link to={"/blogs/blog"}>{b.title}</Link>
+                                        <Link 
+                                            to={"/blogs/"+b.id}
+                                            data-id={b.id}
+                                            // onClick={props.getIdHandler}
+                                        >{b.title}</Link>
                                     </h3>
                                 </div>
                                 <div className="blog-description">

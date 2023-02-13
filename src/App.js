@@ -10,6 +10,10 @@ import Blogs from "./components/pages/blogs/blogs";
 import Loader from "./components/loader/loader";
 import Blog from "./components/pages/blogs/components/blog/blog";
 
+// client and query
+import client from "./components/pages/blogs/controller/client";
+import QUERY from "./components/pages/blogs/controller/query";
+
 
 export default function App () {
   
@@ -42,6 +46,7 @@ export default function App () {
 
   // single Blog article
   const [isOpenShare, setIsOpenShare] = useState(false);
+
   function openShare () {
     setIsOpenShare(true);
     // disable scroll
@@ -52,6 +57,18 @@ export default function App () {
     // enable scroll
     window.document.body.style.overflow="auto";
   }
+
+  // get all Blogs
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(()=> {
+    const getBlogs = async ()=> {
+      const {myPortfolioBlogs} = await client.request(QUERY);
+      setBlogs(myPortfolioBlogs);
+    }
+    getBlogs();
+  }, [])
+
   return (
     <>
       <Loader time={500}/>
@@ -63,7 +80,21 @@ export default function App () {
         <Route path="/portfolio" element={<Portfolio />}/>
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/contact" element={<h1>Contact Me!</h1>} />
-        <Route path="/blogs/blog" element={<Blog openShareHandler={openShare} closeShareHandler={closeShare} open= {isOpenShare}/>}/>
+        {
+          blogs?blogs.map((b, i)=> <Route 
+            key={"key-"+i}
+            path={`/blogs/${b.id}`} 
+            element={
+              <Blog 
+                openShareHandler={openShare} 
+                closeShareHandler={closeShare} 
+                open= {isOpenShare}  
+                blog={b}
+              />
+            }
+          />
+          ):alert("data not found")
+        }
         <Route path="*" element={<h1>Page Not Found 505!</h1>} />
       </Routes>
     </>
