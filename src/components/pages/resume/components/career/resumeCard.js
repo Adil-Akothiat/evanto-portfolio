@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ResumeCard (props) {
     return (
-        <div className="my-card" data-aos="fade-top" data-aos-duration="1000">
+        <div className="my-card" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
             <span className="line-top"></span>
             <div>
                 <div className="date">

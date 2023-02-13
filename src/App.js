@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { Route, Routes} from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import Navigation from "./components/navigation/navigation";
 import Home from "./components/pages/home/home";
@@ -13,10 +15,15 @@ import Blog from "./components/pages/blogs/components/blog/blog";
 // client and query
 import client from "./components/pages/blogs/controller/client";
 import QUERY from "./components/pages/blogs/controller/query";
+import Contact from "./components/pages/contact/contact";
 
 
 export default function App () {
   
+  //setup scroll effect using AOS library
+  useEffect(()=> {
+    AOS.init();
+  }, []);
   
   //navigation.js
   const expandHandler = ()=> document.querySelector(".navigation").classList.toggle("expand-nav");
@@ -78,8 +85,8 @@ export default function App () {
         <Route path="/about" element={<About />}/>
         <Route path="/resume" element={<Resume />}/>
         <Route path="/portfolio" element={<Portfolio />}/>
-        <Route path="/blogs" element={<Blogs />} />
-        <Route path="/contact" element={<h1>Contact Me!</h1>} />
+        <Route path="/blogs" element={<Blogs blogs={blogs}/>} />
+        <Route path="/contact" element={<Contact />} />
         {
           blogs?blogs.map((b, i)=> <Route 
             key={"key-"+i}

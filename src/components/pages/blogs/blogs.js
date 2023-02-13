@@ -1,14 +1,11 @@
 import React, {useState, useEffect} from "react";
-import BlogsView from "./components/blogs/blogsView";
 import "../../../styles/pages/blogs.css";
-import Loader from "../../loader/loader";
-import client from "./controller/client";
-import QUERY from "./controller/query";
 
-export default function Blogs () {
-    const [blogs, setBlogs] = useState([]);
-  // blogs length
-  const [blogsLength, setBlogsLength] = useState(0);
+import BlogsView from "./components/blogs/blogsView";
+import Loader from "../../loader/loader";
+
+export default function Blogs (props) {
+  const [blogs, setBlogs] = useState([]);
 
   // Pagination
   const [startPoint, setStartPoint] = useState(0);
@@ -17,46 +14,53 @@ export default function Blogs () {
 
   // Get the blogs
   useEffect(()=> {
-    const getBlogs = async ()=> {
-      try {
-        const {myPortfolioBlogs} = await client.request(QUERY);
-        setBlogsLength(myPortfolioBlogs.length);
-        setBlogs(myPortfolioBlogs.slice(startPoint, endPoint));
-      } catch (err) {
-        console.log("err");
-      }
+    setBlogs(props.blogs.slice(startPoint, endPoint));
+    
+    // set prev button disabled or enabled
+    const prev = document.getElementById("prev");
+    if(startPoint===0) {
+      prev.setAttribute("disabled", true);
+    }else {
+      prev.removeAttribute("disabled");
     }
-    getBlogs();
-  }, [startPoint, endPoint])
+
+    // set next button disabled or enabled
+    const next = document.getElementById("next");
+    if(endPoint> props.blogs.length) {
+      next.setAttribute("disabled", true);
+    }else {
+      next.removeAttribute("disabled");
+    }
+  }, [startPoint, endPoint, props.blogs])
 
   // next page and prev page
-    function nextPage () {
-        if(endPoint < blogsLength) {
-            setStartPoint(prevState=> prevState + itemPerPage);
-            setEndPoint(prevState=> prevState + itemPerPage);
-        }
+  function nextPage () {
+    if(endPoint < props.blogs.length) {
+      setStartPoint(prevState=> prevState + itemPerPage);
+      setEndPoint(prevState=> prevState + itemPerPage);
     }
+  }
 
-    function prevPage () {
-        if(startPoint > 0) {
-            setStartPoint(prevState=> prevState - itemPerPage);
-            setEndPoint(prevState=> prevState - itemPerPage);
-        }
+  function prevPage ({target}) {
+    if(startPoint > 0) {
+      target.removeAttribute("disabled");
+      setStartPoint(prevState=> prevState - itemPerPage);
+      setEndPoint(prevState=> prevState - itemPerPage);
     }
+  }
 
-    return (
-        <div className="blogs fixed-right test">
-            <Loader time={500}/>
-            <div className="main-size">
-                <div className="position-relative">
-                <BlogsView
-                    nextHandler={nextPage} 
-                    prevHandler={prevPage} 
-                    blogs={blogs}
-                    // getBlogIdHandler={blogs}
-                />
-                </div>
-            </div>
+  return (
+    <div className="blogs fixed-right test">
+      <Loader time={500}/>
+      <div className="main-size">
+        <div className="position-relative">
+        <BlogsView
+          nextHandler={nextPage} 
+          prevHandler={prevPage} 
+          blogs={blogs}
+        />
         </div>
-    );
+      </div>
+    </div>
+  );
 }

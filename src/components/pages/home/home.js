@@ -48,7 +48,7 @@ export default function Home () {
                         </div>
                     </div>
                     <div>
-                        <p>
+                        <p className="fw-normal">
                             {homeData.selfIntroduction}
                         </p>
                     </div>

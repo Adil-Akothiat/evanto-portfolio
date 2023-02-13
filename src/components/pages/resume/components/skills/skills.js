@@ -1,24 +1,26 @@
 import React from "react";
 import Certificat from "./certification/certification";
-import CircleProgressBar from "./CircleProgressBar";
 import LanguageProgress from "./languageProgress";
+import Rate from "./rate";
 
 export default function Skills (props) {
     return (
         <div className="my-4">
             <div className="m-title mb-5">
-                <h2 className="fw-normal">skills</h2>
+                <h2>skills</h2>
             </div>
-            <div className="my-grid skills">
-                <div className="my-card">
+            <div>
+                <div className="my-card" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
                     <div className="skill">
                         {
-                            props.resume.skills.map((s, i)=> <CircleProgressBar key={"key-"+i} value={s.rate} skill={s.skill}/>)
+                            props.resume.skills.map((s, i)=> <Rate key={"key-"+i} value={s.rate} skill={s.skill}/>)
                         }
                     </div>
                 </div>
-                <div className="my-card overflow-hidden">
-                    <h3 className="fw-light my-2 text-capitalize">languages</h3>
+                <div className="m-title my-5">
+                    <h2>languages</h2>
+                </div>
+                <div className="my-card overflow-hidden" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                     <div className="languages">
                         < LanguageProgress 
                             language="arabic"
@@ -41,11 +43,13 @@ export default function Skills (props) {
                             description="beginner"
                         />
                     </div>
-                    <div>
-                        <h3 className="fw-light my-2 text-capitalize">licenses & certifications</h3>
+                </div>
+                <div>
+                    <div className="m-title my-5">
+                        <h2>Licenses & Certifications</h2>
+                    </div>
                         <Certificat certificat={props.resume.certifications}/>
                     </div>
-                </div>
             </div>
         </div>
     );

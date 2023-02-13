@@ -31,48 +31,34 @@
     line-height: 1;
     margin-bottom: .2em;
 }
-.resume .skill {
-    margin-top: 0;
-}
-.skills .progressbar-content {
-    width: fit-content;
-    margin: auto;
-}
-.skills .progressbar {
+.resume .rate >div {
     position: relative;
-    line-height: 0;
+    width: 100%;
+    background-color: var(--light-color);
+    height: 5px;
 }
-.skills .track {
-    fill:none;
-    stroke: var(--light-color);
-    stroke-width: .5em;
-}
-.skills .progress {
-    fill:none;
-    stroke: var(--main-color);
-    stroke-width: .5em;
-    transform-origin: center;
-    transform: rotate(-90deg);
-    transition: all 1s ease;
-}
-.skills .progress-text {
+.resume .rate >div div {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: var(--main-color);
 }
-.skills .progressbar-content h5 {
-    text-align: center;
+.resume .rate >div div::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%; transform: translateY(-50%);
+    border-radius: 50%;
+    width: 3.5mm;
+    height: 3.5mm;
+    background-color: var(--main-color);
+}
+.resume .rate span {
+    position: absolute;
+    right: 0;
+    top: -1.8em;
     color: var(--main-color);
-}
-.skills .progress-text h6 {
-    font-size: 1.5em;
-}
-.resume .gr {
-    display: grid;
-    grid-template-columns: 100%;
-    row-gap: 2em;
 }
 .resume .languages >div{
     display: flex;

@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
-import Loader from "../../loader/loader";
 import "../../../styles/pages/portfolio.css";
+
+import Loader from "../../loader/loader";
 import ProjectDetails from "./components/projectDetails/projectDetails";
 import Main from "./components/mainProject/main";
 import portfolioData from "../../../data/portfolio.json";
@@ -60,7 +61,7 @@ export default function Portfolio () {
                         key={"key-"+i}
                         handleClick={closeProject}
                         images={e.info}
-                        title={e.title}
+                        // title={e.title}
                         description={e.info.description}
                         details={e.info.details}
                     />

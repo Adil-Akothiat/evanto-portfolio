@@ -6,7 +6,7 @@ export default function Certificat (props) {
     return (
         <div className="certificat p-2">
             <Marquee 
-                gradient={false} 
+                gradient={true} 
                 pauseOnHover={true}
                 speed={80}
             >

@@ -5,7 +5,7 @@ export default function Services () {
     return (
         <div>
             <div className="m-title mb-5">
-                <h2 className="fw-normal">my services</h2>
+                <h2>my services</h2>
             </div>
             <div className="my-grid services">
                 <div className="my-card" data-aos="fade-top" data-aos-duration="1000">

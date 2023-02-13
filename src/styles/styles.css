@@ -34,6 +34,7 @@ ul {
 }
 /* body properties */
 body {
+    background-color: var(--text-white);
     color: var(--dark-color);
     overflow-x: hidden;
 }
@@ -64,6 +65,7 @@ body::-webkit-scrollbar {
 }
 .m-title h2 {
     font-size: 1.5em;
+    font-weight: 600;
 }
 .m-title::after {
     content: "";
@@ -78,7 +80,7 @@ body::-webkit-scrollbar {
     width: 100%;
 }
 .m-title-top h2 {
-    font-size: 1.9em;
+    font-size: 2em;
 }
 .m-title-top::after {
     background-color: transparent;
@@ -113,6 +115,11 @@ body::-webkit-scrollbar {
         height: 100%;
         right: 0;
         transition: width .8s linear;
+        background-color: var(--text-white);
+    }
+    .fixed-right.dark {
+        background-color: var(--dark-color);
+        color: var(--text-white);
     }
 }
 @media screen and (min-width: 1550px) {

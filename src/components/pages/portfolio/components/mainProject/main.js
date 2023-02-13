@@ -8,7 +8,7 @@ export default function Main (props) {
         setCateg(categ);
     }
     return (
-        <div className="main-size pb-2">
+        <div className="main-size pb-2" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
             <Filter works={props.works} categories={props.categories} setCategories={handleCategories}/>
             <div className="my-grid">
                 {

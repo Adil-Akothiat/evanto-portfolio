@@ -8,7 +8,7 @@ export default function Career (props) {
                 <h2 className="fw-normal text-main">my resume</h2>
             </div>
             <div className="m-title mb-5">
-                <h2 className="fw-normal">employment history</h2>
+                <h2>employment history</h2>
             </div>
             <div className="my-grid experience">
                 {
@@ -26,7 +26,7 @@ export default function Career (props) {
                 }
             </div>
             <div className="m-title mb-5">
-                <h2 className="fw-normal">education</h2>
+                <h2>education</h2>
             </div>
             <div className="my-grid education">
                 {

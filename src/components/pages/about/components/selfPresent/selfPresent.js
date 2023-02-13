@@ -11,15 +11,18 @@ export default function SelfPresentation (props) {
             <div className="m-title m-title-top mb-5">
                 <h2 className="fw-normal text-main">about me</h2>
             </div>
+            <div className="m-title mb-5">
+                <h2>know me more</h2>
+            </div>
             <div className="my-grid info align-items-center hero-img">
-                <div>
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">
                     <img 
                         className="img-fluid rounded w-100"
                         src={"https://deterylightmode.netlify.app/static/media/Aboutus.90dda4cec7b8b59ed230.png"} 
                         alt="hero"
                     />
                 </div>
-                <div>
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500">
                     <div className="mb-4">
                         <p className="lh-base fw-light">
                             {props.about.description}

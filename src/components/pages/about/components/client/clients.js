@@ -5,7 +5,7 @@ export default function Clients (props) {
     return (
         <div className="pb-4">
             <div className="m-title">
-                <h2 className="fw-normal">clients</h2>
+                <h2>clients</h2>
             </div>
             <div className="my-grid clients">
                 {

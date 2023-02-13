@@ -6,7 +6,7 @@ import Video from "./video";
 export default function projectDetails (props) {
     return (
         <div className="project-details">
-            <div className="main-size">
+            <div className="main-size" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
                 <button 
                     id="close-details" 
                     className="btn btn-primary main-bg" 
