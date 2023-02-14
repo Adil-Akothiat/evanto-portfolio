@@ -35,7 +35,8 @@
     position: relative;
     width: 100%;
     background-color: var(--light-color);
-    height: 5px;
+    height: 2px;
+    transition: width .4s linear;
 }
 .resume .rate >div div {
     position: absolute;
@@ -50,15 +51,9 @@
     right: 0;
     top: 50%; transform: translateY(-50%);
     border-radius: 50%;
-    width: 3.5mm;
-    height: 3.5mm;
+    width: 3mm;
+    height: 3mm;
     background-color: var(--main-color);
-}
-.resume .rate span {
-    position: absolute;
-    right: 0;
-    top: -1.8em;
-    color: var(--main-color);
 }
 .resume .languages >div{
     display: flex;

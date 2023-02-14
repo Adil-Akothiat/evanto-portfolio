@@ -1,54 +1,17 @@
 import React from "react";
-import * as Unicons from "@iconscout/react-unicons";
+import PricingCard from "./pricingCard";
 
 export default function Pricing () {
     return (
         <div>
-            <div className="m-title mb-5">
+            <div className="m-title">
                 <h2>Pricing</h2>
             </div>
-            <div className="my-grid pricing">
-                <div className="my-card" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500">
-                    <div>
-                        <Unicons.UilTelegramAlt />
-                        <h3 className="fw-normal text-capitalize">basic</h3>
-                        <h4><strong className="display-6">15 </strong>$/mo</h4>
-                    </div>
-                    <div className="text-capitalize">
-                        <ul>
-                            <li>Page <strong>4</strong></li>
-                            <li>theme <strong>20</strong></li>
-                            <li>starter files</li>
-                            <li>revision <strong>2</strong></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <a href={"#buy-basic"} role="button" className="mt-3 my-own-btn text-capitalize rounded mx-auto">
-                            buy basic
-                        </a>
-                    </div>
-                </div>
-                <div className="my-card" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500">
-                    <div>
-                        <Unicons.UilRocket />
-                        <h3 className="fw-normal text-capitalize">pro</h3>
-                        <h4><strong className="display-6">25 </strong>$/mo</h4>
-                    </div>
-                    <div className="text-capitalize">
-                        <ul>
-                            <li>Page <strong>unlimited</strong></li>
-                            <li>theme <strong>20</strong></li>
-                            <li>starter files</li>
-                            <li>revision <strong>unlimited</strong></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <a href={"#buy-pro"} role="button" className="mt-3 my-own-btn text-capitalize rounded mx-auto">
-                            buy pro
-                        </a>
-                    </div>
-                </div>
-            </div>    
+            <div className="mb-5 pricing-grid">
+                <PricingCard type="free"/>
+                <PricingCard type="standard"/>
+                <PricingCard type="ultimate"/>
+            </div>
         </div>
     );
 }

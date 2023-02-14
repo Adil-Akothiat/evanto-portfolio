@@ -11,7 +11,7 @@ export default function SelfPresentation (props) {
             <div className="m-title m-title-top mb-5">
                 <h2 className="fw-normal text-main">about me</h2>
             </div>
-            <div className="m-title mb-5">
+            <div className="m-title">
                 <h2>know me more</h2>
             </div>
             <div className="my-grid info align-items-center hero-img">
@@ -40,7 +40,7 @@ export default function SelfPresentation (props) {
                                 </div>
                             ))
                         }
-                        <a href={"#CV"} role="button" className="my-own-btn mt-3 text-uppercase rounded">
+                        <a href={"#CV"} role="button" className="text-uppercase">
                                 download cv
                         </a>
                     </div>

@@ -4,7 +4,7 @@ import * as Unicons from "@iconscout/react-unicons";
 export default function Services () {
     return (
         <div>
-            <div className="m-title mb-5">
+            <div className="m-title">
                 <h2>my services</h2>
             </div>
             <div className="my-grid services">

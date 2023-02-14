@@ -10,54 +10,200 @@
     transform: scale(1.5);
     margin-bottom: 1em;
 }
-.pricing >div {
-    display: grid;
-    grid-template-columns: 100%;
-    row-gap: 1em;
-    text-align: center;
-}
-.pricing >div svg {
-    transform: scale(2);
-    margin: 2em 0 1.5em 0;
-    color: var(--main-color);
-}
-.pricing li {
-    margin: .5em 0;
-}
-.clients >div {
-    text-align: center;
-}
-.clients p {
-    font-size: 14px;
-}
-.hide-client {
-    display: none;
-}
-.pricing h4 strong {
-    color: var(--main-color);
-}
-.my-own-btn {
-    display: block;
-    width: fit-content;
-    background-color: var(--main-color);
-    color: var(--text-white);
-    padding: .5em 1.25em;
-    text-decoration: none;
-    border: none;
-    opacity: .7;
-    transition: opacity .3s linear;
-}
-.my-own-btn-link {
-    color: var(--main-color);
-    text-decoration: none;
-}
-.my-own-btn:hover {
-    color:var(--text-white);
-    opacity: 1;
-}
 .cv h4 {
     color: var(--main-color);
     font-size: 24px;
+}
+/* self presentation */
+.cv a[role="button"] {
+    text-decoration: none;
+    color: var(--text-white);
+    background-color: var(--main-color);
+    padding: .5em 1em;
+    display: block;
+    width: fit-content;
+    margin: 1em 0;
+    border: 1px solid var(--main-color);
+    transition: all .4s linear;
+}
+.cv a[role="button"]:hover {
+    background-color: var(--text-white);
+    color: var(--main-color);
+}
+/* pricing */
+.pricing-card h5 {
+    margin: 0;
+    color: var(--scroll-color);
+}
+.pricing-card .card-header {
+    padding: .98em 0;
+}
+.pricing-card .body-card {
+    padding: 1.5em 1em;
+}
+.pricing-card .price-per-time span {
+    margin: 0 .05em;
+}
+.pricing-card .price-per-time span:nth-child(1) {
+    color: var(--main-color);
+    font-size: 2.8em;
+    position: relative;
+}
+.pricing-card .price-per-time span:first-child::after {
+    content: "$";
+    color: var(--main-color);
+    position: absolute;
+    left: -.7em;
+    top: 0;
+    font-size: .5em;
+    font-weight: 700;
+}
+.pricing-card .price-per-time span:last-child {
+    color: var(--scroll-color);
+}
+.pricing-card .package-props li {
+    margin: .5em 0;
+}
+.pricing-card .package-props li.unactive {
+    text-decoration: line-through;
+    color: var(--scroll-color);
+}
+.pricing-card .footer-card {
+    padding: 1em;
+    background-color: var(--bs-card-cap-bg);
+}
+.pricing-card .footer-card button {
+    background-color: var(--main-color);
+    border: none;
+    color: var(--text-white);
+    padding: .5em 1em;
+    display: block;
+    margin: auto;
+    opacity: 0.8;
+    transition: opacity .4s linear;
+}
+.pricing-card .footer-card button:hover {
+    opacity: 1;
+}
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1em;
+    row-gap: 1em;
+}
+@media screen and (max-width: 620px) {
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pricing-grid >div:last-child {
+        grid-column-start: 2 span;
+    }
+}
+@media screen and (max-width: 520px) {
+    .pricing-grid {
+        grid-template-columns: 100%;
+    }
+    .pricing-grid >div:last-child {
+        grid-column-start: auto;
+    }
+}
+.standard .card-header {
+    background-color: var(--main-color);
+}
+.standard .card-header h5 {
+    color: var(--text-white);
+}
+.ultimate {
+    position: relative;
+    overflow: hidden;
+}
+.ultimate >span {
+    background-color: var(--main-color);
+    color: var(--text-white);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(35px, 25px) rotate(45deg);
+    padding: .2em 2.5em;
+    box-shadow: 0px 2px 8px 1px var(--scroll-color);
+}
+@media screen and (max-width: 1200px) {
+    .ultimate >span {
+        font-size: .9em;
+        transform: translate(35px, 20px) rotate(45deg);
+    }
+}
+@media screen and (max-width: 1000px) {
+    .ultimate >span {
+        font-size: .8em;
+        transform: translate(32px, 13px) rotate(45deg);
+    }
+}
+@media screen and (max-width: 850px) {
+    .ultimate >span {
+        font-size: .9em;
+        transform: translate(30px, 22px) rotate(45deg);
+    }
+}
+@media screen and (max-width: 850px) {
+    .ultimate >span {
+        font-size: .8em;
+        transform: translate(32px, 13px) rotate(45deg);
+    }
+}
+@media screen and (max-width: 620px) {
+    .ultimate >span {
+        font-size: 1em;
+        transform: translate(35px, 25px) rotate(45deg);
+    }
+}
+@media screen and (max-width: 250px) {
+    .ultimate >span {
+        font-size: .8em;
+        transform: translate(32px, 14px) rotate(45deg);
+    }
+}
+.about .card {
+    border: none;
+    box-shadow: 0px 0px 4px -1px var(--scroll-color);
+}
+.about .card-header {
+    border-bottom: 1px solid var(--light-color);
+}
+/* clients */
+.review-card {
+    width: 300px;
+    margin: 0 1em;
+}
+@media screen and (max-width: 350px) {
+    .review-card {
+        width: 200px;
+    }
+}
+.review-card .card-header {
+    padding: 1em;
+    border: none;
+}
+.review-card .card-header img {
+    width: 100px;
+    height: 100px;
+}
+.review-card .card-header h5 {
+    line-height: .6;
+}
+.review-card .card-header h6 {
+    color: var(--scroll-color);
+}
+.review-card .body-card {
+    padding: 1em;
+}
+.review-card .body-card p {
+    font-size: 14px;
+    color: var(--scroll-color);
+}
+.review-card a {
+    text-decoration: none;
+    color: var(--main-color);
 }
 @media screen and (max-width: 1250px) {
     .hero-img img {

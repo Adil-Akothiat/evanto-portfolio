@@ -5,7 +5,7 @@ export default function Rate (props) {
         <div className="rate">
             <h5 className="text-capitalize mt-2 fw-normal">{props.skill}</h5>
             <div className="my-2">
-                <div style={{width: props.value+"%"}}><span>{props.value+"%"}</span></div>
+                <div style={{width: props.value+"%"}}></div>
             </div>
         </div>
     );
