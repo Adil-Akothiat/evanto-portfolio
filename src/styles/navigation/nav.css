@@ -170,3 +170,13 @@
     font-size: 15px;
 
 }
+@media screen and (min-width: 1200px) {
+    .navigation {
+        width: 300px;
+    }
+}
+@media screen and (min-width: 1300px) {
+    .navigation {
+        width: 340px;
+    }
+}

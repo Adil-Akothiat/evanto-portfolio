@@ -9,7 +9,7 @@ import About from "./components/pages/about/about";
 import Resume from "./components/pages/resume/resume";
 import Portfolio from "./components/pages/portfolio/portfolio";
 import Blogs from "./components/pages/blogs/blogs";
-import Loader from "./components/loader/loader";
+// import Loader from "./components/loader/loader";
 import Blog from "./components/pages/blogs/components/blog/blog";
 
 // client and query
@@ -78,7 +78,7 @@ export default function App () {
 
   return (
     <>
-      <Loader time={500}/>
+      {/* <Loader time={500}/> */}
       <Navigation expand={expandHandler} close={closeNavHandler}/>
       <Routes>
         <Route path="/" element={<Home />}/>
