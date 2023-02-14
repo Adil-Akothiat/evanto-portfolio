@@ -32,7 +32,7 @@ export default function BlogsView (props) {
                                         <Link 
                                             to={"/blogs/"+b.id}
                                             data-id={b.id}
-                                            // onClick={props.getIdHandler}
+                                            onClick={()=> window.scrollTo(0, 0)}
                                         >{b.title}</Link>
                                     </h3>
                                 </div>

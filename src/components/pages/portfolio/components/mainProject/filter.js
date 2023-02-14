@@ -7,7 +7,7 @@ export default function Filter (props) {
         props.setCategories(target.textContent);
     }
     return (
-        <div className="filter">
+        <div className="filter mb-5">
             <div className="m-title m-title-top mb-5">
                 <h2 className="fw-normal text-main">my portfolio</h2>
             </div>

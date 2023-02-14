@@ -3,7 +3,7 @@ import * as Unicons from "@iconscout/react-unicons";
 
 export default function Share (props) {
     return (
-        <div className="share position-absolute">
+        <div className="share">
             <div className="card">
             <div className="card-header d-flex align-items-center justify-content-between">
                 <h5 className="text-main m-0 text-uppercase fw-normal">share this page</h5>

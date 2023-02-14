@@ -6,7 +6,7 @@ import Video from "./video";
 export default function projectDetails (props) {
     return (
         <div className="project-details">
-            <div className="main-size" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+            <div className="main-size">
                 <button 
                     id="close-details" 
                     className="btn btn-primary main-bg" 
@@ -22,7 +22,7 @@ export default function projectDetails (props) {
                     <div>
                         <ImageGallery details={props.details}/>
                     </div>
-                    <div>
+                    <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
                         <h5 className="text-capitalize mb-3">
                             description
                         </h5>

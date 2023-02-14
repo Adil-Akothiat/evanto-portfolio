@@ -25,7 +25,7 @@ export default function ImageGallery (props) {
         }
     }
     return (
-        <div className="gallery position-relative mb-4"> 
+        <div className="gallery position-relative mb-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400"> 
             <button className="start-0" onClick={prev}><Unicons.UilAngleLeft /></button>
             <div id="content-gallery">
             {
