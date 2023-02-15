@@ -19,7 +19,7 @@ export default function Form () {
         }
     }
     return (
-        <form id="form" className="border-top" onSubmit={subscribe}>
+        <form id="form" className="subscription position-relative" onSubmit={subscribe}>
             <h3 className="text-capitalize text-main">subscribe for more new articles</h3>
             <p>
                 Follow us to inbox our new articles about technology.

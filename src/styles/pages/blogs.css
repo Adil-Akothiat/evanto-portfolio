@@ -98,13 +98,19 @@
     font-size: 3.75rem;
     position: relative;
 }
-.blog .b-t::after {
+@media screen and (max-width: 400px) {
+    .blog .b-t {
+        font-size: 3em;
+    }
+}
+.blog .b-t::after,
+.blog .subscription::after {
     content: "";
     position: absolute;
     top: -0.4em;
     left: 50%;transform: translateX(-50%);
     background-color: var(--dark-color);
-    height: 10px;
+    height: 5px;
     width: 100%;
 }
 @media screen and (min-width: 500px) {
@@ -177,7 +183,18 @@
     width: 120px;
     height: 120px;
 }
-
+.author .author-info {
+    margin: 10px 0;
+}
+@media screen and (min-width: 650px) {
+    .author {
+        display: flex;
+        align-items: flex-start;
+    }
+    .author .author-info {
+        margin: 0 1em;
+    }
+}
 .blog .author h4 {
     color: var(--main-color);
     line-height: 1;
@@ -358,6 +375,11 @@
 .blog .blog-date span{
     color: var(--scroll-color);
     display: block;
+}
+@media screen and (max-width: 494px) {
+    .blog .blog-date {
+        margin-bottom: .5em;
+    }
 }
 .blog .scroll-rate {
     width: 50%;
