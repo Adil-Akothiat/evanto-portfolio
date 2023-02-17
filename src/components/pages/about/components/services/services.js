@@ -1,5 +1,10 @@
 import React from "react";
-import * as Unicons from "@iconscout/react-unicons";
+
+import { MdOutlineDesignServices } from "react-icons/md";
+import { BiCodeCurly, BiDevices } from "react-icons/bi";
+import { AiOutlineAppstoreAdd } from "react-icons/ai";
+import { TbReportAnalytics } from "react-icons/tb";
+import { FaBullhorn } from "react-icons/fa";
 
 export default function Services () {
     return (
@@ -10,7 +15,7 @@ export default function Services () {
             <div className="my-grid services">
                 <div className="my-card" data-aos="fade-top" data-aos-duration="1000">
                     <div className="mb-3">
-                        <Unicons.UilPalette />
+                        <MdOutlineDesignServices />
                         <h5 className="fw-normal text-capitalize">web design</h5>
                     </div>
                     <div>
@@ -21,7 +26,7 @@ export default function Services () {
                 </div>
                 <div className="my-card" data-aos="fade-top" data-aos-duration="1000">
                     <div className="mb-3">
-                        <Unicons.UilBracketsCurly />
+                        <BiCodeCurly />
                         <h5 className="fw-normal text-capitalize">web development</h5>
                     </div>
                     <div>
@@ -32,7 +37,7 @@ export default function Services () {
                 </div>
                 <div className="my-card" data-aos="fade-top" data-aos-duration="1000">
                     <div className="mb-3">
-                        <Unicons.UilApps />
+                        <AiOutlineAppstoreAdd />
                         <h5 className="fw-normal text-capitalize">apps development</h5>
                     </div>
                     <div>
@@ -43,7 +48,7 @@ export default function Services () {
                 </div>
                 <div className="my-card" data-aos="fade-top" data-aos-duration="1000">
                     <div className="mb-3">
-                        <Unicons.UilDesktopAlt />
+                        <BiDevices />
                         <h5 className="fw-normal text-capitalize">uX design</h5>
                     </div>
                     <div>
@@ -54,7 +59,7 @@ export default function Services () {
                 </div>
                 <div className="my-card" data-aos="fade-top" data-aos-duration="1000">
                     <div className="mb-3">
-                        <Unicons.UilAnalytics />
+                        <TbReportAnalytics />
                         <h5 className="fw-normal text-capitalize">business analysis</h5>
                     </div>
                     <div>
@@ -65,7 +70,7 @@ export default function Services () {
                 </div>
                 <div className="my-card" data-aos="fade-top" data-aos-duration="1000">
                     <div className="mb-3">
-                        <Unicons.UilMegaphone />
+                        <FaBullhorn />
                         <h5 className="fw-normal text-capitalize">sEO marketing</h5>
                     </div>
                     <div>

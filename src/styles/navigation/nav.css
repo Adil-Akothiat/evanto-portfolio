@@ -103,6 +103,10 @@
 .navigation .link-pages a:hover::after {
     opacity: .1;
 }
+.navigation .link-pages svg {
+    width: 25px;
+    height: 25px;
+}
 .navigation ul svg,
 .navigation ul span {
     pointer-events: none;
@@ -130,6 +134,8 @@
 .navigation .my-collapse svg {
     pointer-events: none;
     color: var(--main-color);
+    width: 25px;
+    height: 25px;
 }
 @media screen and (min-width: 850px) {
     .navigation {

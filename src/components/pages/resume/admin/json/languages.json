@@ -1,0 +1,22 @@
+[
+    {
+        "language":"arabic",
+        "rate":5,
+        "description":"native"
+    },
+    {
+        "language":"english",
+        "rate":3,
+        "description":"intermediate"
+    },
+    {
+        "language":"germany",
+        "rate":4,
+        "description":"proficient"
+    },
+    {
+        "language":"spanish",
+        "rate":1,
+        "description":"beginnner"
+    }
+]

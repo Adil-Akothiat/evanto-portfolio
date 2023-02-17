@@ -1,6 +1,11 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
-import * as Unicons from "@iconscout/react-unicons";
+
+import { AiOutlineHome } from "react-icons/ai";
+import { BiUserPin } from "react-icons/bi";
+import { RiTodoLine, RiArticleLine } from "react-icons/ri";
+import { MdContactSupport } from "react-icons/md";
+import { IoBriefcaseOutline } from "react-icons/io5";
 
 export default function Links (props) {
     return (
@@ -12,7 +17,7 @@ export default function Links (props) {
                         tag={Link}
                         to="/"
                     >
-                        <Unicons.UilEstate />
+                        <AiOutlineHome />
                         <span>home</span>
                     </NavLink>
                 </li>
@@ -22,7 +27,7 @@ export default function Links (props) {
                         tag={Link}
                         to="/about"
                     >
-                        <Unicons.UilUserCircle />
+                        <BiUserPin />
                         <span>about</span>
                     </NavLink>
                 </li>
@@ -32,7 +37,7 @@ export default function Links (props) {
                         tag={Link}
                         to="/resume"
                     >
-                        <Unicons.UilClipboardAlt />
+                        <RiTodoLine />
                         <span>resume</span>
                     </NavLink>   
                 </li>
@@ -42,7 +47,7 @@ export default function Links (props) {
                         tag={Link}
                         to="/portfolio"
                     >
-                        <Unicons.UilBag />
+                        <IoBriefcaseOutline />
                         <span>portfolio</span>
                     </NavLink>
                 </li>
@@ -52,7 +57,7 @@ export default function Links (props) {
                         tag={Link}
                         to="/blogs"
                     >
-                        <Unicons.UilDocumentLayoutLeft />
+                        <RiArticleLine />
                         <span>blogs</span>
                     </NavLink>
                 </li>
@@ -62,7 +67,7 @@ export default function Links (props) {
                         tag={Link}
                         to="/contact"
                     >
-                        <Unicons.UilAt />
+                        <MdContactSupport />
                         <span>contact</span>
                     </NavLink>
                 </li>

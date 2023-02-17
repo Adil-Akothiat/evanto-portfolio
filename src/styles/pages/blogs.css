@@ -79,6 +79,10 @@
 .pagination button[disabled="true"] {
     opacity: 0.3;
 }
+.pagination button svg {
+    width: 25px;
+    height: 25px;
+}
 .pagination button[disabled="true"]:hover {
     opacity: 0.3;
 }
@@ -195,6 +199,10 @@
         margin: 0 1em;
     }
 }
+.blog .da-ca-sh h5,
+.blog .da-ca-sh h6 {
+    margin: 0;
+}
 .blog .author h4 {
     color: var(--main-color);
     line-height: 1;
@@ -302,7 +310,6 @@
     color: var(--text-white);
     border: none;
     padding: .25em .5em;
-    margin-right: .8em;
     cursor: pointer;
     opacity: .8;
 }
@@ -310,7 +317,8 @@
     opacity: 1;
 }
 .blog .share-btn svg {
-    margin-right: .35em;
+    width: 25px;
+    height: 25px;
 }
 .blog .share {
     position: absolute;
@@ -347,6 +355,10 @@
 .blog .share .close-share:hover {
     opacity: 1;
 }
+.blog .share .close-share svg {
+    width: 28px;
+    height: 28px;
+}
 .blog .social {
     width: fit-content;
 }
@@ -360,16 +372,30 @@
     text-decoration: none;
 }
 .blog .social a:first-child {
-    width: fit-content;
+    width: 40px;
+    height: 40px;
     margin: auto;
     padding: .5em;
     border-radius: 50%;
     background-color: var(--main-color);
     color: var(--text-white);
     opacity: .8;
+    position: relative;
+}
+.blog .social a svg {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 .blog .social a:first-child:hover {
     opacity: 1;
+}
+.blog .blog-date svg {
+    width: 25px;
+    height: 25px;
 }
 .blog .blog-date svg,
 .blog .blog-date span{
@@ -405,6 +431,10 @@
         column-gap: 1.5em;
     }
 }
+.blog .scroll-top svg {
+    width: 28px;
+    height: 28px;
+}
 .blog .scroll-top {
     position: fixed;
     right: 1.5em;
@@ -412,9 +442,9 @@
     border: none;
     color: var(--text-white);
     background-color: var(--main-color);
-    padding: .7em;
-    border-radius: 50%;
+    padding: 8px;
     z-index: 3;
+    opacity: .5;
     transition: all .3s linear;
 }
 .blog .scroll-top:hover {

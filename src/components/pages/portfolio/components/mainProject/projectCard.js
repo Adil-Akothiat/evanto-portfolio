@@ -1,5 +1,6 @@
 import React from "react";
-import * as Unicons from "@iconscout/react-unicons";
+
+import { AiOutlinePlus } from "react-icons/ai";
 
 export default function PorjectCard (props) {
     return (
@@ -11,7 +12,7 @@ export default function PorjectCard (props) {
                     onClick={props.handleClick} 
                     data-id={props.id}
                 >
-                    <Unicons.UilPlus />
+                    <AiOutlinePlus />
                 </button>
                 <div className="translate-middle top-50 start-50">
                     <h4 className="text-capitalize fw-normal">

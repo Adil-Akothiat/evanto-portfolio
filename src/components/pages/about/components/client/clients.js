@@ -3,7 +3,9 @@ import React from "react";
 import ReviewCard from "./reviewCard";
 import Marquee from "react-fast-marquee";
 
-export default function Clients (props) {
+import clients from "../../admin/json/clients.json";
+
+export default function Clients () {
     return (
         <div className="pb-4 client">
             <div className="m-title">
@@ -16,12 +18,13 @@ export default function Clients (props) {
                     speed={80}
                 >
                     {
-                        props.clients.map((client, i)=> (
+                        clients.map((client, i)=> (
                             <ReviewCard 
                                 key={"reviw-"+i}
                                 name={client.name}
                                 image={client.image}
                                 review={client.review}
+                                stars={client.stars}
                                 link={client.link}
                             />
                             )

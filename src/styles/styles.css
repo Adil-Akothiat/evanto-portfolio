@@ -31,6 +31,7 @@ ul {
     --danger-color: #f37272;
     --shadow-color: #0000001a;
     --sm-darken: rgba(0, 0, 0, .4);
+    --stars-color: #f5961d;
 }
 /* body properties */
 body {

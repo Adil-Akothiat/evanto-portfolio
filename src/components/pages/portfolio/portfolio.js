@@ -4,18 +4,17 @@ import "../../../styles/pages/portfolio.css";
 import Loader from "../../loader/loader";
 import ProjectDetails from "./components/projectDetails/projectDetails";
 import Main from "./components/mainProject/main";
-import portfolioData from "../../../data/portfolio.json";
+
+
+// import portfolioData from "../../../data/portfolio.json";
+import projectsData from "./admin/json/projects.json";
 
 export default function Portfolio () {
     const [projects, setProjects]=  useState([]);
     const [categories, setCategories] = useState([]);
     const [details, setDetails] = useState({status: false});
+
     function openProject ({target}) {
-        // display none of the navigation 
-        window.scrollTo(0, 0)
-        if(window.innerWidth<850) {
-            document.querySelector(".navigation").style.display="none";
-        }
         const detailsStatus = {
             id: target.dataset.id,
             status: true,
@@ -23,10 +22,6 @@ export default function Portfolio () {
         setDetails(detailsStatus);
     }
     function closeProject () {
-        // display none of the navigation 
-        if(window.innerWidth<850) {
-            document.querySelector(".navigation").style.display="block";
-        }
         setDetails({status: false});
     }
     function generateDataWithId (dataParams, array=[]) {
@@ -42,13 +37,10 @@ export default function Portfolio () {
         return array;
     }
     useEffect(()=> {
-        setProjects(generateDataWithId(portfolioData));
-    }, [])
-    // get categories
-    useEffect(()=> {
+        setProjects(generateDataWithId(projectsData));
         const categoriesSet = new Set([]);
         let array = ["all"];
-        portfolioData.forEach(e=> categoriesSet.add(e.info.details.category));
+        projectsData.forEach(e=> categoriesSet.add(e.info.details.category));
         categoriesSet.forEach(e=> array.push(e));
         setCategories(array);
     }, [])
@@ -61,7 +53,7 @@ export default function Portfolio () {
                         key={"key-"+i}
                         handleClick={closeProject}
                         images={e.info}
-                        // title={e.title}
+                        title={e.title}
                         description={e.info.description}
                         details={e.info.details}
                     />

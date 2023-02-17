@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ResumeCard (props) {
+export default function ExperienceAndEducation (props) {
     return (
         <div className="my-card" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
             <span className="line-top"></span>

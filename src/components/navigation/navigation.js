@@ -1,43 +1,52 @@
-import React, {useState} from "react";
-import { Link } from "react-router-dom";
-import * as Unicons from "@iconscout/react-unicons";
+import React, {useState, useEffect} from "react";
+
 import "../../styles/navigation/nav.css";
 
 import Links from "./components/links";
+import NavHeader from "./components/navHeader";
+import NavFooter from "./components/navFooter";
+import Collapse from "./components/collapse";
 
-export default function Navigation (props) {
+export default function Navigation () {
     const [open, setOpen] = useState(false);
+
+    const expandHandler = ()=> document.querySelector(".navigation").classList.toggle("expand-nav");
+    const closeHandler = ()=> {
+        document.querySelector(".navigation").classList.remove("expand-nav");
+        window.scrollTo(0, 0);
+    }
+    const decreaseCollapseOpacity = ()=> {
+        const collapse = document.getElementById("collapse");
+        if(window.scrollY>1) {
+          collapse.style.opacity="0.5"
+        }else {
+          collapse.style.opacity="1";
+        }
+    }
+    const collapseNav = ()=> {
+        open?setOpen(false):setOpen(true);
+        expandHandler();
+    }
+
+    useEffect(()=> {
+        window.scrollTo(0, 0);
+        window.addEventListener("scroll", decreaseCollapseOpacity)
+        return ()=> {
+            window.removeEventListener("scroll", decreaseCollapseOpacity)
+        }
+    }, [])
 
     return (
         <div className="navigation">
+            <Collapse 
+                collapse={collapseNav}  
+                open={open}  
+            />
             <div className="content">
-                <div className="p-3 hero mx-auto">
-                    <Link 
-                        onClick={()=> props.closeNav()}
-                        to="/"
-                    >
-                        <img src={"https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"} alt="adil khayt"/>
-                    </Link>
-                    <h5 className="text-capitalize fw-normal text-center mt-3">adil khayt</h5>
-                    <h6 className="text-capitalize text-center fw-light text-main">tangir, morocco</h6>
-                </div>
-                <Links closeNav={props.close}/>
-                <div className="copyright position-relative">
-                    <p className="fw-light text-center">© {new Date().getFullYear()} Company_Name. All Rights Reserved.</p>
-                </div>
+                <NavHeader close={closeHandler}/>
+                <Links close={closeHandler}/>
+                <NavFooter />
             </div>
-            <button 
-                className="my-collapse" 
-                role="menubar"
-                onClick={()=> {
-                    open?setOpen(false):setOpen(true);
-                    props.expand();
-                }}
-                >
-                {
-                    open?<Unicons.UilMultiply />:<Unicons.UilBars />
-                }
-            </button>
         </div>
     );
 }

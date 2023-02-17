@@ -108,7 +108,8 @@
 }
 .certification svg {
     color: var(--main-color);
-    transform: scale(1.2);
+    width: 35px;
+    height: 35px;
 }
 .certification h4 {
     font-size: 1.25em;

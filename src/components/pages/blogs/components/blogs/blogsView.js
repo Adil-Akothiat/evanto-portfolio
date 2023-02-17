@@ -1,7 +1,9 @@
 import React from "react";
-import * as Unicons from "@iconscout/react-unicons";
-import Pagination from "../pagination/pagination";
 import { Link } from "react-router-dom";
+
+import { AiOutlineCalendar } from "react-icons/ai";
+
+import Pagination from "../pagination/pagination";
 
 export default function BlogsView (props) {
     return (
@@ -21,7 +23,7 @@ export default function BlogsView (props) {
                                 <div className="d-flex align-items-center justify-content-between mb-3">
                                     <span className="rounded text-capitalize">{b.category}</span>
                                     <div className="d-flex align-items-center date"> 
-                                        <Unicons.UilCalendarAlt />
+                                        <AiOutlineCalendar />
                                         <p className="fw-light">{b.date}</p>
                                     </div>
                                 </div>

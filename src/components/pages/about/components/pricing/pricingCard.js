@@ -2,22 +2,20 @@ import React from "react";
 
 export default function PricingCard (props) {
     return (
-        <div className={"pricing-card card "+props.type} data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
-            {props.type==="ultimate"?<span className="text-capitalize">advanced</span>:null}
+        <div className={"pricing-card card "+props.package.package} data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+            {props.package.package==="ultimate"?<span className="text-capitalize">{props.package.package}</span>:null}
             <div className="card-header">
-                <h5 className="text-center text-capitalize m-0 fw-normal">{props.type}</h5>
+                <h5 className="text-center text-capitalize m-0 fw-normal">{props.package.package}</h5>
             </div>
             <div className="body-card">
                 <div className="price-per-time text-center">
-                    <span>0</span><span>/month</span>
+                    <span>{props.package.price}</span><span>/{props.package.perTime}</span>
                 </div>
                 <div className="package-props my-3">
                     <ul className="text-center">
-                        <li>Aida dere</li>
-                        <li>Nec feugiat nisl</li>
-                        <li>Nulla at volutpat dola</li>
-                        <li className="unactive">Pharetra massa</li>
-                        <li className="unactive">Massa ultricies mi</li>
+                        {
+                            props.package.features.map((f, i)=> <li className={f.available?"":"unactive"} key={"key-"+i}>{f.feature}</li>)
+                        }
                     </ul>
                 </div>
             </div>

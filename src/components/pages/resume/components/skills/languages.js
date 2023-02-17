@@ -1,6 +1,8 @@
 import React from "react";
 
-export default function LanguageProgress (props) {
+import languages from "../../admin/json/languages.json";
+
+const Language = (props)=> {
     function setRate (r) {
         let array = [];
         for(let i = 0; i < r; i++) {
@@ -21,9 +23,27 @@ export default function LanguageProgress (props) {
             </div>
             <div className="rate-language">
                 {
-                    setRate(props.languageRate).map((e, i)=> <span key={"rate-"+i} className={e}></span>)
+                    setRate(props.rate).map((e, i)=> <span key={"rate-"+i} className={e}></span>)
                 }
             </div>
         </div>
+    );
+}
+
+
+export default function Languages () {
+    return (
+        <>
+            {
+                languages.map((l, i)=> (
+                    <Language 
+                        key={"key-"+i}
+                        language={l.language}
+                        rate={l.rate}
+                        description={l.description}
+                    />
+                ))
+            }
+        </>
     );
 }

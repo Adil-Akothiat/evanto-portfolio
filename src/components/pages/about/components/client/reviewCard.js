@@ -1,6 +1,16 @@
 import React from "react";
 
+import { AiFillStar, AiOutlineStar } from "react-icons/ai";
+
+
 export default function ReviewCard (props) {
+    const stars = ()=> {
+        let num = props.stars>=5?5:props.stars;
+        let stars = [];
+        for(let i = 0; i < num; i++) stars.push("star");
+        for(let i = stars.length; i < 5; i++) stars.push("no-star");
+        return stars;
+    }
     return (
         <div className="review-card card text-center">
             <div className="card-header">
@@ -15,13 +25,22 @@ export default function ReviewCard (props) {
                     <h5 className="text-capitalize fw-normal">{props.name}</h5>
                     <h6 className="text-capitalize fw-light">designer</h6>
                 </div>
+                <div className="stars">
+                    <ul className="d-flex flex-wrap justify-content-center">
+                        {
+                            stars().map((s, i)=> <li className={s} key={"key-"+i}>{
+                                s==="star"?<AiFillStar />:<AiOutlineStar />
+                            }</li>)
+                        }
+                    </ul>
+                </div>
             </div>
             <div className="body-card">
                 <div>
                     <p className="fw-light">{props.review}</p>
                 </div>
                 <div>
-                    <a href={props.link} role={"button"} className="my-own-btn-link fw-light text-capitalize rounded mx-auto">
+                    <a href={props.link} role="button" className="my-own-btn-link text-capitalize rounded mx-auto">
                         watch review
                     </a>
                 </div>

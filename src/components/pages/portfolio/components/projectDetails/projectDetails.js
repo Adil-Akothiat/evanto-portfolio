@@ -1,5 +1,12 @@
 import React from "react";
-import * as Unicons from "@iconscout/react-unicons";
+
+import { AiOutlineCalendar } from "react-icons/ai";
+import { BiCategory } from "react-icons/bi";
+import { BsFillPersonCheckFill } from "react-icons/bs";
+import { TbWorld } from "react-icons/tb";
+import { MdOutlineClose } from "react-icons/md";
+
+
 import ImageGallery from "./imageGallery";
 import Video from "./video";
 
@@ -13,7 +20,7 @@ export default function projectDetails (props) {
                     onClick={props.handleClick}
                     style={{border: "none"}}
                 >
-                    <Unicons.UilMultiply />
+                    <MdOutlineClose />
                 </button>
                 <h3 className="text-capitalize fw-normal my-4">
                     {props.title}
@@ -28,16 +35,16 @@ export default function projectDetails (props) {
                         </h5>
                         <div className="detail mb-4">
                             <div className="d-flex mb-2">
-                                <Unicons.UilUserSquare /><span className="fw-light text-capitalize ml-2">{props.details.client}</span>
+                                <BsFillPersonCheckFill /><span className="fw-light text-capitalize ml-2">{props.details.client}</span>
                             </div>
                             <div className="d-flex mb-2">
-                                <Unicons.UilGlobe /><span className="fw-light ml-2"><a href={props.details.link}>{props.details.link}</a></span>
+                                <TbWorld /><span className="fw-light ml-2"><a href={props.details.link}>{props.details.link}</a></span>
                             </div>
                             <div className="d-flex mb-2">
-                                <Unicons.UilApps /><span className="fw-light ml-2 text-capitalize">{props.details.category}</span>
+                                <BiCategory /><span className="fw-light ml-2 text-capitalize">{props.details.category}</span>
                             </div>
                             <div className="d-flex mb-2">
-                                <Unicons.UilCalendarAlt /><span className="fw-light ml-2">{props.details.date}</span>
+                                <AiOutlineCalendar /><span className="fw-light ml-2">{props.details.date}</span>
                             </div>
                         </div>
                         <h5 className="text-capitalize my-3">

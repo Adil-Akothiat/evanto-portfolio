@@ -1,0 +1,34 @@
+{
+    "description":"I'm Adil Khayt, frontend developer from Morocco, Tangir. Morocco is my origin country, I love the ambiance here. I've been started my first career as frontend developer 3 years ago. I'm passionate about programming in general.",
+    "info": 
+    [
+        {
+            "key":"name", 
+            "value":"adil khayt"
+        },
+        {
+            "key":"age", 
+            "value":22
+        },
+        {
+            "key":"nationality", 
+            "value":"moroccan"
+        },
+        {
+            "key":"address",
+            "value":"branes 1, tangir MR"
+        },
+        {
+            "key":"email", 
+            "value":"me@me.com"
+        },
+        {
+            "key":"phone", 
+            "value":"+21261 303 7225"
+        },
+        {
+            "key":"hobbies", 
+            "value":"swimming, read books, googling"
+        }
+    ]
+}

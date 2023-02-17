@@ -1,9 +1,13 @@
 import React from "react";
-import * as Unicons from "@iconscout/react-unicons";
+
+import { AiOutlineCalendar } from "react-icons/ai";
+import { CgShare } from "react-icons/cg";
+import { BsArrowUp } from "react-icons/bs";
 
 import Form from "./form/form";
 import Share from "./share/share";
 import Loader from "../../../../loader/loader";
+
 
 
 export default function Blog (props) {
@@ -12,8 +16,8 @@ export default function Blog (props) {
             <Loader time={500}/>
             <button 
                 onClick={()=> window.scrollTo(0, 0)}
-                className="scroll-top"
-            ><Unicons.UilTopArrowFromTop /></button>
+                className="scroll-top rounded"
+            ><BsArrowUp /></button>
             <div className="main-size position-relative">
                 {
                     props.open?
@@ -51,14 +55,14 @@ export default function Blog (props) {
                                 <h5 className="fw-normal text-capitalize">{props.blog.category}</h5>
                                 <span>━</span>
                                 <div className="blog-date d-flex align-items-center">
-                                    <Unicons.UilCalender />
+                                    <AiOutlineCalendar />
                                     <span className="mx-2">{new Date(...props.blog.date.split("-")).toDateString()}</span>
                                 </div>
                             </div>
                             <div className="d-flex align-items-center">
                                 <button className="share-btn rounded text-capitalize" onClick={props.openShareHandler}>
-                                    <Unicons.UilShare />
-                                    share
+                                    <CgShare />
+                                    <span className="mx-2">Share</span>
                                 </button>
                             </div>
                         </div>

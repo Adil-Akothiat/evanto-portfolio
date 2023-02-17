@@ -1,11 +1,8 @@
 import React from "react";
 
-export default function SelfPresentation (props) {
-    function getPersonalInfo () {
-        let personal = [];
-        for(let key in props.about.personalInfo) personal.push({key:key, value:props.about.personalInfo[key]});
-        return personal;
-    }
+import knowMeMore from "../../admin/json/knowMeMore.json";
+
+export default function KnowMeMore (props) {
     return (
         <div className="cv">
             <div className="m-title m-title-top mb-5">
@@ -24,19 +21,19 @@ export default function SelfPresentation (props) {
                 </div>
                 <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500">
                     <div className="mb-4">
-                        <p className="lh-base fw-light">
-                            {props.about.description}
+                        <p className="lh-base">
+                            {knowMeMore.description}
                         </p>
                     </div>
                     <div>
-                        <h4 className="fw-normal text-capitalize">personal information</h4>
+                        <h4 className="text-capitalize">personal information</h4>
                         {
-                            getPersonalInfo().map((e, i)=> (
+                            knowMeMore.info.map((e, i)=> (
                                 <div 
                                     key={"key-"+i}
                                     className="ds-fl my-2"
                                 >
-                                    <span className="text-capitalize fw-normal">{e.key} : </span><span className={e.key==="email"?"fw-light":"text-capitalize fw-light"}>{e.value}</span>
+                                    <span className="text-capitalize fw-bold">{e.key} : </span><span className={e.key==="email"?"":"text-capitalize"}>{e.value}</span>
                                 </div>
                             ))
                         }

@@ -1,5 +1,8 @@
 import React from "react";
-import * as Unicons from "@iconscout/react-unicons";
+
+// import { GrFormNext, GrFormPrevious } from "react-icons/gr";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+
 
 export default function ImageGallery (props) {
     function prev () {
@@ -26,7 +29,7 @@ export default function ImageGallery (props) {
     }
     return (
         <div className="gallery position-relative mb-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400"> 
-            <button className="start-0" onClick={prev}><Unicons.UilAngleLeft /></button>
+            <button className="start-0" onClick={prev}><FaAngleLeft /></button>
             <div id="content-gallery">
             {
                 props.details.images.map((img, i)=> (
@@ -39,7 +42,7 @@ export default function ImageGallery (props) {
                 ))
             }
             </div>
-            <button className="end-0" onClick={next}><Unicons.UilAngleRight /></button>
+            <button className="end-0" onClick={next}><FaAngleRight /></button>
         </div>
     );
 }

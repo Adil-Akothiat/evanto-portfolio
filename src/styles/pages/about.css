@@ -6,8 +6,9 @@
     margin-left: .5em;
 }
 .services svg {
+    width: 40px;
+    height: 40px;
     color: var(--main-color);
-    transform: scale(1.5);
     margin-bottom: 1em;
 }
 .cv h4 {
@@ -175,6 +176,10 @@
     width: 300px;
     margin: 0 1em;
 }
+.review-card svg {
+    width: 25px;
+    height: 25px;
+}
 @media screen and (max-width: 350px) {
     .review-card {
         width: 200px;
@@ -204,6 +209,9 @@
 .review-card a {
     text-decoration: none;
     color: var(--main-color);
+}
+.review-card .stars svg {
+    fill: var(--stars-color);
 }
 @media screen and (max-width: 1250px) {
     .hero-img img {

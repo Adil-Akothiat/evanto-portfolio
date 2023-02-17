@@ -1,0 +1,83 @@
+[
+    {
+        "package":"free",
+        "price":0,
+        "perTime":"month",
+        "features":[
+            {
+                "feature":"Aida dere",
+                "available":true
+            },
+            {
+                "feature":"Nec feugiat nisl",
+                "available":true
+            },
+            {
+                "feature":"Nulla at volutpat dola",
+                "available":true
+            },
+            {
+                "feature":"Pharetra massa",
+                "available":false
+            },
+            {
+                "feature":"Massa ultricies mi",
+                "available":false
+            }
+        ]
+    },
+    {
+        "package":"standard",
+        "price":25,
+        "perTime":"month",
+        "features":[
+            {
+                "feature":"Aida dere",
+                "available":true
+            },
+            {
+                "feature":"Nec feugiat nisl",
+                "available":true
+            },
+            {
+                "feature":"Nulla at volutpat dola",
+                "available":true
+            },
+            {
+                "feature":"Pharetra massa",
+                "available":true
+            },
+            {
+                "feature":"Massa ultricies mi",
+                "available":false
+            }
+        ]
+    },
+    {
+        "package":"ultimate",
+        "price":48,
+        "perTime":"month",
+        "features":[
+            {
+                "feature":"Aida dere",
+                "available":true
+            },
+            {
+                "feature":"Nec feugiat nisl",
+                "available":true
+            },
+            {
+                "feature":"Nulla at volutpat dola",
+                "available":true
+            },
+            {
+                "feature":"Pharetra massa",
+                "available":true
+            },
+            {
+                "feature":"Massa ultricies mi",
+                "available":true
+            }
+        ]
+    }
+]

@@ -24,32 +24,6 @@ export default function App () {
   useEffect(()=> {
     AOS.init();
   }, []);
-  
-  //navigation.js
-  const expandHandler = ()=> document.querySelector(".navigation").classList.toggle("expand-nav");
-  
-  // onClick to navLink close the navbar
-  const closeNavHandler = ()=> {
-    document.querySelector(".navigation").classList.remove("expand-nav");
-    window.scrollTo(0, 0);
-  }
-  
-  // decrease collapse button opacity
-  function decrOpacity () {
-    const collapse = document.querySelector(".my-collapse");
-    if(window.scrollY>1) {
-      collapse.style.opacity="0.5"
-    }else {
-      collapse.style.opacity="1";
-    }
-  }
-  useEffect(()=> {
-    window.scrollTo(0, 0);
-    window.addEventListener("scroll", ()=> {
-      decrOpacity();
-    })
-  }, []);
-
 
   // single Blog article
   const [isOpenShare, setIsOpenShare] = useState(false);
@@ -78,8 +52,7 @@ export default function App () {
 
   return (
     <>
-      {/* <Loader time={500}/> */}
-      <Navigation expand={expandHandler} close={closeNavHandler}/>
+      <Navigation />
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/about" element={<About />}/>

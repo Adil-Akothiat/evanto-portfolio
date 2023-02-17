@@ -1,0 +1,26 @@
+[
+    {
+        "skill":"web design",
+        "rate":65
+    },
+    {
+        "skill":"javascript",
+        "rate":75
+    },
+    {
+        "skill":"angular js",
+        "rate":60
+    },
+    {
+        "skill":"html/css",
+        "rate":80
+    },
+    {
+        "skill":"react js",
+        "rate":50
+    },
+    {
+        "skill":"bootstrap",
+        "rate":40
+    }
+]

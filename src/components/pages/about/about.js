@@ -5,10 +5,7 @@ import Loader from "../../loader/loader";
 import Clients from "./components/client/clients";
 import Pricing from "./components/pricing/pricing";
 import Services from "./components/services/services";
-import SelfPresentation from "./components/selfPresent/selfPresent";
-
-// data
-import aboutData from "../../../data/about.json";
+import KnowMeMore from "./components/knowMeMore/knowMeMore";
 
 export default function About () {
     
@@ -16,10 +13,10 @@ export default function About () {
         <div className="about fixed-right main-scroll">
             <Loader time={500}/>
             <div className="main-size">
-                <SelfPresentation about={aboutData.about}/>
+                <KnowMeMore />
                 <Services />
                 <Pricing />
-                <Clients clients={aboutData.about.clients}/>
+                <Clients />
             </div>
         </div>
     );

@@ -1,7 +1,11 @@
 import React from "react";
-import ResumeCard from "./resumeCard";
+import ExperienceAndEducation from "./experAndEduc";
 
-export default function Career (props) {
+import employmentHistory from "../../admin/json/employmentHistory.json";
+import education from "../../admin/json/education.json";
+
+
+export default function Career () {
     return (
         <>  
             <div className="m-title m-title-top mb-5">
@@ -12,8 +16,8 @@ export default function Career (props) {
             </div>
             <div className="my-grid experience">
                 {
-                    props.resume.experiences.map((exp, i)=> (
-                        <ResumeCard 
+                    employmentHistory.map((exp, i)=> (
+                        <ExperienceAndEducation
                             key={"experience-"+i}
                             from={exp.from}
                             to={exp.to}
@@ -30,8 +34,8 @@ export default function Career (props) {
             </div>
             <div className="my-grid education">
                 {
-                    props.resume.educations.map((edu, i)=> (
-                        <ResumeCard 
+                    education.map((edu, i)=> (
+                        <ExperienceAndEducation
                             key={"key-"+i}
                             from={edu.from}
                             to={edu.to}
