@@ -4,13 +4,11 @@ import "../../../styles/pages/home.css";
 import BackgroundAnimated from "./components/animatedBackground";
 import TypingAnimation from "./components/typeIt";
 import Social from "./components/social";
-import Loader from "../../loader/loader";
 
 export default function Home () {
     return (
         <div className="home fixed-right">
             <div className="center main-size m-0">
-                <Loader time={500}/>
                 <BackgroundAnimated />
                 <div className="home-size">
                     <TypingAnimation />

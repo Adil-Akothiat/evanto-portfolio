@@ -2,7 +2,7 @@ import React from "react";
 
 import knowMeMore from "../../admin/json/knowMeMore.json";
 
-export default function KnowMeMore (props) {
+export default function KnowMeMore () {
     return (
         <div className="cv">
             <div className="m-title m-title-top mb-5">
@@ -12,14 +12,14 @@ export default function KnowMeMore (props) {
                 <h2>know me more</h2>
             </div>
             <div className="my-grid info align-items-center hero-img">
-                <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">
+                <div>
                     <img 
                         className="img-fluid rounded w-100"
                         src={"https://deterylightmode.netlify.app/static/media/Aboutus.90dda4cec7b8b59ed230.png"} 
                         alt="hero"
                     />
                 </div>
-                <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500">
+                <div>
                     <div className="mb-4">
                         <p className="lh-base">
                             {knowMeMore.description}

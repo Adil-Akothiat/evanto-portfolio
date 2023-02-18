@@ -15,7 +15,7 @@ export default function BlogsView (props) {
                 {
                     props.blogs?props.blogs.map((b, i)=> (
                     <div key={"key-"+i} className="col-xl-4 col-md-6 col-sm-6 mb-4">
-                        <div className="card" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
+                        <div className="card">
                             <div className="overflow-hidden rounded-top border-bottom">
                                 <img className="img-fluid rounded-top" src={b.titleImage.url} alt={b.category}/>
                             </div>

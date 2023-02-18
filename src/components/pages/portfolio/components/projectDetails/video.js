@@ -22,7 +22,7 @@ export default function Video (props) {
         return player;
     }
     return (
-        <div className="video-player" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+        <div className="video-player">
             <iframe
                 style={{width:"100%"}}
                 className="rounded"

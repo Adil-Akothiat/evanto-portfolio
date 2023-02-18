@@ -1,12 +1,9 @@
 import React, {useState, useEffect} from "react";
 import "../../../styles/pages/portfolio.css";
 
-import Loader from "../../loader/loader";
 import ProjectDetails from "./components/projectDetails/projectDetails";
 import Main from "./components/mainProject/main";
 
-
-// import portfolioData from "../../../data/portfolio.json";
 import projectsData from "./admin/json/projects.json";
 
 export default function Portfolio () {
@@ -46,7 +43,6 @@ export default function Portfolio () {
     }, [])
     return (
         <div className="portfolio fixed-right">
-            <Loader time={500} />
             {
                 details.status?projects.filter(project=> project.id===details.id).map((e, i)=> (
                     <ProjectDetails 

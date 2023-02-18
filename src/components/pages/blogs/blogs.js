@@ -2,7 +2,6 @@ import React, {useState, useEffect} from "react";
 import "../../../styles/pages/blogs.css";
 
 import BlogsView from "./components/blogs/blogsView";
-import Loader from "../../loader/loader";
 
 export default function Blogs (props) {
   const [blogs, setBlogs] = useState([]);
@@ -51,7 +50,6 @@ export default function Blogs (props) {
 
   return (
     <div className="blogs fixed-right test">
-      <Loader time={500}/>
       <div className="main-size">
         <div className="position-relative">
         <BlogsView

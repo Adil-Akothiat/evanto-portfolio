@@ -6,12 +6,10 @@ import { BsArrowUp } from "react-icons/bs";
 
 import Form from "./form/form";
 import Share from "./share/share";
-import Loader from "../../../../loader/loader";
 
 export default function BlogContent (props) {
     return (
         <div className="blog fixed-right">
-            <Loader time={500}/>
             <button 
                 onClick={()=> window.scrollTo(0, 0)}
                 className="scroll-top rounded"
@@ -20,12 +18,12 @@ export default function BlogContent (props) {
                 {
                     props.open?
                     (
-                        <div className="position-fixed share-bg" data-aos="fade-top" data-aos-duration="1000" data-aos-delay="0">
+                        <div className="position-fixed share-bg">
                             <Share handleClick={props.closeShare}/>
                         </div>
                     ):null
                 }
-                <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+                <div>
                     <div className="mt-4">
                         <div className="author">
                             <div>

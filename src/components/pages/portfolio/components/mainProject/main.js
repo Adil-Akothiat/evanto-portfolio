@@ -10,7 +10,7 @@ export default function Main (props) {
     return (
         <div className="main-size pb-2">
             <Filter works={props.works} categories={props.categories} setCategories={handleCategories}/>
-            <div className="my-grid" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+            <div className="my-grid">
                 {
                     props.works.map((w, i)=> {
                         return (

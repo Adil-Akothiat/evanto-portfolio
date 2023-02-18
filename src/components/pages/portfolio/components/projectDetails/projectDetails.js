@@ -29,7 +29,7 @@ export default function projectDetails (props) {
                     <div>
                         <ImageGallery details={props.details}/>
                     </div>
-                    <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+                    <div>
                         <h5 className="text-capitalize mb-3">
                             description
                         </h5>

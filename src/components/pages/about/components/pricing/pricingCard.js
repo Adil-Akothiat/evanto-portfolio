@@ -2,7 +2,7 @@ import React from "react";
 
 export default function PricingCard (props) {
     return (
-        <div className={"pricing-card card "+props.package.package} data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+        <div className={"pricing-card card "+props.package.package}>
             {props.package.package==="ultimate"?<span className="text-capitalize">{props.package.package}</span>:null}
             <div className="card-header">
                 <h5 className="text-center text-capitalize m-0 fw-normal">{props.package.package}</h5>

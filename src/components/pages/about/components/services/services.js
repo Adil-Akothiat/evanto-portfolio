@@ -13,7 +13,7 @@ export default function Services () {
                 <h2>my services</h2>
             </div>
             <div className="my-grid services">
-                <div className="my-card" data-aos="fade-top" data-aos-duration="1000">
+                <div className="my-card">
                     <div className="mb-3">
                         <MdOutlineDesignServices />
                         <h5 className="fw-normal text-capitalize">web design</h5>
@@ -24,7 +24,7 @@ export default function Services () {
                         </p>
                     </div>
                 </div>
-                <div className="my-card" data-aos="fade-top" data-aos-duration="1000">
+                <div className="my-card">
                     <div className="mb-3">
                         <BiCodeCurly />
                         <h5 className="fw-normal text-capitalize">web development</h5>
@@ -35,7 +35,7 @@ export default function Services () {
                         </p>
                     </div>
                 </div>
-                <div className="my-card" data-aos="fade-top" data-aos-duration="1000">
+                <div className="my-card">
                     <div className="mb-3">
                         <AiOutlineAppstoreAdd />
                         <h5 className="fw-normal text-capitalize">apps development</h5>
@@ -46,7 +46,7 @@ export default function Services () {
                         </p>
                     </div>
                 </div>
-                <div className="my-card" data-aos="fade-top" data-aos-duration="1000">
+                <div className="my-card">
                     <div className="mb-3">
                         <BiDevices />
                         <h5 className="fw-normal text-capitalize">uX design</h5>
@@ -57,7 +57,7 @@ export default function Services () {
                         </p>
                     </div>
                 </div>
-                <div className="my-card" data-aos="fade-top" data-aos-duration="1000">
+                <div className="my-card">
                     <div className="mb-3">
                         <TbReportAnalytics />
                         <h5 className="fw-normal text-capitalize">business analysis</h5>
@@ -68,7 +68,7 @@ export default function Services () {
                         </p>
                     </div>
                 </div>
-                <div className="my-card" data-aos="fade-top" data-aos-duration="1000">
+                <div className="my-card">
                     <div className="mb-3">
                         <FaBullhorn />
                         <h5 className="fw-normal text-capitalize">sEO marketing</h5>
