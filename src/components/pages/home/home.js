@@ -1,9 +1,10 @@
-import React from "react";
+import React, {Suspense} from "react";
 import "../../../styles/pages/home.css";
 
 import BackgroundAnimated from "./components/animatedBackground";
 import TypingAnimation from "./components/typeIt";
-import Social from "./components/social";
+
+const Social = React.lazy(()=> import("./components/social"));
 
 export default function Home () {
     return (
@@ -12,7 +13,9 @@ export default function Home () {
                 <BackgroundAnimated />
                 <div className="home-size">
                     <TypingAnimation />
-                    <Social />
+                    <Suspense fallback={<div>...loading...</div>}>
+                        <Social />
+                    </Suspense>
                 </div>
             </div>
         </div>

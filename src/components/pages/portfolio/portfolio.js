@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, Suspense} from "react";
 import "../../../styles/pages/portfolio.css";
-
-import ProjectDetails from "./components/projectDetails/projectDetails";
-import Main from "./components/mainProject/main";
-
 import projectsData from "./admin/json/projects.json";
+
+const ProjectDetails = React.lazy(()=> import("./components/projectDetails/projectDetails"));
+const Main = React.lazy(()=> import("./components/mainProject/main"));
+
 
 export default function Portfolio () {
     const [projects, setProjects]=  useState([]);
@@ -43,19 +43,21 @@ export default function Portfolio () {
     }, [])
     return (
         <div className="portfolio fixed-right">
-            {
-                details.status?projects.filter(project=> project.id===details.id).map((e, i)=> (
-                    <ProjectDetails 
-                        key={"key-"+i}
-                        handleClick={closeProject}
-                        images={e.info}
-                        title={e.title}
-                        description={e.info.description}
-                        details={e.info.details}
-                    />
-               )):null
-            }
-            {details.status?null:<Main works={projects} openProject={openProject} categories={categories}/>}
+            <Suspense fallback={<div>...loading...</div>}>
+                {
+                    details.status?projects.filter(project=> project.id===details.id).map((e, i)=> (
+                        <ProjectDetails 
+                            key={"key-"+i}
+                            handleClick={closeProject}
+                            images={e.info}
+                            title={e.title}
+                            description={e.info.description}
+                            details={e.info.details}
+                        />
+                )):null
+                }
+                {details.status?null:<Main works={projects} openProject={openProject} categories={categories}/>}
+            </Suspense>
         </div>
     );
 }
