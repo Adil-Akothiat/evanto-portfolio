@@ -1,4 +1,4 @@
-import React, {useState, useEffect, Suspense} from "react";
+import React, { useState, useEffect } from "react";
 import "../../../styles/pages/portfolio.css";
 import projectsData from "./admin/json/projects.json";
 
@@ -43,21 +43,19 @@ export default function Portfolio () {
     }, [])
     return (
         <div className="portfolio fixed-right">
-            <Suspense fallback={<div>...loading...</div>}>
-                {
-                    details.status?projects.filter(project=> project.id===details.id).map((e, i)=> (
-                        <ProjectDetails 
-                            key={"key-"+i}
-                            handleClick={closeProject}
-                            images={e.info}
-                            title={e.title}
-                            description={e.info.description}
-                            details={e.info.details}
-                        />
+            {
+                details.status?projects.filter(project=> project.id===details.id).map((e, i)=> (
+                    <ProjectDetails 
+                        key={"key-"+i}
+                        handleClick={closeProject}
+                        images={e.info}
+                        title={e.title}
+                        description={e.info.description}
+                        details={e.info.details}
+                    />
                 )):null
-                }
-                {details.status?null:<Main works={projects} openProject={openProject} categories={categories}/>}
-            </Suspense>
+            }
+            {details.status?null:<Main works={projects} openProject={openProject} categories={categories}/>}
         </div>
     );
 }

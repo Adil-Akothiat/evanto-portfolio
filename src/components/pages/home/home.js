@@ -1,4 +1,4 @@
-import React, {Suspense} from "react";
+import React from "react";
 import "../../../styles/pages/home.css";
 
 import BackgroundAnimated from "./components/animatedBackground";
@@ -11,11 +11,9 @@ export default function Home () {
         <div className="home fixed-right">
             <div className="center main-size m-0">
                 <BackgroundAnimated />
-                <div className="home-size">
+                <div className="home-size position-relative">
                     <TypingAnimation />
-                    <Suspense fallback={<div>...loading...</div>}>
-                        <Social />
-                    </Suspense>
+                    <Social />
                 </div>
             </div>
         </div>

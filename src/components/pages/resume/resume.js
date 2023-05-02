@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 import "../../../styles/pages/resume.css";
 
 const SkillStack = React.lazy(()=> import("./components/skills/skillStack"));
@@ -8,12 +8,10 @@ export default function Resume () {
     return (
         <div className="resume fixed-right">
             <div className="main-size pb-3">
-                <Suspense fallback={<div>...laoding...</div>}>
-                    <Career />
-                    <div className="my-4">
-                        <SkillStack />
-                    </div>
-                </Suspense>
+                <Career />
+                <div className="my-4">
+                    <SkillStack />
+                </div>
             </div>
         </div>
     );

@@ -1,4 +1,5 @@
 import React, {Suspense, useState} from "react";
+import Loader from "../../../../loader/loader";
 
 const BlogContent = React.lazy(()=> import("./blogContent"));
 
@@ -18,13 +19,15 @@ export default function Blog (props) {
     }
 
     return (
-        <Suspense fallback={<div>...loading...</div>}>
-            <BlogContent 
-                openShare={openShare}
-                closeShare={closeShare}
-                open={isOpenShare}
-                blog={props.blog}
-            />
-        </Suspense>
+        <div className="blog fixed-right">
+            <Suspense fallback={<Loader />}>
+                <BlogContent 
+                    openShare={openShare}
+                    closeShare={closeShare}
+                    open={isOpenShare}
+                    blog={props.blog}
+                />
+            </Suspense>
+        </div>
     );
 }

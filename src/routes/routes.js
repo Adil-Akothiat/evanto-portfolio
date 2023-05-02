@@ -5,6 +5,7 @@ import client from "../components/pages/blogs/controller/client";
 import QUERY from "../components/pages/blogs/controller/query";
 
 import Navigation from "../components/navigation/navigation";
+import Loader from "../components/loader/loader";
 const Home = React.lazy(()=> import("../components/pages/home/home"));
 const About = React.lazy(()=> import("../components/pages/about/about"));
 const Blogs = React.lazy(()=> import( "../components/pages/blogs/blogs"));
@@ -27,7 +28,7 @@ export default function MyRoutes () {
     return (
         <>
             <Navigation />
-            <Suspense fallback={<div>...loading...</div>}>
+            <Suspense fallback={<Loader />}>
                 <Routes>
                     <Route path="/" element={<Home />}/>
                     <Route path="/about" element={<About />}/>
@@ -47,7 +48,7 @@ export default function MyRoutes () {
                         />)
                         :alert("data not found!")
                     }
-                    <Route path="*" element={<h1>Page Not Found</h1>} />
+                    {/* <Route path="*" element={<h1>Page Not Found</h1>} /> */}
                 </Routes>
             </Suspense>
         </>

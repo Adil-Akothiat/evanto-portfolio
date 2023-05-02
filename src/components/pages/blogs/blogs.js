@@ -1,4 +1,4 @@
-import React, {useState, useEffect, Suspense} from "react";
+import React, { useState, useEffect } from "react";
 import "../../../styles/pages/blogs.css";
 
 const BlogsView = React.lazy(()=> import("./components/blogs/blogsView"));
@@ -55,15 +55,13 @@ export default function Blogs (props) {
   return (
     <div className="blogs fixed-right test">
       <div className="main-size">
-        <Suspense fallback={<div>...loading...</div>}>
-          <div className="position-relative">
-            <BlogsView
-              nextHandler={nextPage} 
-              prevHandler={prevPage} 
-              blogs={blogs}
-            />
-          </div>
-        </Suspense>
+      <div className="position-relative">
+        <BlogsView
+          nextHandler={nextPage} 
+          prevHandler={prevPage} 
+          blogs={blogs}
+        />
+      </div>
       </div>
     </div>
   );

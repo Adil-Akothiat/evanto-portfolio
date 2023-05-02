@@ -9,7 +9,7 @@ import Share from "./share/share";
 
 export default function BlogContent (props) {
     return (
-        <div className="blog fixed-right">
+       <>
             <button 
                 onClick={()=> window.scrollTo(0, 0)}
                 className="scroll-top rounded"
@@ -71,6 +71,6 @@ export default function BlogContent (props) {
                     <Form />
                 </div>
             </div>
-        </div>
+       </>
     );
 }

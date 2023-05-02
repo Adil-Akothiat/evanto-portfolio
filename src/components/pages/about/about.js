@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 import "../../../styles/pages/about.css";
 
 const Clients = React.lazy(()=> import("./components/client/clients"));
@@ -10,12 +10,10 @@ export default function About () {
     return (
         <div className="about fixed-right main-scroll">
             <div className="main-size">
-                <Suspense fallback={<div>...loading...</div>}>
-                    <KnowMeMore />
-                    <Services />
-                    <Pricing />
-                    <Clients />
-                </Suspense>
+                <KnowMeMore />
+                <Services />
+                <Pricing />
+                <Clients />
             </div>
         </div>
     );
