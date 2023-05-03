@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback, Suspense } from "react";
 import "../../../styles/pages/blogs.css";
+import Loader from "../../loader/loader";
 
 const BlogsView = React.lazy(()=> import("./components/blogs/blogsView"));
 
@@ -14,7 +15,6 @@ export default function Blogs (props) {
   // Get the blogs
   useEffect(()=> {
     setBlogs(props.blogs.slice(startPoint, endPoint));
-    
     // set prev button disabled or enabled
     const prev = document.getElementById("prev");
     if(prev) {
@@ -24,7 +24,6 @@ export default function Blogs (props) {
         prev.removeAttribute("disabled");
       }
     }
-
     // set next button disabled or enabled
     const next = document.getElementById("next");
     if(next) {
@@ -35,32 +34,32 @@ export default function Blogs (props) {
       }
     }
   }, [startPoint, endPoint, props.blogs])
-
   // next page and prev page
-  function nextPage () {
+  const nextPage = useCallback(function () {
     if(endPoint < props.blogs.length) {
       setStartPoint(prevState=> prevState + itemPerPage);
       setEndPoint(prevState=> prevState + itemPerPage);
     }
-  }
-
-  function prevPage ({target}) {
+  }, [endPoint, props.blogs.length])
+  const prevPage = useCallback(function ({target}) {
     if(startPoint > 0) {
       target.removeAttribute("disabled");
       setStartPoint(prevState=> prevState - itemPerPage);
       setEndPoint(prevState=> prevState - itemPerPage);
     }
-  }
+  }, [startPoint]);
 
   return (
     <div className="blogs fixed-right test">
       <div className="main-size">
       <div className="position-relative">
-        <BlogsView
-          nextHandler={nextPage} 
-          prevHandler={prevPage} 
-          blogs={blogs}
-        />
+        <Suspense fallBack={<Loader />}>
+          <BlogsView
+            nextHandler={nextPage} 
+            prevHandler={prevPage} 
+            blogs={blogs}
+          />
+        </Suspense>
       </div>
       </div>
     </div>

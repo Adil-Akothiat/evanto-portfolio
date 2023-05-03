@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback, Suspense } from "react";
 import "../../../styles/pages/portfolio.css";
 import projectsData from "./admin/json/projects.json";
+import Loader from "../../loader/loader";
 
 const ProjectDetails = React.lazy(()=> import("./components/projectDetails/projectDetails"));
 const Main = React.lazy(()=> import("./components/mainProject/main"));
@@ -18,10 +19,10 @@ export default function Portfolio () {
         }
         setDetails(detailsStatus);
     }
-    function closeProject () {
+    const closeProject = useCallback(function () {
         setDetails({status: false});
-    }
-    function generateDataWithId (dataParams, array=[]) {
+    }, []);
+    const generateDataWithId  = useCallback(function (dataParams, array=[]) {
         array=[];
         for(let i = 0; i <dataParams.length; i++) {
             let id = "__id__"+i, data = {};
@@ -32,7 +33,7 @@ export default function Portfolio () {
             array.push(data);
         }
         return array;
-    }
+    }, [])
     useEffect(()=> {
         setProjects(generateDataWithId(projectsData));
         const categoriesSet = new Set([]);
@@ -40,22 +41,24 @@ export default function Portfolio () {
         projectsData.forEach(e=> categoriesSet.add(e.info.details.category));
         categoriesSet.forEach(e=> array.push(e));
         setCategories(array);
-    }, [])
+    }, [generateDataWithId])
     return (
         <div className="portfolio fixed-right">
-            {
-                details.status?projects.filter(project=> project.id===details.id).map((e, i)=> (
-                    <ProjectDetails 
-                        key={"key-"+i}
-                        handleClick={closeProject}
-                        images={e.info}
-                        title={e.title}
-                        description={e.info.description}
-                        details={e.info.details}
-                    />
-                )):null
-            }
-            {details.status?null:<Main works={projects} openProject={openProject} categories={categories}/>}
+            <Suspense fallBack={<Loader />}>
+                {
+                    details.status?projects.filter(project=> project.id===details.id).map((e, i)=> (
+                        <ProjectDetails 
+                            key={"key-"+i}
+                            handleClick={closeProject}
+                            images={e.info}
+                            title={e.title}
+                            description={e.info.description}
+                            details={e.info.details}
+                        />
+                    )):null
+                }
+                {details.status?null:<Main works={projects} openProject={openProject} categories={categories}/>}
+            </Suspense>
         </div>
     );
 }

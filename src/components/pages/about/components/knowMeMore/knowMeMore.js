@@ -15,7 +15,7 @@ export default function KnowMeMore () {
                 <div>
                     <img 
                         className="img-fluid rounded w-100"
-                        src={"https://deterylightmode.netlify.app/static/media/Aboutus.90dda4cec7b8b59ed230.png"} 
+                        src={require("../../../../../assets/about/me.jpg")} 
                         alt="hero"
                     />
                 </div>

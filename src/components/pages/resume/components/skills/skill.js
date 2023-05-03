@@ -1,5 +1,4 @@
 import React from "react";
-
 import skills from "../../admin/json/skills.json";
 
 export default function Skill () {

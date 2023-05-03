@@ -1,21 +1,19 @@
-import React from "react";
-
+import React, { useCallback } from "react";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 
-
 export default function ReviewCard (props) {
-    const stars = ()=> {
+    const stars = useCallback(()=> {
         let num = props.stars>=5?5:props.stars;
         let stars = [];
         for(let i = 0; i < num; i++) stars.push("star");
         for(let i = stars.length; i < 5; i++) stars.push("no-star");
         return stars;
-    }
+    },[props.stars]);
     return (
         <div className="review-card card text-center">
             <div className="card-header">
                 <img 
-                    src={props.image} 
+                    src={require("../../../../../assets/about/clients/"+props.image)} 
                     alt={props.name} 
                     className="img-thumbnail rounded-circle"
                     width="100"

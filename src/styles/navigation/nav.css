@@ -48,7 +48,7 @@
     height: 100px;
     border-radius: 50%;
     margin-left: 50%;transform: translateX(-50%);
-    border: 1.5mm solid var(--text-white);
+    border: 1.5mm solid var(--light-color);
 }
 .navigation .open,
 .navigation .not-open {

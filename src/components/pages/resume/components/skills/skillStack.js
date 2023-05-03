@@ -1,7 +1,6 @@
 import React from "react";
 import Certificat from "./certification";
 import Languages from "./languages";
-
 import Skill from "./skill";
 
 

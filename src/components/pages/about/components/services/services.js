@@ -1,5 +1,4 @@
 import React from "react";
-
 import { MdOutlineDesignServices } from "react-icons/md";
 import { BiCodeCurly, BiDevices } from "react-icons/bi";
 import { AiOutlineAppstoreAdd } from "react-icons/ai";

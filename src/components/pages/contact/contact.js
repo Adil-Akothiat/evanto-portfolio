@@ -1,7 +1,8 @@
-import React from "react";
+import React, { Suspense } from "react";
 import "../../../styles/pages/contact.css";
-import ContactForm from "./component/contactForm";
-import ContactInfo from "./component/contactInfo";
+import Loader from "../../loader/loader";
+const ContactForm = React.lazy(()=> import("./component/contactForm"));
+const ContactInfo = React.lazy(()=> import("./component/contactInfo"))
 
 export default function Contact () {
     return (
@@ -11,8 +12,10 @@ export default function Contact () {
                     <h2 className="fw-normal text-main">let's talk</h2>
                 </div>
                 <div className="form-info d-flex justify-content-between">
-                    <ContactForm />
-                    <ContactInfo />
+                    <Suspense fallBack={<Loader />}>
+                        <ContactForm />
+                        <ContactInfo />
+                    </Suspense>
                 </div>
             </div>
         </div>

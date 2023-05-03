@@ -1,8 +1,6 @@
 import React from "react";
-
 import { FaAward } from "react-icons/fa";
 import Marquee from "react-fast-marquee";
-
 import certifications from "../../admin/json/licensesAndCertifications.json";
 
 

@@ -1,9 +1,7 @@
 import React from "react";
 import ExperienceAndEducation from "./experAndEduc";
-
 import employmentHistory from "../../admin/json/employmentHistory.json";
 import education from "../../admin/json/education.json";
-
 
 export default function Career () {
     return (
