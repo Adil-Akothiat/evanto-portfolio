@@ -1,11 +1,9 @@
 import React from "react";
-
 import { AiOutlineCalendar } from "react-icons/ai";
 import { BiCategory } from "react-icons/bi";
 import { BsFillPersonCheckFill } from "react-icons/bs";
 import { TbWorld } from "react-icons/tb";
 import { MdOutlineClose } from "react-icons/md";
-
 
 import ImageGallery from "./imageGallery";
 import Video from "./video";
@@ -26,9 +24,11 @@ export default function projectDetails (props) {
                     {props.title}
                 </h3>
                 <div className="my-grid-second">
-                    <div>
-                        <ImageGallery details={props.details}/>
-                    </div>
+                    {
+                        props.details.images?props.details.images.length?<div>
+                        <ImageGallery details={props.details} index={props.projectIndex}/>
+                        </div>:null:null
+                    }
                     <div>
                         <h5 className="text-capitalize mb-3">
                             description

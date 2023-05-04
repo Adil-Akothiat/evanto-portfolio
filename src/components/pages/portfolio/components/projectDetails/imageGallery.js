@@ -1,32 +1,29 @@
-import React from "react";
-
-// import { GrFormNext, GrFormPrevious } from "react-icons/gr";
+import React, { useCallback } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
-
 export default function ImageGallery (props) {
-    function prev () {
+    const prev = useCallback(() => {
         const current = document.querySelector(".show");
-        const contentGall = document.getElementById("content-gallery");
+        const images = document.getElementById("content-gallery").children;
         if(current.previousElementSibling) {
             current.classList.remove("show");
             current.previousElementSibling.classList.add("show");
         }else {
             current.classList.remove("show");
-            contentGall.children[contentGall.children.length-1].classList.add("show");
+            images[images.length-1].classList.add("show");
         }
-    }
-    function next() {
+    }, []);
+    const next = useCallback(()=> {
         const current = document.querySelector(".show");
-        const contentGall = document.getElementById("content-gallery");
+        const images = document.getElementById("content-gallery").children;
         if(current.nextElementSibling) {
             current.classList.remove("show");
             current.nextElementSibling.classList.add("show");
         }else {
             current.classList.remove("show");
-            contentGall.children[0].classList.add("show");
+            images[0].classList.add("show");
         }
-    }
+    }, []);
     return (
         <div className="gallery position-relative mb-4"> 
             <button className="start-0" onClick={prev}><FaAngleLeft /></button>
@@ -35,8 +32,8 @@ export default function ImageGallery (props) {
                 props.details.images.map((img, i)=> (
                     <img 
                         key={"key-"+i}
-                        className={i===0?"rounded position-absolute hide show img-fluid":"rounded hide"}
-                        src={img}
+                        className={i===0?"rounded show img-fluid":"rounded"}
+                        src={require(`../../../../../assets/portfolio/project${props.index}/gallery/${img}`)}
                         alt={props.title}
                     />
                 ))

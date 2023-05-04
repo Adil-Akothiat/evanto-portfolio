@@ -1,11 +1,10 @@
 import React from "react";
-
 import { AiOutlinePlus } from "react-icons/ai";
 
 export default function PorjectCard (props) {
     return (
         <div className={`project-card ${props.class}`}>
-            <img className="img-fluid" src={props.src} alt={props.title}/>
+            <img className="img-fluid" src={require("../../../../../assets/portfolio/"+props.src)} alt={props.title}/>
             <div>
                 <button 
                     className="open-project" 

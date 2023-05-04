@@ -1,11 +1,8 @@
-import React, { useState, useEffect, useCallback, Suspense } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "../../../styles/pages/portfolio.css";
-import projectsData from "./admin/json/projects.json";
-import Loader from "../../loader/loader";
-
-const ProjectDetails = React.lazy(()=> import("./components/projectDetails/projectDetails"));
-const Main = React.lazy(()=> import("./components/mainProject/main"));
-
+import projectsData from "./admin/projects.json";
+import ProjectDetails from "./components/projectDetails/projectDetails";
+import Main from "./components/mainProject/main";
 
 export default function Portfolio () {
     const [projects, setProjects]=  useState([]);
@@ -44,21 +41,20 @@ export default function Portfolio () {
     }, [generateDataWithId])
     return (
         <div className="portfolio fixed-right">
-            <Suspense fallBack={<Loader />}>
-                {
-                    details.status?projects.filter(project=> project.id===details.id).map((e, i)=> (
-                        <ProjectDetails 
-                            key={"key-"+i}
-                            handleClick={closeProject}
-                            images={e.info}
-                            title={e.title}
-                            description={e.info.description}
-                            details={e.info.details}
-                        />
-                    )):null
-                }
-                {details.status?null:<Main works={projects} openProject={openProject} categories={categories}/>}
-            </Suspense>
+            {
+                details.status?projects.filter(project=> project.id===details.id).map((e, i)=> (
+                    <ProjectDetails 
+                        key={"key-"+i}
+                        handleClick={closeProject}
+                        images={e.info}
+                        title={e.title}
+                        description={e.info.description}
+                        details={e.info.details}
+                        projectIndex={e.index}
+                    />
+                )):null
+            }
+            {details.status?null:<Main works={projects} openProject={openProject} categories={categories}/>}
         </div>
     );
 }

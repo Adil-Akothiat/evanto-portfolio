@@ -1,0 +1,36 @@
+[
+    {
+        "index":"1",
+        "title":"project 1",
+        "image":"clock.jpg",
+        "info": {
+            "description":"describe your project here",
+            "details": {
+                "client":"Client Name",
+                "link":"www.project-site.com",
+                "technologies": ["java", "javascript", "css"],
+                "category": "web development",
+                "date":"2023-01-24",
+                "images":["img-1.jpg","img-2.jpg","img-3.jpg"],
+                "source":"https://youtu.be/6AYVlq4RU_A"
+            }
+        }
+    },
+    {
+        "index":"2",
+        "title":"project 2",
+        "image":"coffe.jpg",
+        "info": {
+            "description":"describe your project here",
+            "details": {
+                "client":"Client Name",
+                "link":"www.project-site.com",
+                "technologies": ["java","c#","javascript"],
+                "category": "app developement",
+                "date":"2023-01-28",
+                "images":["img-1.jpg","img-2.jpg","img-3.jpg"],
+                "source":"https://youtu.be/6AYVlq4RU_A"
+            }
+        }
+    }
+]

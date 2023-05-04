@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useCallback } from "react";
 
 export default function Filter (props) {
-    function focus ({target}) {
-        for(let btn of [...document.querySelector(".categories").children]) btn.classList.remove("btn-focus");
+    const focus  = useCallback(function ({target}) {
+        [...document.querySelector(".categories").children].forEach(btn=> btn.classList.remove("btn-focus"));
         target.classList.add("btn-focus");
         props.setCategories(target.textContent);
-    }
+    }, [props]);
     return (
         <div className="filter mb-5">
             <div className="m-title m-title-top mb-5">
