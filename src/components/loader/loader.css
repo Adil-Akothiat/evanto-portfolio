@@ -1,9 +1,31 @@
-.snip-loader { position: absolute; background-color: var(--text-white); width: 100%; height: 100%; z-index: 100;}
+.snip-loader { 
+    position: fixed; 
+    background-color: var(--text-white); 
+    width: 100%; 
+    height: 100%; 
+    z-index: 100; 
+    top:0; 
+    left: 0;
+}
 .snip-loader >div {
-    position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: flex; z-index: 10;
+    position: absolute; 
+    left: 50%; 
+    top: 50%; 
+    transform: translate(-50%, -50%);
+    display: flex; 
+    z-index: 10;
 }
 .snip-loader >div div {
-    width: 1.5rem; height: 1.5rem; background-color: var(--main-color); border-radius: 50%; margin: 0 5px; animation: top-bottom; animation-duration: 400ms; animation-iteration-count: infinite; animation-timing-function: linear; animation-direction: alternate;
+    width: 1.5rem; 
+    height: 1.5rem; 
+    background-color: var(--main-color); 
+    border-radius: 50%; 
+    margin: 0 5px; 
+    animation: top-bottom; 
+    animation-duration: 400ms; 
+    animation-iteration-count: infinite; 
+    animation-timing-function: linear; 
+    animation-direction: alternate;
 }
 .snip-loader >div div:nth-child(2) {
     animation-delay: 300ms;
