@@ -1,6 +1,6 @@
 import React from "react";
 import PricingCard from "./pricingCard";
-import pricingPackages from "../../admin/json/pricing.json";
+import pricingPackages from "../../admin/pricing.json";
 
 export default function Pricing () {
     return (

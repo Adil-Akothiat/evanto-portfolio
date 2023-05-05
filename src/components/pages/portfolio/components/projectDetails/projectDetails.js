@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { AiOutlineCalendar } from "react-icons/ai";
 import { BiCategory } from "react-icons/bi";
 import { BsFillPersonCheckFill } from "react-icons/bs";
@@ -8,7 +8,7 @@ import { MdOutlineClose } from "react-icons/md";
 import ImageGallery from "./imageGallery";
 import Video from "./video";
 
-export default function projectDetails (props) {
+export default memo(function projectDetails (props) {
     return (
         <div className="project-details">
             <div className="main-size">
@@ -61,4 +61,4 @@ export default function projectDetails (props) {
             </div>
         </div>
     );
-}
+})

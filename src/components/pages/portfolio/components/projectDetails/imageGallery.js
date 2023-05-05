@@ -1,7 +1,7 @@
-import React, { useCallback } from "react";
+import React, { useCallback, memo } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
-export default function ImageGallery (props) {
+export default memo (function ImageGallery (props) {
     const prev = useCallback(() => {
         const current = document.querySelector(".show");
         const images = document.getElementById("content-gallery").children;
@@ -42,4 +42,4 @@ export default function ImageGallery (props) {
             <button className="end-0" onClick={next}><FaAngleRight /></button>
         </div>
     );
-}
+})

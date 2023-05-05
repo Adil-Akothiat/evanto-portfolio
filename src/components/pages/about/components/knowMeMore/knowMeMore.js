@@ -1,6 +1,5 @@
 import React from "react";
-
-import knowMeMore from "../../admin/json/knowMeMore.json";
+import knowMeMore from "../../admin/knowMeMore.json";
 
 export default function KnowMeMore () {
     return (

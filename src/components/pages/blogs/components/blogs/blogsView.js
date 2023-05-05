@@ -1,11 +1,9 @@
-import React from "react";
+import React, { memo } from "react";
 import { Link } from "react-router-dom";
-
 import { AiOutlineCalendar } from "react-icons/ai";
-
 import Pagination from "../pagination/pagination";
 
-export default function BlogsView (props) {
+export default memo(function BlogsView (props) {
     return (
         <div className="blogs-view positioh-relative">
             <div className="m-title m-title-top mb-5 text-capitalize">
@@ -54,4 +52,4 @@ export default function BlogsView (props) {
             </div>
         </div>
     );
-}
+})

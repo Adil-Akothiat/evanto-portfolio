@@ -1,12 +1,12 @@
-import React, {useState} from "react";
+import React, { useState, memo, useCallback } from "react";
 import Alert from "./alert";
 
-export default function Form () {
+export default memo(function Form () {
     const [subs, setSubs] = useState(false);
     const [showAlert, setShowAlert] = useState(false);
     const [email, setEmail] = useState("");
 
-    function subscribe (e) {
+    const subscribe  = useCallback(function(e) {
         e.preventDefault();
         setEmail("");
         setSubs(true);
@@ -17,7 +17,7 @@ export default function Form () {
         return ()=> {
             clearTimeout(timer);
         }
-    }
+    }, [])
     return (
         <form id="form" className="subscription position-relative" onSubmit={subscribe}>
             <h3 className="text-capitalize text-main">subscribe for more new articles</h3>
@@ -33,4 +33,4 @@ export default function Form () {
             }
         </form>
     );
-}
+})

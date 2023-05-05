@@ -1,7 +1,7 @@
-import React from "react";
+import React, { memo } from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 
-export default function PorjectCard (props) {
+export default memo ( function PorjectCard (props) {
     return (
         <div className={`project-card ${props.class}`}>
             <img className="img-fluid" src={require("../../../../../assets/portfolio/"+props.src)} alt={props.title}/>
@@ -21,4 +21,4 @@ export default function PorjectCard (props) {
             </div>
         </div>
     );
-}
+})

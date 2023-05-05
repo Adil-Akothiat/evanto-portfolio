@@ -1,12 +1,10 @@
-import React from "react";
-
+import React, { memo } from "react";
 import { BsWhatsapp, BsTwitter } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
 import { FaFacebookF } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 
-
-export default function Share (props) {
+export default memo(function Share (props) {
     return (
         <div className="share">
             <div className="card">
@@ -46,4 +44,4 @@ export default function Share (props) {
             </div>
         </div>
     );
-}
+})

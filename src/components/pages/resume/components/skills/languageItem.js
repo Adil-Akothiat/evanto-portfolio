@@ -1,6 +1,6 @@
-import React, { useCallback } from "react";
+import React, { useCallback, memo } from "react";
 
-export default function LanguageItem (props) {
+export default memo(function LanguageItem (props) {
     const setRate  = useCallback(function (r) {
         let array = [];
         for(let i = 0; i < r; i++) {
@@ -26,4 +26,4 @@ export default function LanguageItem (props) {
             </div>
         </div>
     );
-} 
+})

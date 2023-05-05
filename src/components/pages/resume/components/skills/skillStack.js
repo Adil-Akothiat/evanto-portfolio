@@ -3,10 +3,9 @@ import Certificat from "./certification";
 import Languages from "./languages";
 import Skill from "./skill";
 
-
 export default function SkillStack () {
     return (
-        <>
+        <div className="my-4">
             <div className="m-title mb-5">
                 <h2>skills</h2>
             </div>
@@ -25,6 +24,6 @@ export default function SkillStack () {
             <div>
                 <Certificat />
             </div>
-        </>
+        </div>
     );
 }

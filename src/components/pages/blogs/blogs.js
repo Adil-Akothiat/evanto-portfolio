@@ -1,16 +1,14 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, lazy, memo, Suspense } from "react";
 import "../../../styles/pages/blogs.css";
+import Loader from "../../loader/loader";
+const BlogsView = lazy(()=> import("./components/blogs/blogsView"));
 
-import BlogsView from "./components/blogs/blogsView";
-
-export default function Blogs (props) {
+export default memo(function Blogs (props) {
   const [blogs, setBlogs] = useState([]);
-
   // Pagination
   const [startPoint, setStartPoint] = useState(0);
   const itemPerPage = 6;
   const [endPoint, setEndPoint] = useState(itemPerPage);
-
   // Get the blogs
   useEffect(()=> {
     setBlogs(props.blogs.slice(startPoint, endPoint));
@@ -50,15 +48,17 @@ export default function Blogs (props) {
 
   return (
     <div className="blogs fixed-right test">
-      <div className="main-size">
-      <div className="position-relative">
-          <BlogsView
-            nextHandler={nextPage} 
-            prevHandler={prevPage} 
-            blogs={blogs}
-          />
-      </div>
-      </div>
+      <Suspense fallback={<Loader />}>
+        <div className="main-size">
+          <div className="position-relative">
+              <BlogsView
+                nextHandler={nextPage} 
+                prevHandler={prevPage} 
+                blogs={blogs}
+              />
+          </div>
+        </div>
+      </Suspense>
     </div>
   );
-}
+})

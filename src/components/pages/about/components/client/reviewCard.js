@@ -1,7 +1,7 @@
-import React, { useCallback } from "react";
+import React, { useCallback, memo } from "react";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 
-export default function ReviewCard (props) {
+export default memo(function ReviewCard (props) {
     const stars = useCallback(()=> {
         let num = props.stars>=5?5:props.stars;
         let stars = [];
@@ -45,4 +45,4 @@ export default function ReviewCard (props) {
             </div>
         </div>
     );
-}
+})

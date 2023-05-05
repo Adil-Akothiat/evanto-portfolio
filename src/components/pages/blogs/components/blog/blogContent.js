@@ -1,17 +1,16 @@
-import React from "react";
-
+import React, { memo, useCallback } from "react";
 import { AiOutlineCalendar } from "react-icons/ai";
 import { CgShare } from "react-icons/cg";
 import { BsArrowUp } from "react-icons/bs";
-
 import Form from "./form/form";
 import Share from "./share/share";
 
-export default function BlogContent (props) {
+export default memo(function BlogContent (props) {
+    const scrollTop = useCallback(()=> window.scrollTo(0, 0), []);
     return (
        <>
             <button 
-                onClick={()=> window.scrollTo(0, 0)}
+                onClick={scrollTop}
                 className="scroll-top rounded"
             ><BsArrowUp /></button>
             <div className="main-size position-relative">
@@ -73,4 +72,4 @@ export default function BlogContent (props) {
             </div>
        </>
     );
-}
+})

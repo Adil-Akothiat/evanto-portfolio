@@ -1,18 +1,21 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import "../../../styles/pages/about.css";
-import Clients from "./components/client/clients";
-import Pricing from "./components/pricing/pricing";
-import Services from "./components/services/services";
-import KnowMeMore from "./components/knowMeMore/knowMeMore";
+import Loader from "../../loader/loader";
+const Clients = lazy(()=> import("./components/client/clients"));
+const Pricing = lazy(()=> import("./components/pricing/pricing"));
+const Services = lazy(()=> import("./components/services/services"));
+const KnowMeMore  = lazy(()=> import("./components/knowMeMore/knowMeMore"));
 
 export default function About () {
     return (
         <div className="about fixed-right main-scroll">
             <div className="main-size">
-                <KnowMeMore />
-                <Services />
-                <Pricing />
-                <Clients />
+                <Suspense fallback={<Loader />}>
+                    <KnowMeMore />
+                    <Services />
+                    <Pricing />
+                    <Clients />
+                </Suspense>
             </div>
         </div>
     );

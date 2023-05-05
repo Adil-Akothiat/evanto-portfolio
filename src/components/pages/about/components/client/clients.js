@@ -1,9 +1,7 @@
 import React from "react";
-
 import ReviewCard from "./reviewCard";
 import Marquee from "react-fast-marquee";
-
-import clients from "../../admin/json/clients.json";
+import clients from "../../admin/clients.json";
 
 export default function Clients () {
     return (

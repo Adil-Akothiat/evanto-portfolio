@@ -1,7 +1,7 @@
-import React from "react";
+import React, { memo } from "react";
 import TypeIt from "typeit-react";
 
-export default function TypingAnimation () {
+export default memo(function TypingAnimation () {
     return (
         <div>
             <div className="presentation">
@@ -37,4 +37,4 @@ export default function TypingAnimation () {
             </div>
         </div>
     );
-}
+});

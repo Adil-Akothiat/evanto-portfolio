@@ -25,10 +25,27 @@
             "details": {
                 "client":"Client Name",
                 "link":"www.project-site.com",
-                "technologies": ["java","c#","javascript"],
-                "category": "app developement",
+                "technologies": ["adobe illustrator"],
+                "category": "graphic",
                 "date":"2023-01-28",
                 "images":["img-1.jpg","img-2.jpg","img-3.jpg"],
+                "source":"https://youtu.be/6AYVlq4RU_A"
+            }
+        }
+    },
+    {
+        "index":"3",
+        "title":"project 3",
+        "image":"3d-frame.jpg",
+        "info": {
+            "description":"describe your project here",
+            "details": {
+                "client":"Client Name",
+                "link":"www.project-site.com",
+                "technologies": ["illustrator"],
+                "category": "design",
+                "date":"2023-01-28",
+                "images":["img-1.jpg","img-2.jpg"],
                 "source":"https://youtu.be/6AYVlq4RU_A"
             }
         }

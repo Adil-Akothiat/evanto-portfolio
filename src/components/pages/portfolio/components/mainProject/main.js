@@ -1,8 +1,8 @@
-import React, {useState} from "react";
+import React, { useState, memo } from "react";
 import Filter from "./filter";
 import ProjectCard from "./projectCard";
 
-export default function Main (props) {
+export default memo(function Main (props) {
     const [categ, setCateg] = useState("all");
     function handleCategories (categ) {
         setCateg(categ);
@@ -12,7 +12,7 @@ export default function Main (props) {
             <Filter works={props.works} categories={props.categories} setCategories={handleCategories}/>
             {
                 props.works.length?(
-                    <div className="my-grid">
+                    <div className="my-grid mb-5">
                     {
                         props.works.map((w, i)=> {
                             return (
@@ -36,4 +36,4 @@ export default function Main (props) {
             }
         </div>
     );
-}
+})

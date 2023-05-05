@@ -1,8 +1,8 @@
-import React, {useCallback} from "react";
+import React, { useCallback, memo } from "react";
 import Particles from "react-tsparticles";
 import {loadFull} from "tsparticles";
 
-export default function BackgroundAnimated () {
+export default memo(function BackgroundAnimated () {
         const particlesInit = useCallback(async engine => {
             await loadFull(engine);
         }, []);
@@ -84,4 +84,4 @@ export default function BackgroundAnimated () {
                 }}
             />
         );
-};
+});

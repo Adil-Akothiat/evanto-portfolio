@@ -1,5 +1,5 @@
 import React from "react";
-import skills from "../../admin/json/skills.json";
+import skills from "../../admin/skills.json";
 
 export default function Skill () {
     return (

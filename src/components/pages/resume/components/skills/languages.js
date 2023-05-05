@@ -1,5 +1,5 @@
 import React from "react";
-import languages from "../../admin/json/languages.json";
+import languages from "../../admin/languages.json";
 import LanguageItem from "./languageItem";
 
 export default function Languages () {
