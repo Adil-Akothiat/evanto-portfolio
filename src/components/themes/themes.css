@@ -1,0 +1,47 @@
+.themes-content {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    width: 50px;
+    height: fit-content;
+    transform: translateY(-50%);
+    z-index: 1000;
+    border-radius: 5px;
+    transition: all .4s linear;
+}
+.themes-content button {
+    line-height: 0;
+    padding: 10px;
+    border: none;
+    background-color: var(--light-color);
+    border-radius: 5px 0 0 0;
+    width: 100%;
+}
+.themes-content button svg {
+    width: 28px;
+    height: 28px;
+    color: var(--dark-color);
+    pointer-events: none;
+    transition: transform 500ms linear;
+}
+.themes-content button:hover svg {
+    transform: rotate(0.5turn);
+}
+.themes-content >div {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    background-color: var(--shadow-color);
+    transition: all .4s linear;
+}
+.themes-content >div span {
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin: 10px auto;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.themes-content >.open-themes {
+    max-height: 300px;
+}

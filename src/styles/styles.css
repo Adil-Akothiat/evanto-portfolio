@@ -32,6 +32,7 @@ ul {
     --shadow-color: #0000001a;
     --sm-darken: rgba(0, 0, 0, .4);
     --stars-color: #f5961d;
+    --theme-one: red;
 }
 /* body properties */
 body {

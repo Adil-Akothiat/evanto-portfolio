@@ -35,6 +35,7 @@ export default memo (function ImageGallery (props) {
                         className={i===0?"rounded show img-fluid":"rounded"}
                         src={require(`../../../../../assets/portfolio/project${props.index}/gallery/${img}`)}
                         alt={props.title}
+                        loading="lazy"
                     />
                 ))
             }

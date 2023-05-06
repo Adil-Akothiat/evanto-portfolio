@@ -18,6 +18,7 @@ export default memo(function ReviewCard (props) {
                     className="img-thumbnail rounded-circle"
                     width="100"
                     height="100"
+                    loading="lazy"
                 />
                 <div className="mt-3">
                     <h5 className="text-capitalize fw-normal">{props.name}</h5>

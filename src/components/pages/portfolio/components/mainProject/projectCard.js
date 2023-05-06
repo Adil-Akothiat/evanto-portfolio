@@ -1,10 +1,16 @@
-import React, { memo } from "react";
+import React, { memo, useEffect } from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 
 export default memo ( function PorjectCard (props) {
+    useEffect(()=> console.log(props.src), [props]);
     return (
         <div className={`project-card ${props.class}`}>
-            <img className="img-fluid" src={require("../../../../../assets/portfolio/"+props.src)} alt={props.title}/>
+            <img 
+                className="img-fluid" 
+                src={require("../../../../../assets/portfolio/"+props.src)} 
+                alt={props.title}
+                loading="lazy"
+            />
             <div>
                 <button 
                     className="open-project" 

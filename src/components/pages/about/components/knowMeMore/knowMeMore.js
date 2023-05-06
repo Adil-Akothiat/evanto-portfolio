@@ -12,10 +12,11 @@ export default function KnowMeMore () {
             </div>
             <div className="my-grid info align-items-center hero-img">
                 <div>
-                    <img 
+                    <img
                         className="img-fluid rounded w-100"
                         src={require("../../../../../assets/about/me.jpg")} 
                         alt="hero"
+                        loading="lazy"
                     />
                 </div>
                 <div>
