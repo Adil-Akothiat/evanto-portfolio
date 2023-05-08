@@ -1,7 +1,6 @@
-import React, { useState, useEffect, lazy, memo, Suspense, useCallback } from "react";
+import React, { useState, useEffect, memo, useCallback } from "react";
 import "../../../styles/pages/blogs.css";
-import Loader from "../../loader/loader";
-const BlogsView = lazy(()=> import("./components/blogs/blogsView"));
+import BlogsView from "./components/blogs/blogsView";
 
 export default memo(function Blogs (props) {
   const [blogs, setBlogs] = useState([]);
@@ -26,16 +25,14 @@ export default memo(function Blogs (props) {
   }
   return (
     <div className="blogs fixed-right test">
-      <Suspense fallback={<Loader />}>
-        <div className="main-size">
-          <div className="position-relative">
-              <BlogsView
-                blogs={blogs}
-                readMore={readMoreHandler}
-              />
-          </div>
+      <div className="main-size">
+        <div className="position-relative">
+            <BlogsView
+              blogs={blogs}
+              readMore={readMoreHandler}
+            />
         </div>
-      </Suspense>
+      </div>
     </div>
   );
 })

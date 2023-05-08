@@ -3,7 +3,7 @@ import "./themes.css";
 import { AiTwotoneSetting } from "react-icons/ai";
 
 export default memo(function Themes () {
-    const themeColors = ["#037FFF","#6747C7", "#00ABE4", "#323232","#E7473C","#C53678"];
+    const themeColors = ["#037FFF","#6747C7", "#00ABE4", "#022C43","#E7473C","#C53678"];
     const openThemes = ({target})=> target.nextElementSibling.classList.toggle("open-themes");
     const setThemeColor = ({target})=> {
         document.documentElement.style.setProperty("--main-color", target.dataset.color);

@@ -14,7 +14,12 @@ export default memo(function BlogsView (props) {
                     <div key={"key-"+i} className="col-xl-4 col-md-6 col-sm-6 mb-4">
                         <div className="card">
                             <div className="overflow-hidden rounded-top border-bottom">
-                                <img className="img-fluid rounded-top" src={b.titleImage.url} alt={b.category}/>
+                                <img 
+                                    className="img-fluid rounded-top" 
+                                    src={b.titleImage.url} 
+                                    alt={b.category}
+                                    loading="lazy"
+                                />
                             </div>
                             <div className="card-body">
                                 <div className="d-flex align-items-center justify-content-between mb-3">

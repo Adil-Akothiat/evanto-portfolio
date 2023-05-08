@@ -11,7 +11,6 @@ export default function NavHeader (props) {
                 <img 
                     src={require("../../../assets/avatar/profile.jpg")} 
                     alt="adil khayt"
-                    loading="lazy"
                 />
             </Link>
             <h5 className="text-capitalize fw-normal text-center mt-3">adil khayt</h5>

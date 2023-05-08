@@ -1,6 +1,5 @@
-import React, { Suspense, useState, lazy, memo, useCallback } from "react";
-import Loader from "../../../../loader/loader";
-const BlogContent = lazy(()=> import("./blogContent"));
+import React, { useState, memo, useCallback } from "react";
+import BlogContent from "./blogContent";
 
 export default memo(function Blog (props) {
     // single Blog article
@@ -17,14 +16,12 @@ export default memo(function Blog (props) {
     }, [])
     return (
         <div className="blog fixed-right">
-            <Suspense fallback={<Loader />}>
-                <BlogContent 
-                    openShare={openShare}
-                    closeShare={closeShare}
-                    open={isOpenShare}
-                    blog={props.blog}
-                />
-            </Suspense>
+            <BlogContent 
+                openShare={openShare}
+                closeShare={closeShare}
+                open={isOpenShare}
+                blog={props.blog}
+            />
         </div>
     );
 })

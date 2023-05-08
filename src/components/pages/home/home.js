@@ -1,22 +1,19 @@
-import React, { Suspense, lazy } from "react";
+import React from "react";
 import "../../../styles/pages/home.css";
-import Loader from "../../loader/loader";
-const Social = lazy(()=> import("./components/social"));
-const BackgroundAnimated = lazy(()=> import("./components/animatedBackground"));
-const TypingAnimation = lazy(()=> import("./components/typeIt"));
+import Social from "./components/social";
+import BackgroundAnimated from "./components/animatedBackground";
+import TypingAnimation from "./components/typeIt";
 
 export default function Home () {
     return (
         <div className="home fixed-right">
-            <Suspense fallback={<Loader />}>
-                <div className="center main-size m-0">
-                    <BackgroundAnimated />
-                    <div className="home-size position-relative">
-                        <TypingAnimation />
-                        <Social />
-                    </div>
+            <div className="center main-size m-0">
+                <BackgroundAnimated />
+                <div className="home-size position-relative">
+                    <TypingAnimation />
+                    <Social />
                 </div>
-            </Suspense>
+            </div>
         </div>
     );
 }
