@@ -1,37 +1,19 @@
-import React from "react";
+import React, { memo } from "react";
 
-export default function Video (props) {
-    function getUrl() {
-        let newUrl;
-        if(props.src.split("").includes("=")) {
-            let arr = props.src.split("="), url = arr[arr.length-1];
-            newUrl = url;
-        }else {
-            let arr = props.src.split("/"), url= arr[arr.length-1];
-            newUrl = url;
-        }
-        return newUrl;
-    }
-    function getPlayer () {
-        let player;
-        if(props.src.split(".").includes("https://vimeo")) {
-            player = "https://player.vimeo.com/video";
-        }else {
-            player = "https://www.youtube.com/embed"
-        }
-        return player;
-    }
+export default memo(function Video (props) {
     return (
         <div className="video-player">
-            <iframe
-                style={{width:"100%"}}
+            <video 
+                controls
                 className="rounded"
+                width="100%"
                 height="400"
-                src={`${getPlayer()}/${getUrl()}`}
-                title="Youtube Player"
-                frameBorder="0"
-                allowFullScreen
-            />
+            >
+                <source 
+                    src={require("../../../../../assets/portfolio/project1/video/"+props.src)} 
+                    type="video/webm"
+                />
+            </video>
         </div>
     );
-}
+})

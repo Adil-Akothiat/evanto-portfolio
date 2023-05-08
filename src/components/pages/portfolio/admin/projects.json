@@ -2,24 +2,24 @@
     {
         "index":"1",
         "title":"project 1",
-        "image":"clock.jpg",
+        "image":"honey.jpg",
         "info": {
             "description":"describe your project here",
             "details": {
                 "client":"Client Name",
                 "link":"www.project-site.com",
-                "technologies": ["java", "javascript", "css"],
-                "category": "web development",
+                "technologies": ["photoshop"],
+                "category": "photography",
                 "date":"2023-01-24",
-                "images":["img-1.jpg","img-2.jpg","img-3.jpg"],
-                "source":"https://youtu.be/6AYVlq4RU_A"
+                "images":["img-1.jpg","img-2.jpg","img-3.jpg","img-4.jpg"],
+                "source":"evanto.mp4"
             }
         }
     },
     {
         "index":"2",
         "title":"project 2",
-        "image":"coffe.jpg",
+        "image":"words.jpg",
         "info": {
             "description":"describe your project here",
             "details": {
@@ -29,24 +29,41 @@
                 "category": "graphic",
                 "date":"2023-01-28",
                 "images":["img-1.jpg","img-2.jpg","img-3.jpg"],
-                "source":"https://youtu.be/6AYVlq4RU_A"
+                "source":"evanto.mp4"
             }
         }
     },
     {
         "index":"3",
         "title":"project 3",
-        "image":"3d-frame.jpg",
+        "image":"brick.jpg",
         "info": {
             "description":"describe your project here",
             "details": {
                 "client":"Client Name",
                 "link":"www.project-site.com",
-                "technologies": ["illustrator"],
+                "technologies": ["3D blender"],
                 "category": "design",
                 "date":"2023-01-28",
                 "images":["img-1.jpg","img-2.jpg"],
-                "source":"https://youtu.be/6AYVlq4RU_A"
+                "source":"evanto.mp4"
+            }
+        }
+    },
+    {
+        "index":"4",
+        "title":"project 4",
+        "image":"fruits.jpg",
+        "info": {
+            "description":"describe your project here",
+            "details": {
+                "client":"Client Name",
+                "link":"www.project-site.com",
+                "technologies": ["photoshop"],
+                "category": "photography",
+                "date":"2023-01-28",
+                "images":["img-1.jpg","img-2.jpg","img-3.jpg"],
+                "source":"evanto.mp4"
             }
         }
     }

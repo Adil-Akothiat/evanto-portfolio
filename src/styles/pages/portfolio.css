@@ -164,20 +164,23 @@
     width: 100%;
     line-height: 0;
     border: 1px solid var(--light-color);
-    /* border-top: none; */
-    /* border-bottom: none; */
+    overflow: hidden;
 }
 #content-gallery img {
     width: 100%;
     max-height: 250px;
     object-fit: contain;
+    position: absolute;
+    left: 0;
+    top: 0;
     opacity: 0;
-    transition: all .3s linear;
-    display: none;
+    transform: scale(0);
+    transition: all 500ms linear;
 }
 #content-gallery .show {
-    display: block;
+    position: static;
     opacity: 1;
+    transform: scale(1);
 }
 .gallery button svg {
     width: 25px;

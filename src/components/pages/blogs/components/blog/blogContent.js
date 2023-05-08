@@ -4,6 +4,7 @@ import { CgShare } from "react-icons/cg";
 import { BsArrowUp } from "react-icons/bs";
 import Form from "./form/form";
 import Share from "./share/share";
+import Author from "./author";
 
 export default memo(function BlogContent (props) {
     const scrollTop = useCallback(()=> window.scrollTo(0, 0), []);
@@ -24,22 +25,12 @@ export default memo(function BlogContent (props) {
                 }
                 <div>
                     <div className="mt-4">
-                        <div className="author">
-                            <div>
-                                <img className="rounded" src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" alt="author"/>
-                            </div>
-                            <div className="author-info">
-                                <div>
-                                    <h4 className="text-capitalize fw-light">adil khayt</h4>
-                                    <h6 className="fw-light">Web and Mobile Researcher, ScienceSoft</h6>
-                                </div>
-                                <div className="my-3">
-                                    <p>
-                                        Chris Impey is a writer based in New York City. He's interested in all things tech, science, and photography related, and likes to yo-yo in his free time.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                        <Author 
+                            image={props.blog.authorImage.url?props.blog.authorImage.url:null}
+                            name={props.blog.authorName?props.blog.authorName:null}
+                            job={props.blog.authorJobTitle?props.blog.authorJobTitle:null}
+                            jobDescription={props.blog.authorJobDescription?props.blog.authorJobDescription:null}
+                        />
                         <div>
                             <h1 className="b-t fw-bold text-capitalize mt-5">{props.blog.title}</h1>
                         </div>

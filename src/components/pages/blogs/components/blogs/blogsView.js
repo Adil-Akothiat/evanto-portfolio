@@ -1,7 +1,6 @@
 import React, { memo } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineCalendar } from "react-icons/ai";
-import Pagination from "../pagination/pagination";
 
 export default memo(function BlogsView (props) {
     return (
@@ -48,7 +47,7 @@ export default memo(function BlogsView (props) {
                 }
             </div>
             <div>
-                <Pagination blogs={props.blogs} next={props.nextHandler} prev={props.prevHandler}/>
+                <button className="read-more"onClick={props.readMore}>read more</button>
             </div>
         </div>
     );

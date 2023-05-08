@@ -14,6 +14,12 @@ const QUERY = gql`
             richText {
                 html
             }
+            authorImage {
+                url
+            }
+            authorName
+            authorJobTitle
+            authorJobDescription
         }
     }
 `;
