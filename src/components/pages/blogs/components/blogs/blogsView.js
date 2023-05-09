@@ -1,8 +1,7 @@
 import React, { memo } from "react";
-import { Link } from "react-router-dom";
-import { AiOutlineCalendar } from "react-icons/ai";
+import BlogsCard from "./blogsCard";
 
-export default memo(function BlogsView (props) {
+export default memo(function BlogsView ({ blogs, readMore }) {
     return (
         <div className="blogs-view positioh-relative">
             <div className="m-title m-title-top mb-5 text-capitalize">
@@ -10,49 +9,12 @@ export default memo(function BlogsView (props) {
             </div>
             <div className="row">
                 {
-                    props.blogs?props.blogs.map((b, i)=> (
-                    <div key={"key-"+i} className="col-xl-4 col-md-6 col-sm-6 mb-4">
-                        <div className="card">
-                            <div className="overflow-hidden rounded-top border-bottom">
-                                <img 
-                                    className="img-fluid rounded-top" 
-                                    src={b.titleImage.url} 
-                                    alt={b.category}
-                                    loading="lazy"
-                                />
-                            </div>
-                            <div className="card-body">
-                                <div className="d-flex align-items-center justify-content-between mb-3">
-                                    <span className="rounded text-capitalize">{b.category}</span>
-                                    <div className="d-flex align-items-center date"> 
-                                        <AiOutlineCalendar />
-                                        <p className="fw-light">{b.date}</p>
-                                    </div>
-                                </div>
-                                <div className="blog-title">
-                                    <h3 
-                                        className="fw-bolder text-capitalize"
-                                    >
-                                        <Link 
-                                            to={"/blogs/"+b.id}
-                                            data-id={b.id}
-                                            onClick={()=> window.scrollTo(0, 0)}
-                                        >{b.title}</Link>
-                                    </h3>
-                                </div>
-                                <div className="blog-description">
-                                    <p className="fw-light">
-                                        {b.description.substr(0, 100)+"..."}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    )):<h2>data was not found! please try again and fix error!</h2>
+                    blogs?blogs.map((blog, i)=>  <BlogsCard key={"key-"+i} blog={blog}/>)
+                    :<div className="alert alert-warning">Try again!</div>
                 }
             </div>
             <div>
-                <button className="read-more"onClick={props.readMore}>read more</button>
+                <button className="read-more"onClick={readMore}>read more</button>
             </div>
         </div>
     );

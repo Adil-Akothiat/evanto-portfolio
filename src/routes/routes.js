@@ -1,8 +1,13 @@
-import React, { useEffect, useState, memo, Suspense, lazy } from "react";
+import React, { 
+    memo, 
+    Suspense, 
+    lazy, 
+    useEffect, 
+    useState,
+    useCallback
+} from "react";
 import { Route, Routes} from "react-router-dom";
 // client & query
-import client from "../components/pages/blogs/controller/client";
-import QUERY from "../components/pages/blogs/controller/query";
 import Loader from "../components/loader/loader";
 import Navigation from "../components/navigation/navigation";
 
@@ -16,14 +21,35 @@ const Resume  = lazy(()=> import("../components/pages/resume/resume"));
 
 export default memo(function MyRoutes () {
     const [blogs, setBlogs] = useState([]);
-    useEffect(()=> {
-        const getBlogs = async ()=> {
-        const {myPortfolioBlogs} = await client.request(QUERY);
-        setBlogs(myPortfolioBlogs);
-        }
-        getBlogs();
+    const getApi = useCallback(async ()=> {
+        const { data } = await fetch(`https://api.buttercms.com/v2/posts/?auth_token=${process.env.REACT_APP_API_TOKEN}`)
+        .then(res=> res.json())
+        const myBlogs = [];
+        data.forEach(blog=> {
+            const author = {
+                profileImage: blog.author.profile_image,
+                name: blog.author.first_name+" "+blog.author.last_name,
+                job: blog.author.title,
+                bio: blog.author.bio
+            };
+            const myBlog = {
+                id: window.crypto.randomUUID(),
+                author,
+                image: blog.featured_image,
+                created: blog.created,
+                category: blog.categories[0].name,
+                title: blog.seo_title,
+                description: blog.meta_description,
+                body: blog.body
+            };
+            myBlogs.push(myBlog);
+        });
+        setBlogs(myBlogs);
     }, [])
-
+    useEffect(()=> {
+        getApi();
+        window.onload = ()=> getApi();
+    }, [getApi])
     return (
         <>
             <Navigation />
@@ -33,16 +59,17 @@ export default memo(function MyRoutes () {
                     <Route path="/about" element={<About />}/>
                     <Route path="/resume" element={<Resume />}/>
                     <Route path="/portfolio" element={<Portfolio />}/>
-                    <Route path="/blogs" element={<Blogs blogs={blogs}/>}/>
-                    <Route path="/contact" element={<Contact />}/>
+                    <Route path="blogs/*" element={<Blogs blogs={blogs}/>}>
                     {
                         blogs?blogs.map((b, i)=> <Route 
                             key={"key-"+i}
-                            path={`/blogs/${b.id}`}
+                            path={`${b.id}`}
                             element={<Blog blog={b} />}
                         />)
                         :<div className="alert alert-warning">Data fail try again!</div>
                     }
+                    </Route>
+                    <Route path="/contact" element={<Contact />}/>
                 </Routes>    
             </Suspense>
         </>

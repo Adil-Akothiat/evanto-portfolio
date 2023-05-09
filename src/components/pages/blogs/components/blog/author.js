@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Author ({ image, name, job, jobDescription }) {
+export default function Author ({ image, name, job, bio}) {
     return (
         <div className="author">
             {
@@ -16,9 +16,9 @@ export default function Author ({ image, name, job, jobDescription }) {
                     {job?<h6 className="fw-light">{job}</h6>:null}
                 </div>
                 {
-                    jobDescription?(
+                    bio?(
                         <div className="my-3">
-                            <p>{jobDescription}</p>
+                            <p>{bio}</p>
                         </div>
                     ):null
                 }

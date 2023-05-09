@@ -26,23 +26,22 @@ export default memo(function BlogContent (props) {
                 <div>
                     <div className="mt-4">
                         <Author 
-                            image={props.blog.authorImage.url?props.blog.authorImage.url:null}
-                            name={props.blog.authorName?props.blog.authorName:null}
-                            job={props.blog.authorJobTitle?props.blog.authorJobTitle:null}
-                            jobDescription={props.blog.authorJobDescription?props.blog.authorJobDescription:null}
+                            image={props.blog.author.profileImage}
+                            name={props.blog.author.name}
+                            job={props.blog.author.job}
+                            bio={props.blog.author.bio}
                         />
                         <div>
                             <h1 className="b-t fw-bold text-capitalize mt-5">{props.blog.title}</h1>
                         </div>
                         <div className="d-flex flex-wrap align-items-center justify-content-between my-5">
                             <div className="da-ca-sh d-flex flex-wrap align-items-center r-c">
-                                <h6 className="fw-normal">03 min reading in </h6>
                                 <span>━</span>
                                 <h5 className="fw-normal text-capitalize">{props.blog.category}</h5>
                                 <span>━</span>
                                 <div className="blog-date d-flex align-items-center">
                                     <AiOutlineCalendar />
-                                    <span className="mx-2">{new Date(...props.blog.date.split("-")).toDateString()}</span>
+                                    <span className="mx-2">{props.blog.created.split(".")[0]}</span>
                                 </div>
                             </div>
                             <div className="d-flex align-items-center">
@@ -52,12 +51,12 @@ export default memo(function BlogContent (props) {
                                 </button>
                             </div>
                         </div>
-                        <img src={props.blog.titleImage.url} alt={props.blog.category} />
+                        <img src={props.blog.image} alt="text" />
                         <p className="description fw-light my-4">
                             {props.blog.description}
                         </p>
                     </div>
-                    <div className="rich-text" dangerouslySetInnerHTML={{"__html": props.blog.richText.html}}></div>
+                    <div className="rich-text" dangerouslySetInnerHTML={{"__html": props.blog.body}}></div>
                     <Form />
                 </div>
             </div>
