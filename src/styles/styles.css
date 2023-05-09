@@ -121,7 +121,6 @@ body::-webkit-scrollbar {
         right: 0;
         transition: width .8s linear;
         background-color: var(--text-white);
-        /* overflow: hidden; */
     }
     .fixed-right.dark {
         background-color: var(--dark-color);
@@ -165,9 +164,6 @@ li {
     opacity: 0;
     transform: translateY(1em);
     transition: all .3s linear;   
-}
-.scroll {
-    transition: all .3s linear;
 }
 .text-main {
     color: var(--main-color);

@@ -1,5 +1,6 @@
 import React, { useState, memo, useCallback } from "react";
 import BlogContent from "./blogContent";
+import "../../../../../styles/pages/blog.css";
 
 export default memo(function Blog (props) {
     // single Blog article
