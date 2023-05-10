@@ -14,10 +14,11 @@ import getApi from "../components/blogApi/api";
 const Home = lazy(()=> import("../components/pages/home/home"));
 const About = lazy(()=> import("../components/pages/about/about"));
 const Blogs = lazy(()=> import("../components/pages/blogs/blogs"));
-const Blog = lazy(()=> import("../components/pages/blogs/components/blog/blog"));
+const Blog = lazy(()=> import("../components/pages/blog/blog"));
 const Contact = lazy(()=> import("../components/pages/contact/contact"));
 const Portfolio = lazy(()=> import("../components/pages/portfolio/portfolio"));
 const Resume  = lazy(()=> import("../components/pages/resume/resume"));
+const NotFound = lazy(()=> import("../components/pages/notFound/notFound"));
 
 export default memo(function MyRoutes () {
     const [blogs, setBlogs] = useState([]);
@@ -39,6 +40,7 @@ export default memo(function MyRoutes () {
                     <Route path="/blogs" element={<Blogs blogs={blogs} />} />
                     <Route path={`/blogs/:id`} element={<Blog  blogs={blogs} />} />
                     <Route path="/contact" element={<Contact />}/>
+                    <Route path="*" element={<NotFound />}/>
                 </Routes>
             </Suspense>
         </>

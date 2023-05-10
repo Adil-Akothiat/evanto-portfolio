@@ -1,8 +1,7 @@
-import React, { memo, useEffect } from "react";
+import React, { memo } from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 
 export default memo ( function PorjectCard (props) {
-    useEffect(()=> console.log(props.src), [props]);
     return (
         <div className={`project-card ${props.class}`}>
             <img 

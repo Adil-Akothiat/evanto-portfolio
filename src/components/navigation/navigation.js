@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, memo } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "../../styles/navigation/nav.css";
 
 import Links from "./components/links";
@@ -6,7 +6,7 @@ import NavHeader from "./components/navHeader";
 import NavFooter from "./components/navFooter";
 import Collapse from "./components/collapse";
 
-export default memo(function Navigation () {
+export default function Navigation () {
     const [open, setOpen] = useState(false);
     const expandHandler = useCallback(()=> document.querySelector(".navigation").classList.toggle("expand-nav"), []);
     const closeHandler = useCallback(()=> {
@@ -46,4 +46,4 @@ export default memo(function Navigation () {
             </div>
         </div>
     );
-})
+}

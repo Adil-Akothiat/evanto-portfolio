@@ -1,6 +1,6 @@
 import React, { memo, useState, useEffect } from "react";
 import "../../../styles/pages/blogs.css";
-import BlogsView from "./components/blogs/blogsView";
+import BlogsView from "./components/blogsView";
 
 export default memo(function Blogs (props) {
   const [blogs, setBlogs] = useState([]);

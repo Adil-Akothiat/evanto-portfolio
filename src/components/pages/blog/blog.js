@@ -1,8 +1,8 @@
 import React, { useState, memo, useCallback } from "react";
 import { useParams } from "react-router-dom"; 
 import BlogContent from "./blogContent";
-import "../../../../../styles/pages/blog.css";
-import Loader from "../../../../loader/loader";
+import "../../../styles/pages/blog.css";
+import Loader from "../../loader/loader";
 
 export default memo(function Blog ({ blogs }) {
     // single Blog article

@@ -1,8 +1,8 @@
-import React, { useEffect, memo } from "react";
+import React, { useEffect } from "react";
 import "./themes.css";
 import { AiTwotoneSetting } from "react-icons/ai";
 
-export default memo(function Themes () {
+export default function Themes () {
     const themeColors = ["#037FFF","#6747C7", "#00ABE4", "#022C43","#E7473C","#C53678"];
     const openThemes = ({target})=> target.nextElementSibling.classList.toggle("open-themes");
     const setThemeColor = ({target})=> {
@@ -35,4 +35,4 @@ export default memo(function Themes () {
             </div>
         </div>
     );
-})
+}
