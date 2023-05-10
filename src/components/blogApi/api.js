@@ -24,4 +24,4 @@ const getApi = async ()=> {
     return myBlogs;
 }
 
-module.exports = getApi;
+export default = getApi;
