@@ -1,4 +1,4 @@
-const getApi = async ()=> {
+export default async function getApi () {
     const { data } = await fetch(`https://api.buttercms.com/v2/posts/?auth_token=${process.env.REACT_APP_API_TOKEN}`)
     .then(res=> res.json());
     const myBlogs = [];
@@ -23,5 +23,3 @@ const getApi = async ()=> {
     });
     return myBlogs;
 }
-
-export default = getApi;
