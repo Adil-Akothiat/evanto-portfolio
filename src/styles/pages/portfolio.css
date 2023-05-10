@@ -1,5 +1,10 @@
+.filter button::after, .filter .categories::after, .project-card >div, .project-details #close-details, .project-card >div div, .project-details, #content-gallery img, .gallery button, .open-project  {
+    position: absolute
+}
 .portfolio img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
 }
 .filter button {
     border: none;
@@ -10,7 +15,6 @@
 }
 .filter button::after {
     content:"";
-    position: absolute;
     width: 0%;
     height: 3px;
     background-color: var(--main-color);
@@ -26,7 +30,6 @@
 }
 .filter .categories::after {
     content:"";
-    position: absolute;
     left: 0;
     bottom: 0;
     height: 1px;
@@ -40,10 +43,8 @@
 .filter button:hover {
     color: var(--main-color);
 }
-.filter button:hover::after {
-    width: 100%;
-}
-.filter .btn-focus::after {
+.filter button:hover::after,
+.filter .btn-focus::after  {
     width: 100%;
 }
 .filter .btn-focus {
@@ -59,34 +60,30 @@
         font-size: 9px;
     }
 }
-.filter input { 
-    padding: .25em 1em;
-    border: 1px solid var(--main-color);
-    caret-color: var(--main-color);
-    margin-right: .5em;
-}
 .project-card {
     position: relative;
     line-height: 0;
     overflow: hidden;
 }
+.project-card >div, .project-details {
+    width: 100%;
+    height: 100%;
+}
 .project-card >div {
-    position: absolute;
     top: 0;
     background-color: var(--sm-darken);
     backdrop-filter: blur(4px);
-    width: 100%;
-    height: 100%;
     opacity: 0;
     transition: opacity .3s linear;
 }
 .project-card >div div {
-    position: absolute;
     color: var(--text-white);
 }
 .project-card img {
-    width: 100%;
+    min-width: 100%;
+    object-fit: cover;
     height: 15em;
+    border-radius: 5px;
     transition: transform .3s linear;
 }
 .project-card:hover >div {
@@ -102,7 +99,6 @@
     padding: .75em;
     border: none;
     transition: all .3s linear;
-    position: absolute;
     left: 50%;transform: translateX(-50%);
     bottom: 1em;
 }
@@ -115,13 +111,12 @@
 .project-details .main-bg {
     background-color: var(--main-color) !important;
 }
-.project-details {
-    position: absolute;
+.project-details, #content-gallery img {
     top: 0;
     left: 0;
+}
+.project-details {
     background-color: var(--text-white);
-    width: 100%;
-    height: 100%;
     z-index: 100;
 }
 .project-details svg {
@@ -140,7 +135,6 @@
 }
 .project-details #close-details {
     line-height: 0;
-    position: absolute;
     top: 1em;
     right: 1em;
     padding: .5em;
@@ -170,9 +164,6 @@
     width: 100%;
     max-height: 250px;
     object-fit: contain;
-    position: absolute;
-    left: 0;
-    top: 0;
     opacity: 0;
     transform: scale(0);
     transition: all 500ms linear;
@@ -192,7 +183,6 @@
     color: var(--text-white); 
     padding: .3em .5em;
     border: none;
-    position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1; 

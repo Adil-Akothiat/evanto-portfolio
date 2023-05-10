@@ -1,7 +1,7 @@
-import React, { memo, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./loader.css";
 
-export default memo(function Loader () {
+export default function Loader () {
     useEffect(()=> {
         if(window.localStorage.getItem("themeColor")) {
             [...document.querySelector(".snip-blocks").children].forEach(b=> b.style.backgroundColor=window.localStorage.getItem("themeColor"))
@@ -16,4 +16,4 @@ export default memo(function Loader () {
             </div>
         </div>
     );
-})
+}

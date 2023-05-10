@@ -1,11 +1,10 @@
-import React, { memo } from "react";
+import React from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 
-export default memo ( function PorjectCard (props) {
+export default function PorjectCard (props) {
     return (
-        <div className={`project-card ${props.class}`}>
+        <div className={`project-card ${props.class} border rounded`}>
             <img 
-                className="img-fluid" 
                 src={require("../../../../../assets/portfolio/"+props.src)} 
                 alt={props.title}
                 loading="lazy"
@@ -15,15 +14,16 @@ export default memo ( function PorjectCard (props) {
                     className="open-project" 
                     onClick={props.handleClick} 
                     data-id={props.id}
+                    aria-label="open project details"
                 >
                     <AiOutlinePlus />
                 </button>
                 <div className="translate-middle top-50 start-50">
-                    <h4 className="text-capitalize fw-normal">
+                    <strong className="text-capitalize fw-normal">
                         {props.title}
-                    </h4>
+                    </strong>
                 </div>
             </div>
         </div>
     );
-})
+}

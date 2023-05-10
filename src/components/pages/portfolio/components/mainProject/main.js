@@ -1,8 +1,9 @@
-import React, { useState, memo } from "react";
+import React, { useState } from "react";
 import Filter from "./filter";
 import ProjectCard from "./projectCard";
+import Loader from "../../../../loader/loader";
 
-export default memo(function Main (props) {
+export default function Main (props) {
     const [categ, setCateg] = useState("all");
     function handleCategories (categ) {
         setCateg(categ);
@@ -26,14 +27,14 @@ export default memo(function Main (props) {
                                     title={w.title}
                                     src={`project${i+1}/${w.image}`}
                                     handleClick={props.openProject}
-                                    id={w.id}
+                                    id={w.index}
                                 />
                             );
                         })
                     }
                 </div>
-                ):<div className="alert alert-warning">You don't have any project create some project in directory <strong>/src/components/pages/portfolio/admin/projects.json</strong></div>
+                ):<Loader />
             }
         </div>
     );
-})
+}

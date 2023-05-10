@@ -1,6 +1,6 @@
-import React, { useCallback, memo } from "react";
+import React, { useCallback } from "react";
 
-export default memo(function Filter (props) {
+export default function Filter (props) {
     const focus  = useCallback(function ({target}) {
         [...document.querySelector(".categories").children].forEach(btn=> btn.classList.remove("btn-focus"));
         target.classList.add("btn-focus");
@@ -24,4 +24,4 @@ export default memo(function Filter (props) {
             </div>
         </div>
     );
-})
+}

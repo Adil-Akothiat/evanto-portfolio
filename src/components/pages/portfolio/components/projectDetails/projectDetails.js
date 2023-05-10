@@ -7,6 +7,7 @@ import { MdOutlineClose } from "react-icons/md";
 
 import ImageGallery from "./imageGallery";
 import Video from "./video";
+import { Link } from "react-router-dom";
 
 export default memo(function projectDetails (props) {
     return (
@@ -17,6 +18,7 @@ export default memo(function projectDetails (props) {
                     className="btn btn-primary main-bg" 
                     onClick={props.handleClick}
                     style={{border: "none"}}
+                    aria-label="close project details"
                 >
                     <MdOutlineClose />
                 </button>
@@ -38,7 +40,8 @@ export default memo(function projectDetails (props) {
                                 <BsFillPersonCheckFill /><span className="fw-light text-capitalize ml-2">{props.details.client}</span>
                             </div>
                             <div className="d-flex mb-2">
-                                <TbWorld /><span className="fw-light ml-2"><a href={props.details.link}>{props.details.link}</a></span>
+                                <TbWorld /><span className="fw-light ml-2"><Link to="/">{props.details.link}</Link>
+                                </span>
                             </div>
                             <div className="d-flex mb-2">
                                 <BiCategory /><span className="fw-light ml-2 text-capitalize">{props.details.category}</span>
