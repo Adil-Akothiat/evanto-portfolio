@@ -1,5 +1,4 @@
 import React, { memo, useState, useEffect } from "react";
-import { Outlet } from "react-router-dom";
 import "../../../styles/pages/blogs.css";
 import BlogsView from "./components/blogs/blogsView";
 
@@ -16,20 +15,17 @@ export default memo(function Blogs (props) {
   }
   useEffect(()=> {
     setBlogs(props.blogs.slice(0, 3));
-  }, [props.blogs])
+  }, [props])
   return (
-    <>
-      <div className="blogs fixed-right test">
-        <div className="main-size">
-          <div className="position-relative">
-              <BlogsView
-                blogs={blogs}
-                readMore={readMoreHandler}
-              />
-          </div>
+    <div className="blogs fixed-right test">
+      <div className="main-size">
+        <div className="position-relative">
+            <BlogsView
+              blogs={blogs}
+              readMore={readMoreHandler}
+            />
         </div>
       </div>
-      <Outlet />
-    </>
+    </div>
   );
 })

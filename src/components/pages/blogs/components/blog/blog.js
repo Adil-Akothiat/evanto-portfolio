@@ -1,8 +1,10 @@
 import React, { useState, memo, useCallback } from "react";
+import { useParams } from "react-router-dom"; 
 import BlogContent from "./blogContent";
 import "../../../../../styles/pages/blog.css";
+import Loader from "../../../../loader/loader";
 
-export default memo(function Blog (props) {
+export default memo(function Blog ({ blogs }) {
     // single Blog article
     const [isOpenShare, setIsOpenShare] = useState(false);
     const openShare = useCallback(function () {
@@ -15,14 +17,17 @@ export default memo(function Blog (props) {
         // enable scroll
         window.document.body.style.overflow="auto";
     }, [])
+    const { id } = useParams();
     return (
         <div className="blog fixed-right">
-            <BlogContent 
+            {
+                blogs.length?<BlogContent 
                 openShare={openShare}
                 closeShare={closeShare}
                 open={isOpenShare}
-                blog={props.blog}
-            />
+                blog={blogs.filter(b=> b.id===id)[0]}
+            />:<Loader />
+            }
         </div>
     );
 })
