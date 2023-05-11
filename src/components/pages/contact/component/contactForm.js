@@ -29,6 +29,7 @@ export default function ContactForm () {
     return (
         <form onSubmit={submitHandler}>
             <div className="row name form-gr">
+                <label htmlFor="name">name</label>
                 <input 
                     type="text"
                     id="name"
@@ -40,6 +41,7 @@ export default function ContactForm () {
                 />
             </div>
             <div className="row email form-gr">
+                <label htmlFor="message">email</label>
                 <input 
                     type="email"
                     id="email"
@@ -51,6 +53,7 @@ export default function ContactForm () {
                 />
             </div>
             <div className="row message form-gr">
+                <label htmlFor="message" className="message">message</label>
                 <textarea 
                     id="message"
                     required

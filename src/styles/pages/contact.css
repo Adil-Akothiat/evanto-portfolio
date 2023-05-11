@@ -8,14 +8,11 @@
 .contact form >div:first-child {
     margin-top: 20px; 
 }
-.contact form >.message {
-    margin-bottom: 20px;
-}
 .contact form >.alert- {
     margin: 18px 0;
 }
-.contact form .form-gr::after {
-    content:"field name";
+.contact form label {
+    text-transform: capitalize;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -25,18 +22,12 @@
     pointer-events: none;
     background-color: var(--text-white);
 }
-.contact form >.message::after {
-    content:"Message";
+.contact form .message {
+    margin-bottom: 20px;
     transform: translateY(0);
     top: 10px;
 }
-.contact form >.name::after {
-    content:"Name";
-}
-.contact form >.email::after {
-    content:"Email";
-}
-.contact form >.focus-on::after {
+.contact form >.focus-on label {
     transform: translateY(0);
     top: -2em;
     color: var(--main-color);
@@ -127,5 +118,8 @@
 @media screen and (max-width: 675px) {
     .contact .contact-info {
         grid-template-columns: 100%;
+    }
+    .contact form >div:first-child {
+        margin-top: 5em; 
     }
 }

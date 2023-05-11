@@ -39,7 +39,12 @@ export default memo(function ReviewCard (props) {
                     <p className="fw-light">{props.review}</p>
                 </div>
                 <div>
-                    <a href={props.link} role="button" className="my-own-btn-link text-capitalize rounded mx-auto">
+                    <a 
+                        href={props.link} 
+                        role="button" 
+                        className="my-own-btn-link text-capitalize rounded mx-auto"
+                        aria-label="watch review"    
+                    >
                         watch review
                     </a>
                 </div>
