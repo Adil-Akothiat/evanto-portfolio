@@ -10,7 +10,7 @@ export default memo(function Video (props) {
                 height="400"
             >
                 <source 
-                    src={require("../../../../../assets/portfolio/project1/video/"+props.src)} 
+                    src={require("../../../../../assets/portfolio/video/"+props.src)} 
                     type="video/webm"
                 />
             </video>

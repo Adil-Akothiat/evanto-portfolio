@@ -3,9 +3,9 @@ import { AiOutlinePlus } from "react-icons/ai";
 
 export default function PorjectCard (props) {
     return (
-        <div className={`project-card ${props.class} border rounded`}>
+        <div className={`project-card ${props.class}`}>
             <img 
-                src={require("../../../../../assets/portfolio/"+props.src)} 
+                src={props.src} 
                 alt={props.title}
                 loading="lazy"
             />

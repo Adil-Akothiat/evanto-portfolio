@@ -13,7 +13,7 @@ export default function Main (props) {
             <Filter works={props.works} categories={props.categories} setCategories={handleCategories}/>
             {
                 props.works.length?(
-                    <div className="my-grid mb-5">
+                    <div className="my-grid project-cards">
                     {
                         props.works.map((w, i)=> {
                             return (
@@ -25,7 +25,7 @@ export default function Main (props) {
                                         w.info.details.category===categ?"":"hide-project"
                                     }
                                     title={w.title}
-                                    src={`project${i+1}/${w.image}`}
+                                    src={w.image}
                                     handleClick={props.openProject}
                                     id={w.index}
                                 />

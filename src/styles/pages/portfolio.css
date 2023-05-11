@@ -111,10 +111,6 @@
 .project-details .main-bg {
     background-color: var(--main-color) !important;
 }
-.project-details, #content-gallery img {
-    top: 0;
-    left: 0;
-}
 .project-details {
     background-color: var(--text-white);
     z-index: 100;
@@ -161,9 +157,11 @@
     overflow: hidden;
 }
 #content-gallery img {
+    top: 0;
+    left: 0;
     width: 100%;
     max-height: 250px;
-    object-fit: contain;
+    object-fit: cover;
     opacity: 0;
     transform: scale(0);
     transition: all 500ms linear;

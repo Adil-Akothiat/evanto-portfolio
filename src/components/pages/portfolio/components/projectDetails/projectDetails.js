@@ -51,10 +51,10 @@ export default memo(function projectDetails (props) {
                             </div>
                         </div>
                         <h5 className="text-capitalize my-3">
-                            technologies
+                            tools
                         </h5>
                         <div className="d-flex flex-wrap stack mb-4">
-                            {props.details.technologies.map((e, i)=> <span key={"key-"+i} className="rounded fw-light text-capitalize my-1">{e}</span>)}
+                            {props.details.tools.map((e, i)=> <span key={"key-"+i} className="rounded fw-light text-capitalize my-1">{e}</span>)}
                         </div>
                     </div>
                 </div>
