@@ -20,10 +20,10 @@ export default memo(function Blogs (props) {
     <div className="blogs fixed-right test">
       <div className="main-size">
         <div className="position-relative">
-            <BlogsView
-              blogs={blogs}
-              readMore={readMoreHandler}
-            />
+          <BlogsView
+            blogs={blogs}
+            readMore={readMoreHandler}
+          />
         </div>
       </div>
     </div>
