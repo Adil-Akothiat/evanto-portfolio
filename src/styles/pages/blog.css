@@ -372,3 +372,7 @@
     transform: scale(1.08);
     opacity: 1;
 }
+.blog .css-1xi4blx:has(iframe) {
+    width: fit-content;
+    margin: auto;
+}

@@ -11,9 +11,9 @@ export default function Social () {
             <ul className="social-links">
                 <li>
                     <a 
-                        href={"#twitter"} 
-                        target={"_blank"} 
-                        rel={"noreferrer"}
+                        href="#twitter"
+                        target="_blank"
+                        rel="noreferrer"
                         aria-label="twitter"
                     >
                         <AiFillTwitterCircle />
@@ -21,9 +21,9 @@ export default function Social () {
                 </li>
                 <li>
                     <a 
-                        href={"#github"} 
-                        target={"_blank"} 
-                        rel={"noreferrer"}
+                        href="#github"
+                        target="_blank"
+                        rel="noreferrer"
                         aria-label="github"
                     >
                         <AiFillGithub />
@@ -31,9 +31,9 @@ export default function Social () {
                 </li>
                 <li>
                     <a 
-                        href={"#linkedin"} 
-                        target={"_blank"} 
-                        rel={"noreferrer"}
+                        href="#linkedin"
+                        target="_blank"
+                        rel="noreferrer"
                         aria-label="linkedin"
                     >
                         <AiFillLinkedin />

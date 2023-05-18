@@ -1,6 +1,10 @@
 import React, { useCallback, memo } from "react";
 import Particles from "react-tsparticles";
 import {loadFull} from "tsparticles";
+const particlesConfig = require("./particles.json");
+particlesConfig.background.color.value="#fffff";
+particlesConfig.particles.color=document.documentElement.style.getPropertyValue("--main-color");
+
 
 export default memo(function BackgroundAnimated () {
         const particlesInit = useCallback(async engine => {
@@ -10,78 +14,7 @@ export default memo(function BackgroundAnimated () {
             <Particles
                 id="tsparticles"
                 init={particlesInit}
-                options={{
-                    background: {   
-                        color: {
-                            value: "white",
-                        },
-                    },
-                    fpsLimit: 120,
-                    interactivity: {
-                        events: {
-                            onClick: {
-                                enable: true,
-                                mode: "push",
-                            },
-                            onHover: {
-                                enable: true,
-                                mode: "repulse",
-                            },
-                            resize: true,
-                        },
-                        modes: {
-                            push: {
-                                quantity: 0,
-                            },
-                            repulse: {
-                                distance: 100,
-                                duration: 0.5,
-                            },
-                        },
-                    },
-                    particles: {
-                        color: {
-                            value: "#2a68db",
-                        },
-                        links: {
-                            color: "#b8b8b8",
-                            distance: 150,
-                            enable: true,
-                            opacity: 1,
-                            width: 1,
-                        },
-                        collisions: {
-                            enable: true,
-                        },
-                        move: {
-                            directions: "none",
-                            enable: true,
-                            outModes: {
-                                default: "bounce",
-                            },
-                            random: false,
-                            speed: 3,
-                            straight: false,
-                        },
-                        number: {
-                            density: {
-                                enable: true,
-                                area: 900,
-                            },
-                            value: 30,
-                        },
-                        opacity: {
-                            value: 0.5,
-                        },
-                        shape: {
-                            type: "circle",
-                        },
-                        size: {
-                            value: { min: 4, max: 5 },
-                        },
-                    },
-                    detectRetina: true,
-                }}
+                options={particlesConfig}
             />
         );
 });

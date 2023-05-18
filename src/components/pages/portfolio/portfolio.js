@@ -19,9 +19,11 @@ export default function Portfolio () {
             status: true,
         }
         setDetails(detailsStatus);
+        window.scrollTo(0, 0);
     }
     const closeProject = useCallback(function () {
         setDetails({status: false});
+        window.scrollTo(0, 0);
     }, []);
     useEffect(()=> {
         setProjects(projectsData);

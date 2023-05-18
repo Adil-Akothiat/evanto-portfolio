@@ -3,7 +3,6 @@ import "../../styles/navigation/nav.css";
 
 import Links from "./components/links";
 import NavHeader from "./components/navHeader";
-import NavFooter from "./components/navFooter";
 import Collapse from "./components/collapse";
 
 export default function Navigation () {
@@ -41,8 +40,7 @@ export default function Navigation () {
             />
             <div className="content">
                 <NavHeader close={closeHandler}/>
-                <Links close={closeHandler}/>
-                <NavFooter />
+                <Links closeNav={closeHandler}/>
             </div>
         </div>
     );
