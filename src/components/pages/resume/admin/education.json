@@ -1,31 +1,31 @@
 [
     {
-        "from":2018,
-        "to":"present",
+        "from":2014,
+        "to":2015,
         "degree":"master of science",
         "university":"abc university",
         "description":"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit.",
         "link":"#education-profile"
     },
     {
-        "from":2018,
-        "to":"present",
+        "from":2013,
+        "to":2014,
         "degree":"master of science",
         "university":"abc university",
         "description":"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere.",
         "link":"#education-profile"
     },
     {
-        "from":2018,
-        "to":"present",
+        "from":2010,
+        "to":2013,
         "degree":"master of science",
         "university":"abc university",
         "description":"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere.",
         "link":"#education-profile"
     },
     {
-        "from":2018,
-        "to":"present",
+        "from":2008,
+        "to":2010,
         "degree":"master of science",
         "university":"abc university",
         "description":"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere.",

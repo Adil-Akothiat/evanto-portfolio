@@ -1,6 +1,6 @@
 [
     {
-        "from":2018,
+        "from":2022,
         "to":"present",
         "job":"frontend web developer",
         "company":"abc company",
@@ -9,23 +9,23 @@
     },
     {
         "from":2018,
-        "to":"present",
+        "to":2022,
         "job":"frontend web developer",
         "company":"abc company",
         "description":"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia.",
         "link":"#company-profile"
     },
     {
-        "from":2018,
-        "to":"present",
+        "from":2016,
+        "to":2018,
         "job":"frontend web developer",
         "company":"abc company",
         "description":"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia.",
         "link":"#company-profile"
     },
     {
-        "from":2018,
-        "to":"present",
+        "from":2014,
+        "to":2016,
         "job":"frontend web developer",
         "company":"abc company",
         "description":"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia.",
