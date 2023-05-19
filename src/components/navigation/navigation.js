@@ -41,6 +41,9 @@ export default function Navigation () {
             <div className="content">
                 <NavHeader close={closeHandler}/>
                 <Links closeNav={closeHandler}/>
+                <footer>
+                    <p>Made with ❤️ by Skiller</p>
+                </footer>
             </div>
         </div>
     );

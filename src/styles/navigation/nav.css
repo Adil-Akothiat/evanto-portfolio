@@ -63,6 +63,17 @@
 .navigation .not-open {
     background-color: var(--danger-color);
 }
+.navigation footer {
+    position: relative;
+}
+.navigation footer p {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 @media screen and (min-width: 350px) {
     .navigation .hero img {
         width: 150px;
