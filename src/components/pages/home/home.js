@@ -7,8 +7,8 @@ import TypingAnimation from "./components/typeIt";
 export default function Home () {
     return (
         <div className="home fixed-right">
+            <BackgroundAnimated />
             <div className="center main-size m-0">
-                <BackgroundAnimated />
                 <div className="home-size position-relative">
                     <TypingAnimation />
                     <Social />

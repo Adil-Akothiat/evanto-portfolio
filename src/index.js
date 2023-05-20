@@ -5,7 +5,6 @@ import "./styles/styles.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import App from './App';
-
 const root = ReactDOM.createRoot(document.getElementById('app'));
 root.render(
   <React.StrictMode>
@@ -14,4 +13,3 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
-
