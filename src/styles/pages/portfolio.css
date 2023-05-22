@@ -143,6 +143,9 @@
     grid-template-columns: 55% 40%;
     column-gap: 2em;
 }
+.my-grid-second >div:first-child {
+    min-height: 300px;
+}
 @media screen and (max-width: 600px) {
     .my-grid-second {
         grid-template-columns: 100%;

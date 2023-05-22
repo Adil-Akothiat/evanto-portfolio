@@ -3,6 +3,7 @@ import Particles from "react-tsparticles";
 import {loadFull} from "tsparticles";
 const particlesConfig = require("./particles.json");
 particlesConfig.background.color.value="#fffff";
+particlesConfig.particles.color.value=window.localStorage.getItem("themeColor");
 
 export default memo(function BackgroundAnimated () {
         const particlesInit = useCallback(async engine => {
