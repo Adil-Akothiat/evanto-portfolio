@@ -42,7 +42,7 @@ export default function Navigation () {
                 <NavHeader close={closeHandler}/>
                 <Links closeNav={closeHandler}/>
                 <footer>
-                    <p>Made with ❤️ by Skiller</p>
+                    <p>Made with ❤️ by Adil Akothiat</p>
                 </footer>
             </div>
         </div>
