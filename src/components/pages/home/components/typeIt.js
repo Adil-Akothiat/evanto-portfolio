@@ -8,7 +8,7 @@ export default memo(function TypingAnimation () {
                 <TypeIt
                     getBeforeInit={(instance) => {
                         instance
-                            .type("hi, i am adil khayt")
+                            .type("hi, i am Akothiat Adil")
                         return instance;
                     }}
                 />
