@@ -34,11 +34,11 @@ export default function ContactInfo () {
                 <MdWifiCalling3 />
                 <div>
                     <h5><a
-                        href="tel:0867870667"
-                    >+212867870667</a></h5>
+                        href="tel:0867870XXX"
+                    >+212867870XXX</a></h5>
                     <h5><a 
-                        href="tel:0867870688"
-                    >+212867870688</a></h5>
+                        href="tel:0867870XXX"
+                    >+212867870XXX</a></h5>
                 </div>
             </div>
         </div>
