@@ -13,7 +13,7 @@ export default function NavHeader (props) {
                     alt="adil khayt"
                 />
             </Link>
-            <h5 className="text-capitalize fw-normal text-center mt-3">adil khayt</h5>
+            <h5 className="text-capitalize fw-normal text-center mt-3">akothiat adil</h5>
             <h6 className="text-capitalize text-center fw-normal text-main">tangir, morocco</h6>
         </div>
     );
